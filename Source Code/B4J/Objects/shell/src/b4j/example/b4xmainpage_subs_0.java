@@ -213,13 +213,13 @@ RemoteObject _newlist = RemoteObject.declareNull("anywheresoftware.b4a.objects.c
 Debug.ShouldStop(1048576);
  BA.debugLineNum = 123;BA.debugLine="Log(\"Total without VAT: \" & mg.SumRows(\"Tot.Price";
 Debug.ShouldStop(67108864);
-b4xmainpage.__c.runVoidMethod ("LogImpl","7655366",RemoteObject.concat(RemoteObject.createImmutable("Total without VAT: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("Tot.Price wo VAT")),(Object)(RemoteObject.createImmutable("")))),0);
+b4xmainpage.__c.runVoidMethod ("LogImpl","2393222",RemoteObject.concat(RemoteObject.createImmutable("Total without VAT: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("Tot.Price wo VAT")),(Object)(RemoteObject.createImmutable("")))),0);
  BA.debugLineNum = 126;BA.debugLine="Log(\"Total with VAT: \" & mg.SumRows(\"Tot.Price w";
 Debug.ShouldStop(536870912);
-b4xmainpage.__c.runVoidMethod ("LogImpl","7655369",RemoteObject.concat(RemoteObject.createImmutable("Total with VAT: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("Tot.Price w VAT")),(Object)(RemoteObject.createImmutable("")))),0);
+b4xmainpage.__c.runVoidMethod ("LogImpl","2393225",RemoteObject.concat(RemoteObject.createImmutable("Total with VAT: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("Tot.Price w VAT")),(Object)(RemoteObject.createImmutable("")))),0);
  BA.debugLineNum = 129;BA.debugLine="Log(\"only VAT 13%: \" & mg.SumRows(\"VAT\",\"SELECT";
 Debug.ShouldStop(1);
-b4xmainpage.__c.runVoidMethod ("LogImpl","7655372",RemoteObject.concat(RemoteObject.createImmutable("only VAT 13%: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("VAT")),(Object)(RemoteObject.createImmutable("SELECT  SUM([VAT]) as myvalue FROM data WHERE [Vat%]='13.00';")))),0);
+b4xmainpage.__c.runVoidMethod ("LogImpl","2393228",RemoteObject.concat(RemoteObject.createImmutable("only VAT 13%: "),__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_sumrows" /*RemoteObject*/ ,(Object)(BA.ObjectToString("VAT")),(Object)(RemoteObject.createImmutable("SELECT  SUM([VAT]) as myvalue FROM data WHERE [Vat%]='13.00';")))),0);
  BA.debugLineNum = 132;BA.debugLine="Dim newlist As List=mg.GetData";
 Debug.ShouldStop(8);
 _newlist = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
@@ -275,38 +275,68 @@ return;
 
 case 0:
 //C
-this.state = -1;
+this.state = 1;
 Debug.locals.put("_ref", __ref);
  BA.debugLineNum = 140;BA.debugLine="Dim newlist As List = mg.GetData";
 Debug.ShouldStop(2048);
 _newlist = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");
 _newlist = __ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_getdata" /*RemoteObject*/ );Debug.locals.put("newlist", _newlist);Debug.locals.put("newlist", _newlist);
- BA.debugLineNum = 141;BA.debugLine="Dim maxRow() As Object = newlist.Get(newlist.Size";
+ BA.debugLineNum = 141;BA.debugLine="If newlist.Size>0 Then";
 Debug.ShouldStop(4096);
-_maxrow = (_newlist.runMethod(false,"Get",(Object)(RemoteObject.solve(new RemoteObject[] {_newlist.runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1))));Debug.locals.put("maxRow", _maxrow);Debug.locals.put("maxRow", _maxrow);
- BA.debugLineNum = 142;BA.debugLine="Dim newID As Int = maxRow(0) + 1";
-Debug.ShouldStop(8192);
-_newid = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _maxrow.getArrayElement(false,BA.numberCast(int.class, 0))),RemoteObject.createImmutable(1)}, "+",1, 0));Debug.locals.put("newID", _newid);Debug.locals.put("newID", _newid);
- BA.debugLineNum = 143;BA.debugLine="newlist.Add(Array As String(newID,\"\",\"\",DateTime.";
-Debug.ShouldStop(16384);
-_newlist.runVoidMethod ("Add",(Object)((RemoteObject.createNewArray("String",new int[] {8},new Object[] {BA.NumberToString(_newid),BA.ObjectToString(""),BA.ObjectToString(""),BA.NumberToString(parent.__c.getField(false,"DateTime").runMethod(true,"getNow")),BA.ObjectToString("0.00"),BA.ObjectToString("0.00"),BA.ObjectToString("1.00"),RemoteObject.createImmutable("24.00")}))));
- BA.debugLineNum = 144;BA.debugLine="mg.SetData(newlist)";
-Debug.ShouldStop(32768);
-__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_setdata" /*void*/ ,(Object)(_newlist));
- BA.debugLineNum = 145;BA.debugLine="Sleep(0)";
-Debug.ShouldStop(65536);
-parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "b4xmainpage", "button2_click"),BA.numberCast(int.class, 0));
-this.state = 1;
-return;
+if (true) break;
+
 case 1:
+//if
+this.state = 6;
+if (RemoteObject.solveBoolean(">",_newlist.runMethod(true,"getSize"),BA.numberCast(double.class, 0))) { 
+this.state = 3;
+}else {
+this.state = 5;
+}if (true) break;
+
+case 3:
+//C
+this.state = 6;
+ BA.debugLineNum = 142;BA.debugLine="Dim maxRow() As Object = newlist.Get(newlist.Siz";
+Debug.ShouldStop(8192);
+_maxrow = (_newlist.runMethod(false,"Get",(Object)(RemoteObject.solve(new RemoteObject[] {_newlist.runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1))));Debug.locals.put("maxRow", _maxrow);Debug.locals.put("maxRow", _maxrow);
+ BA.debugLineNum = 143;BA.debugLine="Dim newID As Int = maxRow(0) + 1 'aeric's fix";
+Debug.ShouldStop(16384);
+_newid = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {BA.numberCast(double.class, _maxrow.getArrayElement(false,BA.numberCast(int.class, 0))),RemoteObject.createImmutable(1)}, "+",1, 0));Debug.locals.put("newID", _newid);Debug.locals.put("newID", _newid);
+ if (true) break;
+
+case 5:
+//C
+this.state = 6;
+ BA.debugLineNum = 145;BA.debugLine="Dim newID As Int = 1";
+Debug.ShouldStop(65536);
+_newid = BA.numberCast(int.class, 1);Debug.locals.put("newID", _newid);Debug.locals.put("newID", _newid);
+ if (true) break;
+
+case 6:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 146;BA.debugLine="mg.CalcAll";
-Debug.ShouldStop(131072);
-__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_calcall" /*RemoteObject*/ );
- BA.debugLineNum = 147;BA.debugLine="End Sub";
+ BA.debugLineNum = 147;BA.debugLine="newlist.Add(Array As String(newID,\"\",\"\",DateTime.";
 Debug.ShouldStop(262144);
+_newlist.runVoidMethod ("Add",(Object)((RemoteObject.createNewArray("String",new int[] {8},new Object[] {BA.NumberToString(_newid),BA.ObjectToString(""),BA.ObjectToString(""),BA.NumberToString(parent.__c.getField(false,"DateTime").runMethod(true,"getNow")),BA.ObjectToString("0.00"),BA.ObjectToString("0.00"),BA.ObjectToString("1.00"),RemoteObject.createImmutable("24.00")}))));
+ BA.debugLineNum = 148;BA.debugLine="mg.SetData(newlist)";
+Debug.ShouldStop(524288);
+__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_setdata" /*void*/ ,(Object)(_newlist));
+ BA.debugLineNum = 149;BA.debugLine="Sleep(1000)";
+Debug.ShouldStop(1048576);
+parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "b4xmainpage", "button2_click"),BA.numberCast(int.class, 1000));
+this.state = 7;
+return;
+case 7:
+//C
+this.state = -1;
+;
+ BA.debugLineNum = 150;BA.debugLine="mg.CalcAll";
+Debug.ShouldStop(2097152);
+__ref.getField(false,"_mg" /*RemoteObject*/ ).runClassMethod (b4j.example.magmagrid.class, "_calcall" /*RemoteObject*/ );
+ BA.debugLineNum = 151;BA.debugLine="End Sub";
+Debug.ShouldStop(4194304);
 if (true) break;
 
             }

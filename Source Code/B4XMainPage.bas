@@ -144,10 +144,14 @@ End Sub
 Private Sub Button2_Click
 	' I prefer VAT 24%
 	Dim newlist As List = mg.GetData
-	Dim maxRow() As Object = newlist.Get(newlist.Size-1) 'aeric's fix
-	Dim newID As Int = maxRow(0) + 1 'aeric's fix
+	If newlist.Size>0 Then
+		Dim maxRow() As Object = newlist.Get(newlist.Size-1) 'aeric's fix
+		Dim newID As Int = maxRow(0) + 1 'aeric's fix
+	Else
+		Dim newID As Int = 1
+	End If
 	newlist.Add(Array As String(newID,"","",DateTime.now, "0.00","0.00","1.00","24.00"))
 	mg.SetData(newlist)
-	Sleep(0)
+	Sleep(1000)
 	mg.CalcAll
 End Sub

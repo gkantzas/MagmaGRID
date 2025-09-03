@@ -497,9 +497,9 @@ magmagrid._id = RemoteObject.createImmutable("");__ref.setField("_id",magmagrid.
 magmagrid._decimalseparator = BA.ObjectToString(".");__ref.setField("_decimalseparator",magmagrid._decimalseparator);
  //BA.debugLineNum = 35;BA.debugLine="Private PrevColumn As mycol";
 magmagrid._prevcolumn = RemoteObject.createNew ("b4j.example.magmagrid._mycol");__ref.setField("_prevcolumn",magmagrid._prevcolumn);
- //BA.debugLineNum = 36;BA.debugLine="Private SelectedColumn As mycol";
+ //BA.debugLineNum = 36;BA.debugLine="Public SelectedColumn As mycol";
 magmagrid._selectedcolumn = RemoteObject.createNew ("b4j.example.magmagrid._mycol");__ref.setField("_selectedcolumn",magmagrid._selectedcolumn);
- //BA.debugLineNum = 37;BA.debugLine="Private SelectedRow As Long";
+ //BA.debugLineNum = 37;BA.debugLine="Public SelectedRow As Long";
 magmagrid._selectedrow = RemoteObject.createImmutable(0L);__ref.setField("_selectedrow",magmagrid._selectedrow);
  //BA.debugLineNum = 39;BA.debugLine="Private myroot As B4XView";
 magmagrid._myroot = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");__ref.setField("_myroot",magmagrid._myroot);
@@ -538,9 +538,32 @@ magmagrid._currentpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return RemoteObject.createImmutable("");
 }
+public static RemoteObject  _deleterow(RemoteObject __ref,RemoteObject _rowid) throws Exception{
+try {
+		Debug.PushSubsStack("DeleteRow (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1035);
+if (RapidSub.canDelegate("deleterow")) { return __ref.runUserSub(false, "magmagrid","deleterow", __ref, _rowid);}
+Debug.locals.put("rowid", _rowid);
+ BA.debugLineNum = 1035;BA.debugLine="Public Sub DeleteRow(rowid As Long)";
+Debug.ShouldStop(1024);
+ BA.debugLineNum = 1037;BA.debugLine="useB4XTable.sql1.ExecnonQuery(\"DELETE FROM data W";
+Debug.ShouldStop(4096);
+__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_sql1" /*RemoteObject*/ ).runVoidMethod ("ExecNonQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("DELETE FROM data WHERE rowid="),_rowid,RemoteObject.createImmutable(";"))));
+ BA.debugLineNum = 1038;BA.debugLine="useB4XTable.Refresh";
+Debug.ShouldStop(8192);
+__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_refresh" /*RemoteObject*/ );
+ BA.debugLineNum = 1040;BA.debugLine="End Sub";
+Debug.ShouldStop(32768);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _enableresizeguidelines(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("EnableResizeGuidelines (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1039);
+		Debug.PushSubsStack("EnableResizeGuidelines (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1050);
 if (RapidSub.canDelegate("enableresizeguidelines")) { return __ref.runUserSub(false, "magmagrid","enableresizeguidelines", __ref);}
 RemoteObject _pnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _clv = RemoteObject.declareNull("b4j.example.customlistview");
@@ -549,22 +572,22 @@ RemoteObject _basex = RemoteObject.createImmutable(0);
 RemoteObject _colx = RemoteObject.createImmutable(0);
 int _col = 0;
 RemoteObject _tablecol = RemoteObject.declareNull("b4j.example.b4xtable._b4xtablecolumn");
- BA.debugLineNum = 1039;BA.debugLine="Sub EnableResizeGuidelines";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 1040;BA.debugLine="If isResizing = False Then";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 1050;BA.debugLine="Sub EnableResizeGuidelines";
+Debug.ShouldStop(33554432);
+ BA.debugLineNum = 1051;BA.debugLine="If isResizing = False Then";
+Debug.ShouldStop(67108864);
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_isresizing" /*RemoteObject*/ ),magmagrid.__c.getField(true,"False"))) { 
- BA.debugLineNum = 1041;BA.debugLine="resizeTimer.Enabled = False";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 1052;BA.debugLine="resizeTimer.Enabled = False";
+Debug.ShouldStop(134217728);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",magmagrid.__c.getField(true,"False"));
- BA.debugLineNum = 1042;BA.debugLine="isResizing = True";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 1053;BA.debugLine="isResizing = True";
+Debug.ShouldStop(268435456);
 __ref.setField ("_isresizing" /*RemoteObject*/ ,magmagrid.__c.getField(true,"True"));
- BA.debugLineNum = 1044;BA.debugLine="If removableGuidelines.IsInitialized Then";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 1055;BA.debugLine="If removableGuidelines.IsInitialized Then";
+Debug.ShouldStop(1073741824);
 if (__ref.getField(false,"_removableguidelines" /*RemoteObject*/ ).runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1045;BA.debugLine="For Each pnl As B4XView In removableGuidelines";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 1056;BA.debugLine="For Each pnl As B4XView In removableGuidelines";
+Debug.ShouldStop(-2147483648);
 _pnl = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 {
 final RemoteObject group5 = __ref.getField(false,"_removableguidelines" /*RemoteObject*/ );
@@ -574,70 +597,70 @@ final int groupLen5 = group5.runMethod(true,"getSize").<Integer>get()
 for (; index5 < groupLen5;index5++){
 _pnl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), group5.runMethod(false,"Get",index5));Debug.locals.put("pnl", _pnl);
 Debug.locals.put("pnl", _pnl);
- BA.debugLineNum = 1046;BA.debugLine="pnl.RemoveViewFromParent";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 1057;BA.debugLine="pnl.RemoveViewFromParent";
+Debug.ShouldStop(1);
 _pnl.runVoidMethod ("RemoveViewFromParent");
  }
 }Debug.locals.put("pnl", _pnl);
 ;
  };
- BA.debugLineNum = 1050;BA.debugLine="Dim clv As CustomListView = useB4XTable.clvData";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 1061;BA.debugLine="Dim clv As CustomListView = useB4XTable.clvData";
+Debug.ShouldStop(16);
 _clv = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ );Debug.locals.put("clv", _clv);Debug.locals.put("clv", _clv);
- BA.debugLineNum = 1051;BA.debugLine="Dim scrollX As Int = clv.sv.ScrollViewOffsetX";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 1062;BA.debugLine="Dim scrollX As Int = clv.sv.ScrollViewOffsetX";
+Debug.ShouldStop(32);
 _scrollx = BA.numberCast(int.class, _clv.getField(false,"_sv").runMethod(true,"getScrollViewOffsetX"));Debug.locals.put("scrollX", _scrollx);Debug.locals.put("scrollX", _scrollx);
- BA.debugLineNum = 1052;BA.debugLine="Dim baseX As Int = useB4XTable.mBase.Left + clv.";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 1063;BA.debugLine="Dim baseX As Int = useB4XTable.mBase.Left + clv.";
+Debug.ShouldStop(64);
 _basex = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getLeft"),_clv.runMethod(false,"_getbase").runMethod(true,"getLeft"),_scrollx,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getLeft")}, "+-+",3, 0));Debug.locals.put("baseX", _basex);Debug.locals.put("baseX", _basex);
- BA.debugLineNum = 1054;BA.debugLine="removableGuidelines.Clear";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 1065;BA.debugLine="removableGuidelines.Clear";
+Debug.ShouldStop(256);
 __ref.getField(false,"_removableguidelines" /*RemoteObject*/ ).runVoidMethod ("Clear");
- BA.debugLineNum = 1055;BA.debugLine="Dim colX As Int = baseX";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 1066;BA.debugLine="Dim colX As Int = baseX";
+Debug.ShouldStop(512);
 _colx = _basex;Debug.locals.put("colX", _colx);Debug.locals.put("colX", _colx);
- BA.debugLineNum = 1056;BA.debugLine="For col = 0 To useB4XTable.visibleColumns.Size -";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 1067;BA.debugLine="For col = 0 To useB4XTable.visibleColumns.Size -";
+Debug.ShouldStop(1024);
 {
 final int step14 = 1;
 final int limit14 = RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_visiblecolumns" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _col = 0 ;
 for (;(step14 > 0 && _col <= limit14) || (step14 < 0 && _col >= limit14) ;_col = ((int)(0 + _col + step14))  ) {
 Debug.locals.put("col", _col);
- BA.debugLineNum = 1057;BA.debugLine="Dim tableCol As B4XTableColumn = useB4XTable.vi";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 1068;BA.debugLine="Dim tableCol As B4XTableColumn = useB4XTable.vi";
+Debug.ShouldStop(2048);
 _tablecol = (__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_visiblecolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, _col))));Debug.locals.put("tableCol", _tablecol);Debug.locals.put("tableCol", _tablecol);
- BA.debugLineNum = 1058;BA.debugLine="colX = colX + tableCol.Width";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 1069;BA.debugLine="colX = colX + tableCol.Width";
+Debug.ShouldStop(4096);
 _colx = RemoteObject.solve(new RemoteObject[] {_colx,_tablecol.getField(true,"Width" /*RemoteObject*/ )}, "+",1, 1);Debug.locals.put("colX", _colx);
- BA.debugLineNum = 1060;BA.debugLine="Dim guidelinePanel As B4XView = xui.CreatePanel";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 1071;BA.debugLine="Dim guidelinePanel As B4XView = xui.CreatePanel";
+Debug.ShouldStop(16384);
 magmagrid._guidelinepanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 magmagrid._guidelinepanel = __ref.getField(false,"_xui" /*RemoteObject*/ ).runMethod(false,"CreatePanel",__ref.getField(false, "ba"),(Object)(RemoteObject.createImmutable("GuidelinePanel")));__ref.setField("_guidelinepanel",magmagrid._guidelinepanel);
- BA.debugLineNum = 1061;BA.debugLine="guidelinePanel.Tag = col";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 1072;BA.debugLine="guidelinePanel.Tag = col";
+Debug.ShouldStop(32768);
 __ref.getField(false,"_guidelinepanel" /*RemoteObject*/ ).runMethod(false,"setTag",RemoteObject.createImmutable((_col)));
- BA.debugLineNum = 1062;BA.debugLine="guidelinePanel.SetColorAndBorder(xui.Color_Tran";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 1073;BA.debugLine="guidelinePanel.SetColorAndBorder(xui.Color_Tran";
+Debug.ShouldStop(65536);
 __ref.getField(false,"_guidelinepanel" /*RemoteObject*/ ).runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 0)));
- BA.debugLineNum = 1064;BA.debugLine="myroot.AddView(guidelinePanel, colX - 1, useB4";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 1075;BA.debugLine="myroot.AddView(guidelinePanel, colX - 1, useB4";
+Debug.ShouldStop(262144);
 __ref.getField(false,"_myroot" /*RemoteObject*/ ).runVoidMethod ("AddView",(Object)((__ref.getField(false,"_guidelinepanel" /*RemoteObject*/ ).getObject())),(Object)(BA.numberCast(double.class, RemoteObject.solve(new RemoteObject[] {_colx,RemoteObject.createImmutable(1)}, "-",1, 1))),(Object)(RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getTop"),_clv.runMethod(false,"_getbase").runMethod(true,"getTop"),__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getTop"),RemoteObject.createImmutable(1)}, "+++",3, 0)),(Object)(BA.numberCast(double.class, 2)),(Object)(_clv.getField(false,"_sv").runMethod(true,"getScrollViewContentHeight")));
- BA.debugLineNum = 1066;BA.debugLine="removableGuidelines.Add(guidelinePanel)";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 1077;BA.debugLine="removableGuidelines.Add(guidelinePanel)";
+Debug.ShouldStop(1048576);
 __ref.getField(false,"_removableguidelines" /*RemoteObject*/ ).runVoidMethod ("Add",(Object)((__ref.getField(false,"_guidelinepanel" /*RemoteObject*/ ).getObject())));
  }
 }Debug.locals.put("col", _col);
 ;
- BA.debugLineNum = 1069;BA.debugLine="isResizing = False";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 1080;BA.debugLine="isResizing = False";
+Debug.ShouldStop(8388608);
 __ref.setField ("_isresizing" /*RemoteObject*/ ,magmagrid.__c.getField(true,"False"));
- BA.debugLineNum = 1070;BA.debugLine="resizeTimer.Enabled = True";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 1081;BA.debugLine="resizeTimer.Enabled = True";
+Debug.ShouldStop(16777216);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",magmagrid.__c.getField(true,"True"));
  };
- BA.debugLineNum = 1072;BA.debugLine="End Sub";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 1083;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -648,45 +671,45 @@ finally {
 		}}
 public static RemoteObject  _firstcolforedit(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("FirstColforEdit (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,972);
+		Debug.PushSubsStack("FirstColforEdit (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,976);
 if (RapidSub.canDelegate("firstcolforedit")) { return __ref.runUserSub(false, "magmagrid","firstcolforedit", __ref);}
 RemoteObject _foredit = RemoteObject.createImmutable("");
 int _k = 0;
 RemoteObject _myc = RemoteObject.declareNull("b4j.example.magmagrid._mycol");
- BA.debugLineNum = 972;BA.debugLine="Private Sub FirstColforEdit As String";
-Debug.ShouldStop(2048);
- BA.debugLineNum = 973;BA.debugLine="Dim foredit As String";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 976;BA.debugLine="Private Sub FirstColforEdit As String";
+Debug.ShouldStop(32768);
+ BA.debugLineNum = 977;BA.debugLine="Dim foredit As String";
+Debug.ShouldStop(65536);
 _foredit = RemoteObject.createImmutable("");Debug.locals.put("foredit", _foredit);
- BA.debugLineNum = 974;BA.debugLine="For k=0 To MyColumns.Size-1";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 978;BA.debugLine="For k=0 To MyColumns.Size-1";
+Debug.ShouldStop(131072);
 {
 final int step2 = 1;
 final int limit2 = RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _k = 0 ;
 for (;(step2 > 0 && _k <= limit2) || (step2 < 0 && _k >= limit2) ;_k = ((int)(0 + _k + step2))  ) {
 Debug.locals.put("k", _k);
- BA.debugLineNum = 975;BA.debugLine="Dim myc As mycol=MyColumns.Get(k)";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 979;BA.debugLine="Dim myc As mycol=MyColumns.Get(k)";
+Debug.ShouldStop(262144);
 _myc = (__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, _k))));Debug.locals.put("myc", _myc);Debug.locals.put("myc", _myc);
- BA.debugLineNum = 976;BA.debugLine="foredit=myc.name";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 980;BA.debugLine="foredit=myc.name";
+Debug.ShouldStop(524288);
 _foredit = _myc.getField(true,"Name" /*RemoteObject*/ );Debug.locals.put("foredit", _foredit);
- BA.debugLineNum = 977;BA.debugLine="If myc.Locked=False And myc.Hidden=False Then";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 981;BA.debugLine="If myc.Locked=False And myc.Hidden=False Then";
+Debug.ShouldStop(1048576);
 if (RemoteObject.solveBoolean("=",_myc.getField(true,"Locked" /*RemoteObject*/ ),magmagrid.__c.getField(true,"False")) && RemoteObject.solveBoolean("=",_myc.getField(true,"Hidden" /*RemoteObject*/ ),magmagrid.__c.getField(true,"False"))) { 
- BA.debugLineNum = 978;BA.debugLine="Return foredit";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 982;BA.debugLine="Return foredit";
+Debug.ShouldStop(2097152);
 if (true) return _foredit;
  };
  }
 }Debug.locals.put("k", _k);
 ;
- BA.debugLineNum = 981;BA.debugLine="Return foredit";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 985;BA.debugLine="Return foredit";
+Debug.ShouldStop(16777216);
 if (true) return _foredit;
- BA.debugLineNum = 982;BA.debugLine="End Sub";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 986;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -697,61 +720,61 @@ finally {
 		}}
 public static RemoteObject  _getdata(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("GetData (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1007);
+		Debug.PushSubsStack("GetData (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1011);
 if (RapidSub.canDelegate("getdata")) { return __ref.runUserSub(false, "magmagrid","getdata", __ref);}
 RemoteObject _list1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _rs = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _colcount = RemoteObject.createImmutable(0);
 RemoteObject _rowarray = null;
 int _i = 0;
- BA.debugLineNum = 1007;BA.debugLine="public Sub GetData As List";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 1009;BA.debugLine="Dim list1 As List";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 1011;BA.debugLine="public Sub GetData As List";
+Debug.ShouldStop(262144);
+ BA.debugLineNum = 1013;BA.debugLine="Dim list1 As List";
+Debug.ShouldStop(1048576);
 _list1 = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.List");Debug.locals.put("list1", _list1);
- BA.debugLineNum = 1010;BA.debugLine="list1.Initialize";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 1014;BA.debugLine="list1.Initialize";
+Debug.ShouldStop(2097152);
 _list1.runVoidMethod ("Initialize");
- BA.debugLineNum = 1012;BA.debugLine="Dim rs As ResultSet = useB4XTable.SQL1.ExecQuery(";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 1016;BA.debugLine="Dim rs As ResultSet = useB4XTable.SQL1.ExecQuery(";
+Debug.ShouldStop(8388608);
 _rs = RemoteObject.createNew ("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 _rs = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_sql1" /*RemoteObject*/ ).runMethod(false,"ExecQuery",(Object)(RemoteObject.createImmutable("SELECT * FROM data")));Debug.locals.put("rs", _rs);Debug.locals.put("rs", _rs);
- BA.debugLineNum = 1014;BA.debugLine="Do While rs.NextRow";
-Debug.ShouldStop(2097152);
-while (_rs.runMethod(true,"NextRow").<Boolean>get().booleanValue()) {
- BA.debugLineNum = 1015;BA.debugLine="Dim colCount As Int = rs.ColumnCount";
-Debug.ShouldStop(4194304);
-_colcount = _rs.runMethod(true,"getColumnCount");Debug.locals.put("colCount", _colcount);Debug.locals.put("colCount", _colcount);
- BA.debugLineNum = 1016;BA.debugLine="Dim rowArray(colCount) As Object";
-Debug.ShouldStop(8388608);
-_rowarray = RemoteObject.createNewArray ("Object", new int[] {_colcount.<Integer>get().intValue()}, new Object[]{});Debug.locals.put("rowArray", _rowarray);
- BA.debugLineNum = 1018;BA.debugLine="For i = 0 To colCount - 1";
+ BA.debugLineNum = 1018;BA.debugLine="Do While rs.NextRow";
 Debug.ShouldStop(33554432);
+while (_rs.runMethod(true,"NextRow").<Boolean>get().booleanValue()) {
+ BA.debugLineNum = 1019;BA.debugLine="Dim colCount As Int = rs.ColumnCount";
+Debug.ShouldStop(67108864);
+_colcount = _rs.runMethod(true,"getColumnCount");Debug.locals.put("colCount", _colcount);Debug.locals.put("colCount", _colcount);
+ BA.debugLineNum = 1020;BA.debugLine="Dim rowArray(colCount) As Object";
+Debug.ShouldStop(134217728);
+_rowarray = RemoteObject.createNewArray ("Object", new int[] {_colcount.<Integer>get().intValue()}, new Object[]{});Debug.locals.put("rowArray", _rowarray);
+ BA.debugLineNum = 1022;BA.debugLine="For i = 0 To colCount - 1";
+Debug.ShouldStop(536870912);
 {
 final int step7 = 1;
 final int limit7 = RemoteObject.solve(new RemoteObject[] {_colcount,RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _i = 0 ;
 for (;(step7 > 0 && _i <= limit7) || (step7 < 0 && _i >= limit7) ;_i = ((int)(0 + _i + step7))  ) {
 Debug.locals.put("i", _i);
- BA.debugLineNum = 1019;BA.debugLine="rowArray(i) = rs.GetString2(i)";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 1023;BA.debugLine="rowArray(i) = rs.GetString2(i)";
+Debug.ShouldStop(1073741824);
 _rowarray.setArrayElement ((_rs.runMethod(true,"GetString2",(Object)(BA.numberCast(int.class, _i)))),BA.numberCast(int.class, _i));
  }
 }Debug.locals.put("i", _i);
 ;
- BA.debugLineNum = 1022;BA.debugLine="list1.Add(rowArray)";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 1026;BA.debugLine="list1.Add(rowArray)";
+Debug.ShouldStop(2);
 _list1.runVoidMethod ("Add",(Object)((_rowarray)));
  }
 ;
- BA.debugLineNum = 1025;BA.debugLine="rs.Close";
-Debug.ShouldStop(1);
-_rs.runVoidMethod ("Close");
- BA.debugLineNum = 1027;BA.debugLine="Return list1";
-Debug.ShouldStop(4);
-if (true) return _list1;
- BA.debugLineNum = 1029;BA.debugLine="End Sub";
+ BA.debugLineNum = 1029;BA.debugLine="rs.Close";
 Debug.ShouldStop(16);
+_rs.runVoidMethod ("Close");
+ BA.debugLineNum = 1031;BA.debugLine="Return list1";
+Debug.ShouldStop(64);
+if (true) return _list1;
+ BA.debugLineNum = 1033;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable(null);
 }
 catch (Exception e) {
@@ -932,76 +955,76 @@ finally {
 }
 public static RemoteObject  _guidelinepanel_mousedragged(RemoteObject __ref,RemoteObject _eventdata) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MouseDragged (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1157);
+		Debug.PushSubsStack("GuidelinePanel_MouseDragged (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1168);
 if (RapidSub.canDelegate("guidelinepanel_mousedragged")) { return __ref.runUserSub(false, "magmagrid","guidelinepanel_mousedragged", __ref, _eventdata);}
 RemoteObject _tableleft = RemoteObject.createImmutable(0);
 RemoteObject _visibleright = RemoteObject.createImmutable(0);
 RemoteObject _tentativeleft = RemoteObject.createImmutable(0);
 RemoteObject _newsize = RemoteObject.createImmutable(0);
 Debug.locals.put("EventData", _eventdata);
- BA.debugLineNum = 1157;BA.debugLine="Private Sub GuidelinePanel_MouseDragged (EventData";
-Debug.ShouldStop(16);
- BA.debugLineNum = 1158;BA.debugLine="If isResizing Then";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 1168;BA.debugLine="Private Sub GuidelinePanel_MouseDragged (EventData";
+Debug.ShouldStop(32768);
+ BA.debugLineNum = 1169;BA.debugLine="If isResizing Then";
+Debug.ShouldStop(65536);
 if (__ref.getField(true,"_isresizing" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1160;BA.debugLine="If currentPanel.IsInitialized Then";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 1171;BA.debugLine="If currentPanel.IsInitialized Then";
+Debug.ShouldStop(262144);
 if (__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1162;BA.debugLine="cumulativeDelta = cumulativeDelta + EventData.X";
-Debug.ShouldStop(512);
-__ref.setField ("_cumulativedelta" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ ),_eventdata.runMethod(true,"getX")}, "+",1, 0)));
- BA.debugLineNum = 1165;BA.debugLine="Dim tableLeft As Int = useB4XTable.mBase.Left";
-Debug.ShouldStop(4096);
-_tableleft = BA.numberCast(int.class, __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getLeft"));Debug.locals.put("tableLeft", _tableleft);Debug.locals.put("tableLeft", _tableleft);
- BA.debugLineNum = 1166;BA.debugLine="tableLeft = tableLeft + useB4XTable.mBase.Parent";
-Debug.ShouldStop(8192);
-_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getLeft")}, "+",1, 0));Debug.locals.put("tableLeft", _tableleft);
- BA.debugLineNum = 1167;BA.debugLine="tableLeft = tableLeft + useB4XTable.clvData.GetB";
-Debug.ShouldStop(16384);
-_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).runMethod(false,"_getbase").runMethod(true,"getLeft")}, "+",1, 0));Debug.locals.put("tableLeft", _tableleft);
- BA.debugLineNum = 1170;BA.debugLine="Dim visibleRight As Int = tableLeft + useB4XTabl";
-Debug.ShouldStop(131072);
-_visibleright = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runMethod(true,"getWidth")}, "+",1, 0));Debug.locals.put("visibleRight", _visibleright);Debug.locals.put("visibleRight", _visibleright);
- BA.debugLineNum = 1173;BA.debugLine="Dim tentativeLeft As Int = currentPanel.Left + E";
+ BA.debugLineNum = 1173;BA.debugLine="cumulativeDelta = cumulativeDelta + EventData.X";
 Debug.ShouldStop(1048576);
-_tentativeleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"getLeft"),_eventdata.runMethod(true,"getX")}, "+",1, 0));Debug.locals.put("tentativeLeft", _tentativeleft);Debug.locals.put("tentativeLeft", _tentativeleft);
- BA.debugLineNum = 1176;BA.debugLine="If tentativeLeft < tableLeft Then";
+__ref.setField ("_cumulativedelta" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ ),_eventdata.runMethod(true,"getX")}, "+",1, 0)));
+ BA.debugLineNum = 1176;BA.debugLine="Dim tableLeft As Int = useB4XTable.mBase.Left";
 Debug.ShouldStop(8388608);
-if (RemoteObject.solveBoolean("<",_tentativeleft,BA.numberCast(double.class, _tableleft))) { 
- BA.debugLineNum = 1177;BA.debugLine="cumulativeDelta = cumulativeDelta - (tableLeft";
+_tableleft = BA.numberCast(int.class, __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getLeft"));Debug.locals.put("tableLeft", _tableleft);Debug.locals.put("tableLeft", _tableleft);
+ BA.debugLineNum = 1177;BA.debugLine="tableLeft = tableLeft + useB4XTable.mBase.Parent";
 Debug.ShouldStop(16777216);
-__ref.setField ("_cumulativedelta" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ ),(RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"getLeft")}, "-",1, 0))}, "-",1, 0)));
- BA.debugLineNum = 1178;BA.debugLine="tentativeLeft = tableLeft";
+_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getLeft")}, "+",1, 0));Debug.locals.put("tableLeft", _tableleft);
+ BA.debugLineNum = 1178;BA.debugLine="tableLeft = tableLeft + useB4XTable.clvData.GetB";
 Debug.ShouldStop(33554432);
+_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).runMethod(false,"_getbase").runMethod(true,"getLeft")}, "+",1, 0));Debug.locals.put("tableLeft", _tableleft);
+ BA.debugLineNum = 1181;BA.debugLine="Dim visibleRight As Int = tableLeft + useB4XTabl";
+Debug.ShouldStop(268435456);
+_visibleright = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runMethod(true,"getWidth")}, "+",1, 0));Debug.locals.put("visibleRight", _visibleright);Debug.locals.put("visibleRight", _visibleright);
+ BA.debugLineNum = 1184;BA.debugLine="Dim tentativeLeft As Int = currentPanel.Left + E";
+Debug.ShouldStop(-2147483648);
+_tentativeleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"getLeft"),_eventdata.runMethod(true,"getX")}, "+",1, 0));Debug.locals.put("tentativeLeft", _tentativeleft);Debug.locals.put("tentativeLeft", _tentativeleft);
+ BA.debugLineNum = 1187;BA.debugLine="If tentativeLeft < tableLeft Then";
+Debug.ShouldStop(4);
+if (RemoteObject.solveBoolean("<",_tentativeleft,BA.numberCast(double.class, _tableleft))) { 
+ BA.debugLineNum = 1188;BA.debugLine="cumulativeDelta = cumulativeDelta - (tableLeft";
+Debug.ShouldStop(8);
+__ref.setField ("_cumulativedelta" /*RemoteObject*/ ,BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ ),(RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"getLeft")}, "-",1, 0))}, "-",1, 0)));
+ BA.debugLineNum = 1189;BA.debugLine="tentativeLeft = tableLeft";
+Debug.ShouldStop(16);
 _tentativeleft = _tableleft;Debug.locals.put("tentativeLeft", _tentativeleft);
  };
- BA.debugLineNum = 1181;BA.debugLine="If tentativeLeft > visibleRight Then";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 1192;BA.debugLine="If tentativeLeft > visibleRight Then";
+Debug.ShouldStop(128);
 if (RemoteObject.solveBoolean(">",_tentativeleft,BA.numberCast(double.class, _visibleright))) { 
- BA.debugLineNum = 1182;BA.debugLine="cumulativeDelta = cumulativeDelta - (tentativeL";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 1193;BA.debugLine="cumulativeDelta = cumulativeDelta - (tentativeL";
+Debug.ShouldStop(256);
 __ref.setField ("_cumulativedelta" /*RemoteObject*/ ,RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ ),(RemoteObject.solve(new RemoteObject[] {_tentativeleft,_visibleright}, "-",1, 1))}, "-",1, 1));
- BA.debugLineNum = 1183;BA.debugLine="tentativeLeft = visibleRight";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 1194;BA.debugLine="tentativeLeft = visibleRight";
+Debug.ShouldStop(512);
 _tentativeleft = _visibleright;Debug.locals.put("tentativeLeft", _tentativeleft);
  };
- BA.debugLineNum = 1187;BA.debugLine="currentPanel.Left = tentativeLeft";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 1198;BA.debugLine="currentPanel.Left = tentativeLeft";
+Debug.ShouldStop(8192);
 __ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(true,"setLeft",BA.numberCast(double.class, _tentativeleft));
- BA.debugLineNum = 1190;BA.debugLine="Dim newSize As Int = startColumnWidth + cumulati";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 1201;BA.debugLine="Dim newSize As Int = startColumnWidth + cumulati";
+Debug.ShouldStop(65536);
 _newsize = RemoteObject.solve(new RemoteObject[] {__ref.getField(true,"_startcolumnwidth" /*RemoteObject*/ ),__ref.getField(true,"_cumulativedelta" /*RemoteObject*/ )}, "+",1, 1);Debug.locals.put("newSize", _newsize);Debug.locals.put("newSize", _newsize);
- BA.debugLineNum = 1191;BA.debugLine="If newSize < 20 Then newSize = 20";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 1202;BA.debugLine="If newSize < 20 Then newSize = 20";
+Debug.ShouldStop(131072);
 if (RemoteObject.solveBoolean("<",_newsize,BA.numberCast(double.class, 20))) { 
 _newsize = BA.numberCast(int.class, 20);Debug.locals.put("newSize", _newsize);};
- BA.debugLineNum = 1192;BA.debugLine="currentColumn.Width = newSize";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 1203;BA.debugLine="currentColumn.Width = newSize";
+Debug.ShouldStop(262144);
 __ref.getField(false,"_currentcolumn" /*RemoteObject*/ ).setField ("Width" /*RemoteObject*/ ,_newsize);
  };
  };
- BA.debugLineNum = 1200;BA.debugLine="End Sub";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 1211;BA.debugLine="End Sub";
+Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1012,7 +1035,7 @@ finally {
 		}}
 public static RemoteObject  _guidelinepanel_mouseentered(RemoteObject __ref,RemoteObject _eventdata) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MouseEntered (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1074);
+		Debug.PushSubsStack("GuidelinePanel_MouseEntered (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1085);
 if (RapidSub.canDelegate("guidelinepanel_mouseentered")) { return __ref.runUserSub(false, "magmagrid","guidelinepanel_mouseentered", __ref, _eventdata);}
 RemoteObject _pnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _tableleft = RemoteObject.createImmutable(0);
@@ -1020,48 +1043,48 @@ RemoteObject _visibleright = RemoteObject.createImmutable(0);
 RemoteObject _cursor = RemoteObject.declareNull("anywheresoftware.b4j.object.JavaObject");
 RemoteObject _jopnl = RemoteObject.declareNull("anywheresoftware.b4j.object.JavaObject");
 Debug.locals.put("EventData", _eventdata);
- BA.debugLineNum = 1074;BA.debugLine="Private Sub GuidelinePanel_MouseEntered (EventData";
-Debug.ShouldStop(131072);
- BA.debugLineNum = 1076;BA.debugLine="If noEdit Then Return";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 1085;BA.debugLine="Private Sub GuidelinePanel_MouseEntered (EventData";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 1087;BA.debugLine="If noEdit Then Return";
+Debug.ShouldStop(1073741824);
 if (__ref.getField(true,"_noedit" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
 if (true) return RemoteObject.createImmutable("");};
- BA.debugLineNum = 1078;BA.debugLine="Dim pnl As B4XView = Sender";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 1089;BA.debugLine="Dim pnl As B4XView = Sender";
+Debug.ShouldStop(1);
 _pnl = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 _pnl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), magmagrid.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("pnl", _pnl);Debug.locals.put("pnl", _pnl);
- BA.debugLineNum = 1080;BA.debugLine="If pnl.IsInitialized Then";
-Debug.ShouldStop(8388608);
-if (_pnl.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1083;BA.debugLine="Dim tableLeft As Int = useB4XTable.mBase.Left + u";
-Debug.ShouldStop(67108864);
-_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getLeft"),__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).runMethod(false,"_getbase").runMethod(true,"getLeft"),__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getLeft")}, "++",2, 0));Debug.locals.put("tableLeft", _tableleft);Debug.locals.put("tableLeft", _tableleft);
- BA.debugLineNum = 1084;BA.debugLine="Dim visibleRight As Int = tableLeft + useB4XTable";
-Debug.ShouldStop(134217728);
-_visibleright = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runMethod(true,"getWidth")}, "+",1, 0));Debug.locals.put("visibleRight", _visibleright);Debug.locals.put("visibleRight", _visibleright);
- BA.debugLineNum = 1087;BA.debugLine="If pnl.Left >= tableLeft And pnl.Left <= visibleR";
-Debug.ShouldStop(1073741824);
-if (RemoteObject.solveBoolean("g",_pnl.runMethod(true,"getLeft"),BA.numberCast(double.class, _tableleft)) && RemoteObject.solveBoolean("k",_pnl.runMethod(true,"getLeft"),BA.numberCast(double.class, _visibleright))) { 
- BA.debugLineNum = 1088;BA.debugLine="pnl.SetColorAndBorder(xui.Color_Transparent, 2,";
-Debug.ShouldStop(-2147483648);
-_pnl.runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Green")),(Object)(BA.numberCast(double.class, 0)));
- BA.debugLineNum = 1090;BA.debugLine="Dim cursor As JavaObject";
-Debug.ShouldStop(2);
-_cursor = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");Debug.locals.put("cursor", _cursor);
- BA.debugLineNum = 1091;BA.debugLine="cursor.InitializeStatic(\"javafx.scene.Cursor\")";
+ BA.debugLineNum = 1091;BA.debugLine="If pnl.IsInitialized Then";
 Debug.ShouldStop(4);
+if (_pnl.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 1094;BA.debugLine="Dim tableLeft As Int = useB4XTable.mBase.Left + u";
+Debug.ShouldStop(32);
+_tableleft = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(true,"getLeft"),__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).runMethod(false,"_getbase").runMethod(true,"getLeft"),__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_mbase" /*RemoteObject*/ ).runMethod(false,"getParent").runMethod(true,"getLeft")}, "++",2, 0));Debug.locals.put("tableLeft", _tableleft);Debug.locals.put("tableLeft", _tableleft);
+ BA.debugLineNum = 1095;BA.debugLine="Dim visibleRight As Int = tableLeft + useB4XTable";
+Debug.ShouldStop(64);
+_visibleright = BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_tableleft,__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runMethod(true,"getWidth")}, "+",1, 0));Debug.locals.put("visibleRight", _visibleright);Debug.locals.put("visibleRight", _visibleright);
+ BA.debugLineNum = 1098;BA.debugLine="If pnl.Left >= tableLeft And pnl.Left <= visibleR";
+Debug.ShouldStop(512);
+if (RemoteObject.solveBoolean("g",_pnl.runMethod(true,"getLeft"),BA.numberCast(double.class, _tableleft)) && RemoteObject.solveBoolean("k",_pnl.runMethod(true,"getLeft"),BA.numberCast(double.class, _visibleright))) { 
+ BA.debugLineNum = 1099;BA.debugLine="pnl.SetColorAndBorder(xui.Color_Transparent, 2,";
+Debug.ShouldStop(1024);
+_pnl.runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Green")),(Object)(BA.numberCast(double.class, 0)));
+ BA.debugLineNum = 1101;BA.debugLine="Dim cursor As JavaObject";
+Debug.ShouldStop(4096);
+_cursor = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");Debug.locals.put("cursor", _cursor);
+ BA.debugLineNum = 1102;BA.debugLine="cursor.InitializeStatic(\"javafx.scene.Cursor\")";
+Debug.ShouldStop(8192);
 _cursor.runVoidMethod ("InitializeStatic",(Object)(RemoteObject.createImmutable("javafx.scene.Cursor")));
- BA.debugLineNum = 1092;BA.debugLine="Dim joPnl As JavaObject = pnl";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 1103;BA.debugLine="Dim joPnl As JavaObject = pnl";
+Debug.ShouldStop(16384);
 _jopnl = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");
 _jopnl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4j.object.JavaObject"), _pnl.getObject());Debug.locals.put("joPnl", _jopnl);Debug.locals.put("joPnl", _jopnl);
- BA.debugLineNum = 1093;BA.debugLine="joPnl.RunMethod(\"setCursor\", Array(cursor.GetFie";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 1104;BA.debugLine="joPnl.RunMethod(\"setCursor\", Array(cursor.GetFie";
+Debug.ShouldStop(32768);
 _jopnl.runVoidMethod ("RunMethod",(Object)(BA.ObjectToString("setCursor")),(Object)(RemoteObject.createNewArray("Object",new int[] {1},new Object[] {_cursor.runMethod(false,"GetField",(Object)(RemoteObject.createImmutable("E_RESIZE")))})));
  };
  };
- BA.debugLineNum = 1097;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 1108;BA.debugLine="End Sub";
+Debug.ShouldStop(524288);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1072,40 +1095,40 @@ finally {
 		}}
 public static RemoteObject  _guidelinepanel_mouseexited(RemoteObject __ref,RemoteObject _eventdata) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MouseExited (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1099);
+		Debug.PushSubsStack("GuidelinePanel_MouseExited (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1110);
 if (RapidSub.canDelegate("guidelinepanel_mouseexited")) { return __ref.runUserSub(false, "magmagrid","guidelinepanel_mouseexited", __ref, _eventdata);}
 RemoteObject _pnl = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 RemoteObject _cursor = RemoteObject.declareNull("anywheresoftware.b4j.object.JavaObject");
 RemoteObject _jopnl = RemoteObject.declareNull("anywheresoftware.b4j.object.JavaObject");
 Debug.locals.put("EventData", _eventdata);
- BA.debugLineNum = 1099;BA.debugLine="Private Sub GuidelinePanel_MouseExited (EventData";
-Debug.ShouldStop(1024);
- BA.debugLineNum = 1101;BA.debugLine="Dim pnl As B4XView = Sender";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 1110;BA.debugLine="Private Sub GuidelinePanel_MouseExited (EventData";
+Debug.ShouldStop(2097152);
+ BA.debugLineNum = 1112;BA.debugLine="Dim pnl As B4XView = Sender";
+Debug.ShouldStop(8388608);
 _pnl = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 _pnl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), magmagrid.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("pnl", _pnl);Debug.locals.put("pnl", _pnl);
- BA.debugLineNum = 1102;BA.debugLine="If pnl.IsInitialized Then";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 1113;BA.debugLine="If pnl.IsInitialized Then";
+Debug.ShouldStop(16777216);
 if (_pnl.runMethod(true,"IsInitialized").<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1104;BA.debugLine="pnl.SetColorAndBorder(xui.Color_Transparent, 2, x";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 1115;BA.debugLine="pnl.SetColorAndBorder(xui.Color_Transparent, 2, x";
+Debug.ShouldStop(67108864);
 _pnl.runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 0)));
- BA.debugLineNum = 1106;BA.debugLine="Dim cursor As JavaObject";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 1117;BA.debugLine="Dim cursor As JavaObject";
+Debug.ShouldStop(268435456);
 _cursor = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");Debug.locals.put("cursor", _cursor);
- BA.debugLineNum = 1107;BA.debugLine="cursor.InitializeStatic(\"javafx.scene.Cursor\")";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 1118;BA.debugLine="cursor.InitializeStatic(\"javafx.scene.Cursor\")";
+Debug.ShouldStop(536870912);
 _cursor.runVoidMethod ("InitializeStatic",(Object)(RemoteObject.createImmutable("javafx.scene.Cursor")));
- BA.debugLineNum = 1108;BA.debugLine="Dim joPnl As JavaObject = pnl";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 1119;BA.debugLine="Dim joPnl As JavaObject = pnl";
+Debug.ShouldStop(1073741824);
 _jopnl = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");
 _jopnl = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4j.object.JavaObject"), _pnl.getObject());Debug.locals.put("joPnl", _jopnl);Debug.locals.put("joPnl", _jopnl);
- BA.debugLineNum = 1109;BA.debugLine="joPnl.RunMethod(\"setCursor\", Array(cursor.GetFiel";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 1120;BA.debugLine="joPnl.RunMethod(\"setCursor\", Array(cursor.GetFiel";
+Debug.ShouldStop(-2147483648);
 _jopnl.runVoidMethod ("RunMethod",(Object)(BA.ObjectToString("setCursor")),(Object)(RemoteObject.createNewArray("Object",new int[] {1},new Object[] {_cursor.runMethod(false,"GetField",(Object)(RemoteObject.createImmutable("DEFAULT")))})));
  };
- BA.debugLineNum = 1111;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 1122;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1116,7 +1139,7 @@ finally {
 		}}
 public static void  _guidelinepanel_mousepressed(RemoteObject __ref,RemoteObject _eventdata) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MousePressed (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1113);
+		Debug.PushSubsStack("GuidelinePanel_MousePressed (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1124);
 if (RapidSub.canDelegate("guidelinepanel_mousepressed")) { __ref.runUserSub(false, "magmagrid","guidelinepanel_mousepressed", __ref, _eventdata); return;}
 ResumableSub_GuidelinePanel_MousePressed rsub = new ResumableSub_GuidelinePanel_MousePressed(null,__ref,_eventdata);
 rsub.resume(null, null);
@@ -1145,7 +1168,7 @@ RemoteObject _restoredwidth = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MousePressed (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1113);
+		Debug.PushSubsStack("GuidelinePanel_MousePressed (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1124);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {
@@ -1158,8 +1181,8 @@ case 0:
 this.state = 1;
 Debug.locals.put("_ref", __ref);
 Debug.locals.put("EventData", _eventdata);
- BA.debugLineNum = 1114;BA.debugLine="If noEdit Then Return";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 1125;BA.debugLine="If noEdit Then Return";
+Debug.ShouldStop(16);
 if (true) break;
 
 case 1:
@@ -1179,8 +1202,8 @@ case 6:
 //C
 this.state = 7;
 ;
- BA.debugLineNum = 1117;BA.debugLine="If EventData.ClickCount = 2 Then";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 1128;BA.debugLine="If EventData.ClickCount = 2 Then";
+Debug.ShouldStop(128);
 if (true) break;
 
 case 7:
@@ -1193,12 +1216,12 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
- BA.debugLineNum = 1118;BA.debugLine="Dim panel As B4XView = Sender";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 1129;BA.debugLine="Dim panel As B4XView = Sender";
+Debug.ShouldStop(256);
 _panel = RemoteObject.createNew ("anywheresoftware.b4a.objects.B4XViewWrapper");
 _panel = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.B4XViewWrapper"), parent.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));Debug.locals.put("panel", _panel);Debug.locals.put("panel", _panel);
- BA.debugLineNum = 1119;BA.debugLine="If panel.IsInitialized Then";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 1130;BA.debugLine="If panel.IsInitialized Then";
+Debug.ShouldStop(512);
 if (true) break;
 
 case 10:
@@ -1211,14 +1234,14 @@ this.state = 12;
 case 12:
 //C
 this.state = 13;
- BA.debugLineNum = 1120;BA.debugLine="Dim colIndex As Int = panel.Tag";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 1131;BA.debugLine="Dim colIndex As Int = panel.Tag";
+Debug.ShouldStop(1024);
 _colindex = BA.numberCast(int.class, _panel.runMethod(false,"getTag"));Debug.locals.put("colIndex", _colindex);Debug.locals.put("colIndex", _colindex);
- BA.debugLineNum = 1121;BA.debugLine="Dim col As B4XTableColumn = useB4XTable.visible";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 1132;BA.debugLine="Dim col As B4XTableColumn = useB4XTable.visible";
+Debug.ShouldStop(2048);
 _col = (__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_visiblecolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(_colindex)));Debug.locals.put("col", _col);Debug.locals.put("col", _col);
- BA.debugLineNum = 1125;BA.debugLine="If col.Width > 1 Then";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 1136;BA.debugLine="If col.Width > 1 Then";
+Debug.ShouldStop(32768);
 if (true) break;
 
 case 13:
@@ -1233,22 +1256,22 @@ this.state = 17;
 case 15:
 //C
 this.state = 22;
- BA.debugLineNum = 1127;BA.debugLine="previousColumnWidths(colIndex) = col.Width";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 1138;BA.debugLine="previousColumnWidths(colIndex) = col.Width";
+Debug.ShouldStop(131072);
 __ref.getField(false,"_previouscolumnwidths" /*RemoteObject*/ ).setArrayElement (_col.getField(true,"Width" /*RemoteObject*/ ),_colindex);
- BA.debugLineNum = 1128;BA.debugLine="col.Width = 1";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 1139;BA.debugLine="col.Width = 1";
+Debug.ShouldStop(262144);
 _col.setField ("Width" /*RemoteObject*/ ,BA.numberCast(int.class, 1));
  if (true) break;
 
 case 17:
 //C
 this.state = 18;
- BA.debugLineNum = 1131;BA.debugLine="Dim restoredWidth As Int = previousColumnWidth";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 1142;BA.debugLine="Dim restoredWidth As Int = previousColumnWidth";
+Debug.ShouldStop(2097152);
 _restoredwidth = __ref.getField(false,"_previouscolumnwidths" /*RemoteObject*/ ).getArrayElement(true,_colindex);Debug.locals.put("restoredWidth", _restoredwidth);Debug.locals.put("restoredWidth", _restoredwidth);
- BA.debugLineNum = 1132;BA.debugLine="If restoredWidth <= 1 Then";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 1143;BA.debugLine="If restoredWidth <= 1 Then";
+Debug.ShouldStop(4194304);
 if (true) break;
 
 case 18:
@@ -1261,8 +1284,8 @@ this.state = 20;
 case 20:
 //C
 this.state = 21;
- BA.debugLineNum = 1133;BA.debugLine="restoredWidth = 100dip";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 1144;BA.debugLine="restoredWidth = 100dip";
+Debug.ShouldStop(8388608);
 _restoredwidth = parent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)));Debug.locals.put("restoredWidth", _restoredwidth);
  if (true) break;
 
@@ -1270,8 +1293,8 @@ case 21:
 //C
 this.state = 22;
 ;
- BA.debugLineNum = 1135;BA.debugLine="col.Width = restoredWidth";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 1146;BA.debugLine="col.Width = restoredWidth";
+Debug.ShouldStop(33554432);
 _col.setField ("Width" /*RemoteObject*/ ,_restoredwidth);
  if (true) break;
 
@@ -1279,11 +1302,11 @@ case 22:
 //C
 this.state = 23;
 ;
- BA.debugLineNum = 1138;BA.debugLine="useB4XTable.Refresh";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 1149;BA.debugLine="useB4XTable.Refresh";
+Debug.ShouldStop(268435456);
 __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_refresh" /*RemoteObject*/ );
- BA.debugLineNum = 1139;BA.debugLine="Sleep(0)";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 1150;BA.debugLine="Sleep(0)";
+Debug.ShouldStop(536870912);
 parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "magmagrid", "guidelinepanel_mousepressed"),BA.numberCast(int.class, 0));
 this.state = 29;
 return;
@@ -1291,11 +1314,11 @@ case 29:
 //C
 this.state = 23;
 ;
- BA.debugLineNum = 1140;BA.debugLine="EnableResizeGuidelines";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 1151;BA.debugLine="EnableResizeGuidelines";
+Debug.ShouldStop(1073741824);
 __ref.runClassMethod (b4j.example.magmagrid.class, "_enableresizeguidelines" /*RemoteObject*/ );
- BA.debugLineNum = 1141;BA.debugLine="resizeTimer.Enabled = True";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 1152;BA.debugLine="resizeTimer.Enabled = True";
+Debug.ShouldStop(-2147483648);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",parent.__c.getField(true,"True"));
  if (true) break;
 
@@ -1303,8 +1326,8 @@ case 23:
 //C
 this.state = 24;
 ;
- BA.debugLineNum = 1143;BA.debugLine="Return";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 1154;BA.debugLine="Return";
+Debug.ShouldStop(2);
 if (true) return ;
  if (true) break;
 
@@ -1312,11 +1335,11 @@ case 24:
 //C
 this.state = 25;
 ;
- BA.debugLineNum = 1146;BA.debugLine="currentPanel = Sender";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 1157;BA.debugLine="currentPanel = Sender";
+Debug.ShouldStop(16);
 __ref.getField(false,"_currentpanel" /*RemoteObject*/ ).setObject (parent.__c.runMethod(false,"Sender",__ref.getField(false, "ba")));
- BA.debugLineNum = 1147;BA.debugLine="If currentPanel.IsInitialized Then";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 1158;BA.debugLine="If currentPanel.IsInitialized Then";
+Debug.ShouldStop(32);
 if (true) break;
 
 case 25:
@@ -1329,23 +1352,23 @@ this.state = 27;
 case 27:
 //C
 this.state = 28;
- BA.debugLineNum = 1148;BA.debugLine="currentColumn = useB4XTable.visibleColumns.Get(cu";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 1159;BA.debugLine="currentColumn = useB4XTable.visibleColumns.Get(cu";
+Debug.ShouldStop(64);
 __ref.setField ("_currentcolumn" /*RemoteObject*/ ,(__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_visiblecolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, __ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runMethod(false,"getTag"))))));
- BA.debugLineNum = 1149;BA.debugLine="startColumnWidth = currentColumn.Width";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 1160;BA.debugLine="startColumnWidth = currentColumn.Width";
+Debug.ShouldStop(128);
 __ref.setField ("_startcolumnwidth" /*RemoteObject*/ ,__ref.getField(false,"_currentcolumn" /*RemoteObject*/ ).getField(true,"Width" /*RemoteObject*/ ));
- BA.debugLineNum = 1150;BA.debugLine="cumulativeDelta = 0";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 1161;BA.debugLine="cumulativeDelta = 0";
+Debug.ShouldStop(256);
 __ref.setField ("_cumulativedelta" /*RemoteObject*/ ,BA.numberCast(int.class, 0));
- BA.debugLineNum = 1151;BA.debugLine="isResizing = True";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 1162;BA.debugLine="isResizing = True";
+Debug.ShouldStop(512);
 __ref.setField ("_isresizing" /*RemoteObject*/ ,parent.__c.getField(true,"True"));
- BA.debugLineNum = 1152;BA.debugLine="resizeTimer.Enabled = False";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 1163;BA.debugLine="resizeTimer.Enabled = False";
+Debug.ShouldStop(1024);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",parent.__c.getField(true,"False"));
- BA.debugLineNum = 1153;BA.debugLine="currentPanel.SetColorAndBorder(xui.Color_Transpar";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 1164;BA.debugLine="currentPanel.SetColorAndBorder(xui.Color_Transpar";
+Debug.ShouldStop(2048);
 __ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Green")),(Object)(BA.numberCast(double.class, 0)));
  if (true) break;
 
@@ -1353,8 +1376,8 @@ case 28:
 //C
 this.state = -1;
 ;
- BA.debugLineNum = 1155;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 1166;BA.debugLine="End Sub";
+Debug.ShouldStop(8192);
 if (true) break;
 
             }
@@ -1369,32 +1392,32 @@ finally {
 }
 public static RemoteObject  _guidelinepanel_mousereleased(RemoteObject __ref,RemoteObject _eventdata) throws Exception{
 try {
-		Debug.PushSubsStack("GuidelinePanel_MouseReleased (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1202);
+		Debug.PushSubsStack("GuidelinePanel_MouseReleased (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1213);
 if (RapidSub.canDelegate("guidelinepanel_mousereleased")) { return __ref.runUserSub(false, "magmagrid","guidelinepanel_mousereleased", __ref, _eventdata);}
 Debug.locals.put("EventData", _eventdata);
- BA.debugLineNum = 1202;BA.debugLine="Private Sub GuidelinePanel_MouseReleased (EventDat";
-Debug.ShouldStop(131072);
- BA.debugLineNum = 1203;BA.debugLine="If isResizing Then";
-Debug.ShouldStop(262144);
-if (__ref.getField(true,"_isresizing" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
- BA.debugLineNum = 1204;BA.debugLine="isResizing = False";
-Debug.ShouldStop(524288);
-__ref.setField ("_isresizing" /*RemoteObject*/ ,magmagrid.__c.getField(true,"False"));
- BA.debugLineNum = 1208;BA.debugLine="currentPanel.SetColorAndBorder(xui.Color_Transpa";
-Debug.ShouldStop(8388608);
-__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 0)));
- BA.debugLineNum = 1212;BA.debugLine="useB4XTable.Refresh 'Refresh here is safer than";
-Debug.ShouldStop(134217728);
-__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_refresh" /*RemoteObject*/ );
- BA.debugLineNum = 1214;BA.debugLine="EnableResizeGuidelines";
+ BA.debugLineNum = 1213;BA.debugLine="Private Sub GuidelinePanel_MouseReleased (EventDat";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 1214;BA.debugLine="If isResizing Then";
 Debug.ShouldStop(536870912);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_enableresizeguidelines" /*RemoteObject*/ );
- BA.debugLineNum = 1215;BA.debugLine="resizeTimer.Enabled = True";
+if (__ref.getField(true,"_isresizing" /*RemoteObject*/ ).<Boolean>get().booleanValue()) { 
+ BA.debugLineNum = 1215;BA.debugLine="isResizing = False";
 Debug.ShouldStop(1073741824);
+__ref.setField ("_isresizing" /*RemoteObject*/ ,magmagrid.__c.getField(true,"False"));
+ BA.debugLineNum = 1219;BA.debugLine="currentPanel.SetColorAndBorder(xui.Color_Transpa";
+Debug.ShouldStop(4);
+__ref.getField(false,"_currentpanel" /*RemoteObject*/ ).runVoidMethod ("SetColorAndBorder",(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 2)),(Object)(__ref.getField(false,"_xui" /*RemoteObject*/ ).getField(true,"Color_Transparent")),(Object)(BA.numberCast(double.class, 0)));
+ BA.debugLineNum = 1223;BA.debugLine="useB4XTable.Refresh 'Refresh here is safer than";
+Debug.ShouldStop(64);
+__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_refresh" /*RemoteObject*/ );
+ BA.debugLineNum = 1225;BA.debugLine="EnableResizeGuidelines";
+Debug.ShouldStop(256);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_enableresizeguidelines" /*RemoteObject*/ );
+ BA.debugLineNum = 1226;BA.debugLine="resizeTimer.Enabled = True";
+Debug.ShouldStop(512);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",magmagrid.__c.getField(true,"True"));
  };
- BA.debugLineNum = 1217;BA.debugLine="End Sub";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 1228;BA.debugLine="End Sub";
+Debug.ShouldStop(2048);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1900,7 +1923,7 @@ if (true) break;
 
 case 1:
 //if
-this.state = 67;
+this.state = 69;
 if (RemoteObject.solveBoolean("=",__ref.getField(true,"_noedit" /*RemoteObject*/ ),parent.__c.getField(true,"False")) && RemoteObject.solveBoolean(".",__ref.runClassMethod (b4j.example.magmagrid.class, "_istablefocused" /*RemoteObject*/ ,(Object)(_table))) && RemoteObject.solveBoolean(">",BA.numberCast(double.class, _table.getField(false,"_visiblerowids" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0)))),BA.numberCast(double.class, 0))) { 
 this.state = 3;
 }if (true) break;
@@ -1921,7 +1944,7 @@ if (true) break;
 
 case 4:
 //if
-this.state = 66;
+this.state = 68;
 if (RemoteObject.solveBoolean("=",_eventtype,BA.ObjectToString("KEY_PRESSED"))) { 
 this.state = 6;
 }if (true) break;
@@ -1947,8 +1970,8 @@ if (true) break;
 
 case 7:
 //select
-this.state = 60;
-switch (BA.switchObjectToInt(_keycode,BA.ObjectToString("UP"),BA.ObjectToString("DOWN"),BA.ObjectToString("PAGE_UP"),BA.ObjectToString("PAGE_DOWN"),BA.ObjectToString("SPACE"),BA.ObjectToString("ENTER"))) {
+this.state = 62;
+switch (BA.switchObjectToInt(_keycode,BA.ObjectToString("UP"),BA.ObjectToString("DOWN"),BA.ObjectToString("PAGE_UP"),BA.ObjectToString("PAGE_DOWN"),BA.ObjectToString("SPACE"),BA.ObjectToString("DELETE"),BA.ObjectToString("ENTER"))) {
 case 0: {
 this.state = 9;
 if (true) break;
@@ -1973,8 +1996,12 @@ case 5: {
 this.state = 53;
 if (true) break;
 }
+case 6: {
+this.state = 55;
+if (true) break;
+}
 default: {
-this.state = 59;
+this.state = 61;
 if (true) break;
 }
 }
@@ -2011,18 +2038,18 @@ step14 = -1;
 limit14 = 0;
 _i = RemoteObject.solve(new RemoteObject[] {_table.getField(false,"_visiblerowids" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue() ;
 Debug.locals.put("i", _i);
-this.state = 97;
+this.state = 99;
 if (true) break;
 
-case 97:
+case 99:
 //C
 this.state = 22;
 if ((step14 > 0 && _i <= limit14) || (step14 < 0 && _i >= limit14)) this.state = 15;
 if (true) break;
 
-case 98:
+case 100:
 //C
-this.state = 97;
+this.state = 99;
 _i = ((int)(0 + _i + step14)) ;
 Debug.locals.put("i", _i);
 if (true) break;
@@ -2053,7 +2080,7 @@ if (true) break;
 
 case 21:
 //C
-this.state = 98;
+this.state = 100;
 ;
  if (true) break;
 if (true) break;
@@ -2067,7 +2094,7 @@ Debug.locals.put("i", _i);
 
 case 23:
 //C
-this.state = 60;
+this.state = 62;
 ;
  BA.debugLineNum = 863;BA.debugLine="SelectedRow=row";
 Debug.ShouldStop(1073741824);
@@ -2099,7 +2126,7 @@ if (true) break;
 
 case 31:
 //C
-this.state = 60;
+this.state = 62;
 ;
  BA.debugLineNum = 867;BA.debugLine="SelectedRow=row";
 Debug.ShouldStop(4);
@@ -2108,7 +2135,7 @@ __ref.setField ("_selectedrow" /*RemoteObject*/ ,_row);
 
 case 33:
 //C
-this.state = 60;
+this.state = 62;
  BA.debugLineNum = 869;BA.debugLine="row=1";
 Debug.ShouldStop(16);
 _row = BA.numberCast(long.class, 1);Debug.locals.put("row", _row);
@@ -2119,7 +2146,7 @@ _table.runClassMethod (b4j.example.b4xtable.class, "_setcurrentpage" /*RemoteObj
 
 case 35:
 //C
-this.state = 60;
+this.state = 62;
  BA.debugLineNum = 872;BA.debugLine="row=1";
 Debug.ShouldStop(128);
 _row = BA.numberCast(long.class, 1);Debug.locals.put("row", _row);
@@ -2142,18 +2169,18 @@ step31 = 1;
 limit31 = RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _k = 0 ;
 Debug.locals.put("k", _k);
-this.state = 99;
+this.state = 101;
 if (true) break;
 
-case 99:
+case 101:
 //C
 this.state = 51;
 if ((step31 > 0 && _k <= limit31) || (step31 < 0 && _k >= limit31)) this.state = 40;
 if (true) break;
 
-case 100:
+case 102:
 //C
-this.state = 99;
+this.state = 101;
 _k = ((int)(0 + _k + step31)) ;
 Debug.locals.put("k", _k);
 if (true) break;
@@ -2215,297 +2242,314 @@ this.state = 50;
 
 case 50:
 //C
-this.state = 100;
+this.state = 102;
 ;
  if (true) break;
 if (true) break;
 
 case 51:
 //C
-this.state = 60;
+this.state = 62;
 Debug.locals.put("k", _k);
 ;
  if (true) break;
 
 case 53:
 //C
-this.state = 54;
- BA.debugLineNum = 888;BA.debugLine="If noEdit=False Then";
-Debug.ShouldStop(8388608);
-if (true) break;
-
-case 54:
-//if
-this.state = 57;
-if (RemoteObject.solveBoolean("=",__ref.getField(true,"_noedit" /*RemoteObject*/ ),parent.__c.getField(true,"False"))) { 
-this.state = 56;
-}if (true) break;
-
-case 56:
-//C
-this.state = 57;
- BA.debugLineNum = 889;BA.debugLine="SelectedRow=row";
-Debug.ShouldStop(16777216);
+this.state = 62;
+ BA.debugLineNum = 887;BA.debugLine="SelectedRow=row";
+Debug.ShouldStop(4194304);
 __ref.setField ("_selectedrow" /*RemoteObject*/ ,_row);
- BA.debugLineNum = 890;BA.debugLine="Dim myc As mycol=MyColumns.Get(0)";
+ BA.debugLineNum = 888;BA.debugLine="DeleteRow(SelectedRow)";
+Debug.ShouldStop(8388608);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_deleterow" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_selectedrow" /*RemoteObject*/ )));
+ BA.debugLineNum = 889;BA.debugLine="row = table.VisibleRowIds.Get(0)";
+Debug.ShouldStop(16777216);
+_row = BA.numberCast(long.class, _table.getField(false,"_visiblerowids" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));Debug.locals.put("row", _row);
+ BA.debugLineNum = 890;BA.debugLine="SelectedRow=row";
 Debug.ShouldStop(33554432);
-_myc = (__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));Debug.locals.put("myc", _myc);Debug.locals.put("myc", _myc);
- BA.debugLineNum = 891;BA.debugLine="SelColumn(myc.Name)";
-Debug.ShouldStop(67108864);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_selcolumn" /*RemoteObject*/ ,(Object)(_myc.getField(true,"Name" /*RemoteObject*/ )));
- BA.debugLineNum = 892;BA.debugLine="NextEditableColumn";
-Debug.ShouldStop(134217728);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_nexteditablecolumn" /*void*/ );
- BA.debugLineNum = 893;BA.debugLine="Return";
-Debug.ShouldStop(268435456);
-if (true) return ;
+__ref.setField ("_selectedrow" /*RemoteObject*/ ,_row);
  if (true) break;
 
-case 57:
+case 55:
 //C
-this.state = 60;
-;
+this.state = 56;
+ BA.debugLineNum = 892;BA.debugLine="If noEdit=False Then";
+Debug.ShouldStop(134217728);
+if (true) break;
+
+case 56:
+//if
+this.state = 59;
+if (RemoteObject.solveBoolean("=",__ref.getField(true,"_noedit" /*RemoteObject*/ ),parent.__c.getField(true,"False"))) { 
+this.state = 58;
+}if (true) break;
+
+case 58:
+//C
+this.state = 59;
+ BA.debugLineNum = 893;BA.debugLine="SelectedRow=row";
+Debug.ShouldStop(268435456);
+__ref.setField ("_selectedrow" /*RemoteObject*/ ,_row);
+ BA.debugLineNum = 894;BA.debugLine="Dim myc As mycol=MyColumns.Get(0)";
+Debug.ShouldStop(536870912);
+_myc = (__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));Debug.locals.put("myc", _myc);Debug.locals.put("myc", _myc);
+ BA.debugLineNum = 895;BA.debugLine="SelColumn(myc.Name)";
+Debug.ShouldStop(1073741824);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_selcolumn" /*RemoteObject*/ ,(Object)(_myc.getField(true,"Name" /*RemoteObject*/ )));
+ BA.debugLineNum = 896;BA.debugLine="NextEditableColumn";
+Debug.ShouldStop(-2147483648);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_nexteditablecolumn" /*void*/ );
+ BA.debugLineNum = 897;BA.debugLine="Return";
+Debug.ShouldStop(1);
+if (true) return ;
  if (true) break;
 
 case 59:
 //C
-this.state = 60;
+this.state = 62;
+;
+ if (true) break;
+
+case 61:
+//C
+this.state = 62;
  if (true) break;
 ;
- BA.debugLineNum = 899;BA.debugLine="If row<1 Then row=1";
-Debug.ShouldStop(4);
-
-case 60:
-//if
-this.state = 65;
-if (RemoteObject.solveBoolean("<",_row,BA.numberCast(long.class, 1))) { 
-this.state = 62;
-;}if (true) break;
+ BA.debugLineNum = 903;BA.debugLine="If row<1 Then row=1";
+Debug.ShouldStop(64);
 
 case 62:
+//if
+this.state = 67;
+if (RemoteObject.solveBoolean("<",_row,BA.numberCast(long.class, 1))) { 
+this.state = 64;
+;}if (true) break;
+
+case 64:
 //C
-this.state = 65;
+this.state = 67;
 _row = BA.numberCast(long.class, 1);Debug.locals.put("row", _row);
 if (true) break;
 
-case 65:
+case 67:
 //C
-this.state = 66;
+this.state = 68;
 ;
- BA.debugLineNum = 901;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 905;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
+Debug.ShouldStop(256);
 __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runVoidMethod ("RequestFocus");
- BA.debugLineNum = 902;BA.debugLine="Sleep(0)";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 906;BA.debugLine="Sleep(0)";
+Debug.ShouldStop(512);
 parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "magmagrid", "keypressed_filter"),BA.numberCast(int.class, 0));
-this.state = 101;
+this.state = 103;
 return;
-case 101:
+case 103:
 //C
-this.state = 66;
+this.state = 68;
 ;
- BA.debugLineNum = 903;BA.debugLine="thistable.CellClicked(col, row)";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 907;BA.debugLine="thistable.CellClicked(col, row)";
+Debug.ShouldStop(1024);
 __ref.getField(false,"_thistable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtableselections.class, "_cellclicked" /*RemoteObject*/ ,(Object)(_col),(Object)(_row));
  if (true) break;
 
-case 66:
+case 68:
 //C
-this.state = 67;
+this.state = 69;
 ;
  if (true) break;
 ;
- BA.debugLineNum = 909;BA.debugLine="If noEdit=True Then";
-Debug.ShouldStop(4096);
-
-case 67:
-//if
-this.state = 96;
-if (RemoteObject.solveBoolean("=",__ref.getField(true,"_noedit" /*RemoteObject*/ ),parent.__c.getField(true,"True"))) { 
-this.state = 69;
-}if (true) break;
+ BA.debugLineNum = 913;BA.debugLine="If noEdit=True Then";
+Debug.ShouldStop(65536);
 
 case 69:
+//if
+this.state = 98;
+if (RemoteObject.solveBoolean("=",__ref.getField(true,"_noedit" /*RemoteObject*/ ),parent.__c.getField(true,"True"))) { 
+this.state = 71;
+}if (true) break;
+
+case 71:
 //C
-this.state = 70;
- BA.debugLineNum = 910;BA.debugLine="Dim jo As JavaObject = e";
-Debug.ShouldStop(8192);
+this.state = 72;
+ BA.debugLineNum = 914;BA.debugLine="Dim jo As JavaObject = e";
+Debug.ShouldStop(131072);
 _jo = RemoteObject.createNew ("anywheresoftware.b4j.object.JavaObject");
 _jo = RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4j.object.JavaObject"), _e.getObject());Debug.locals.put("jo", _jo);Debug.locals.put("jo", _jo);
- BA.debugLineNum = 911;BA.debugLine="Dim EventType As String = jo.RunMethodJO(\"getEve";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 915;BA.debugLine="Dim EventType As String = jo.RunMethodJO(\"getEve";
+Debug.ShouldStop(262144);
 _eventtype = BA.ObjectToString(_jo.runMethod(false,"RunMethodJO",(Object)(BA.ObjectToString("getEventType")),(Object)((parent.__c.getField(false,"Null")))).runMethod(false,"RunMethod",(Object)(BA.ObjectToString("getName")),(Object)((parent.__c.getField(false,"Null")))));Debug.locals.put("EventType", _eventtype);Debug.locals.put("EventType", _eventtype);
- BA.debugLineNum = 912;BA.debugLine="If EventType = \"KEY_PRESSED\" Then";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 916;BA.debugLine="If EventType = \"KEY_PRESSED\" Then";
+Debug.ShouldStop(524288);
 if (true) break;
-
-case 70:
-//if
-this.state = 95;
-if (RemoteObject.solveBoolean("=",_eventtype,BA.ObjectToString("KEY_PRESSED"))) { 
-this.state = 72;
-}if (true) break;
 
 case 72:
-//C
-this.state = 73;
- BA.debugLineNum = 913;BA.debugLine="Dim keycode As String = jo.RunMethod(\"getCode\",";
-Debug.ShouldStop(65536);
-_keycode = BA.ObjectToString(_jo.runMethod(false,"RunMethod",(Object)(BA.ObjectToString("getCode")),(Object)((parent.__c.getField(false,"Null")))));Debug.locals.put("keycode", _keycode);Debug.locals.put("keycode", _keycode);
- BA.debugLineNum = 914;BA.debugLine="If keycode = \"ESCAPE\" Then";
-Debug.ShouldStop(131072);
-if (true) break;
-
-case 73:
 //if
-this.state = 76;
-if (RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("ESCAPE"))) { 
-this.state = 75;
+this.state = 97;
+if (RemoteObject.solveBoolean("=",_eventtype,BA.ObjectToString("KEY_PRESSED"))) { 
+this.state = 74;
 }if (true) break;
 
-case 75:
+case 74:
 //C
-this.state = 76;
- BA.debugLineNum = 915;BA.debugLine="ie.ExitEditMode";
-Debug.ShouldStop(262144);
+this.state = 75;
+ BA.debugLineNum = 917;BA.debugLine="Dim keycode As String = jo.RunMethod(\"getCode\",";
+Debug.ShouldStop(1048576);
+_keycode = BA.ObjectToString(_jo.runMethod(false,"RunMethod",(Object)(BA.ObjectToString("getCode")),(Object)((parent.__c.getField(false,"Null")))));Debug.locals.put("keycode", _keycode);Debug.locals.put("keycode", _keycode);
+ BA.debugLineNum = 918;BA.debugLine="If keycode = \"ESCAPE\" Then";
+Debug.ShouldStop(2097152);
+if (true) break;
+
+case 75:
+//if
+this.state = 78;
+if (RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("ESCAPE"))) { 
+this.state = 77;
+}if (true) break;
+
+case 77:
+//C
+this.state = 78;
+ BA.debugLineNum = 919;BA.debugLine="ie.ExitEditMode";
+Debug.ShouldStop(4194304);
 __ref.getField(false,"_ie" /*RemoteObject*/ ).runClassMethod (b4j.example.inlineediting.class, "_exiteditmode" /*RemoteObject*/ );
- BA.debugLineNum = 916;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 920;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
+Debug.ShouldStop(8388608);
 __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runVoidMethod ("RequestFocus");
  if (true) break;
 ;
- BA.debugLineNum = 918;BA.debugLine="If keycode=\"TAB\" And xtra.IsComboBoxFocused(MyC";
-Debug.ShouldStop(2097152);
-
-case 76:
-//if
-this.state = 85;
-if (RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("TAB")) && RemoteObject.solveBoolean("=",__ref.getField(false,"_xtra" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xmagmafuncs.class, "_iscomboboxfocused" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mycombofield" /*RemoteObject*/ ))),parent.__c.getField(true,"False"))) { 
-this.state = 78;
-}if (true) break;
+ BA.debugLineNum = 922;BA.debugLine="If keycode=\"TAB\" And xtra.IsComboBoxFocused(MyC";
+Debug.ShouldStop(33554432);
 
 case 78:
-//C
-this.state = 79;
- BA.debugLineNum = 919;BA.debugLine="If SelectedColumn.Controltype.Contains(\"NUMERI";
-Debug.ShouldStop(4194304);
-if (true) break;
-
-case 79:
 //if
-this.state = 84;
-if (__ref.getField(false,"_selectedcolumn" /*RemoteObject*/ ).getField(true,"Controltype" /*RemoteObject*/ ).runMethod(true,"contains",(Object)(RemoteObject.createImmutable("NUMERIC"))).<Boolean>get().booleanValue()) { 
-this.state = 81;
-}else {
-this.state = 83;
+this.state = 87;
+if (RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("TAB")) && RemoteObject.solveBoolean("=",__ref.getField(false,"_xtra" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xmagmafuncs.class, "_iscomboboxfocused" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mycombofield" /*RemoteObject*/ ))),parent.__c.getField(true,"False"))) { 
+this.state = 80;
 }if (true) break;
 
-case 81:
+case 80:
 //C
-this.state = 84;
- BA.debugLineNum = 920;BA.debugLine="mynumfield_Action";
-Debug.ShouldStop(8388608);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_mynumfield_action" /*RemoteObject*/ );
- if (true) break;
+this.state = 81;
+ BA.debugLineNum = 923;BA.debugLine="If SelectedColumn.Controltype.Contains(\"NUMERI";
+Debug.ShouldStop(67108864);
+if (true) break;
+
+case 81:
+//if
+this.state = 86;
+if (__ref.getField(false,"_selectedcolumn" /*RemoteObject*/ ).getField(true,"Controltype" /*RemoteObject*/ ).runMethod(true,"contains",(Object)(RemoteObject.createImmutable("NUMERIC"))).<Boolean>get().booleanValue()) { 
+this.state = 83;
+}else {
+this.state = 85;
+}if (true) break;
 
 case 83:
 //C
-this.state = 84;
- BA.debugLineNum = 922;BA.debugLine="mytextfield_Action";
-Debug.ShouldStop(33554432);
+this.state = 86;
+ BA.debugLineNum = 924;BA.debugLine="mynumfield_Action";
+Debug.ShouldStop(134217728);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_mynumfield_action" /*RemoteObject*/ );
+ if (true) break;
+
+case 85:
+//C
+this.state = 86;
+ BA.debugLineNum = 926;BA.debugLine="mytextfield_Action";
+Debug.ShouldStop(536870912);
 __ref.runClassMethod (b4j.example.magmagrid.class, "_mytextfield_action" /*RemoteObject*/ );
  if (true) break;
 
-case 84:
+case 86:
 //C
-this.state = 85;
+this.state = 87;
 ;
  if (true) break;
 ;
- BA.debugLineNum = 925;BA.debugLine="If xtra.IsComboBoxFocused(MyComboField) And (ke";
-Debug.ShouldStop(268435456);
-
-case 85:
-//if
-this.state = 94;
-if (RemoteObject.solveBoolean(".",__ref.getField(false,"_xtra" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xmagmafuncs.class, "_iscomboboxfocused" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mycombofield" /*RemoteObject*/ )))) && RemoteObject.solveBoolean(".",BA.ObjectToBoolean((RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("ENTER")) || RemoteObject.solveBoolean("=",_keycode,RemoteObject.createImmutable("TAB")))))) { 
-this.state = 87;
-}if (true) break;
+ BA.debugLineNum = 929;BA.debugLine="If xtra.IsComboBoxFocused(MyComboField) And (ke";
+Debug.ShouldStop(1);
 
 case 87:
-//C
-this.state = 88;
- BA.debugLineNum = 928;BA.debugLine="If MyComboField.Editable=True Then";
-Debug.ShouldStop(-2147483648);
-if (true) break;
-
-case 88:
 //if
-this.state = 93;
-if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mycombofield" /*RemoteObject*/ ).runMethod(true,"getEditable"),parent.__c.getField(true,"True"))) { 
-this.state = 90;
-}else {
-this.state = 92;
+this.state = 96;
+if (RemoteObject.solveBoolean(".",__ref.getField(false,"_xtra" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xmagmafuncs.class, "_iscomboboxfocused" /*RemoteObject*/ ,(Object)(__ref.getField(false,"_mycombofield" /*RemoteObject*/ )))) && RemoteObject.solveBoolean(".",BA.ObjectToBoolean((RemoteObject.solveBoolean("=",_keycode,BA.ObjectToString("ENTER")) || RemoteObject.solveBoolean("=",_keycode,RemoteObject.createImmutable("TAB")))))) { 
+this.state = 89;
 }if (true) break;
 
+case 89:
+//C
+this.state = 90;
+ BA.debugLineNum = 932;BA.debugLine="If MyComboField.Editable=True Then";
+Debug.ShouldStop(8);
+if (true) break;
+
 case 90:
-//C
-this.state = 93;
- BA.debugLineNum = 929;BA.debugLine="Dim tmp As String=MyComboField.Value  'here";
-Debug.ShouldStop(1);
-_tmp = BA.ObjectToString(__ref.getField(false,"_mycombofield" /*RemoteObject*/ ).runMethod(false,"getValue"));Debug.locals.put("tmp", _tmp);Debug.locals.put("tmp", _tmp);
- BA.debugLineNum = 930;BA.debugLine="Sleep(0)";
-Debug.ShouldStop(2);
-parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "magmagrid", "keypressed_filter"),BA.numberCast(int.class, 0));
-this.state = 102;
-return;
-case 102:
-//C
-this.state = 93;
-;
- BA.debugLineNum = 931;BA.debugLine="SetValue(SelectedRow,SelectedColumn.Name,tmp";
-Debug.ShouldStop(4);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_setvalue" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_selectedrow" /*RemoteObject*/ )),(Object)(__ref.getField(false,"_selectedcolumn" /*RemoteObject*/ ).getField(true,"Name" /*RemoteObject*/ )),(Object)((_tmp)));
- if (true) break;
+//if
+this.state = 95;
+if (RemoteObject.solveBoolean("=",__ref.getField(false,"_mycombofield" /*RemoteObject*/ ).runMethod(true,"getEditable"),parent.__c.getField(true,"True"))) { 
+this.state = 92;
+}else {
+this.state = 94;
+}if (true) break;
 
 case 92:
 //C
-this.state = 93;
- BA.debugLineNum = 933;BA.debugLine="ie.ExitEditMode";
+this.state = 95;
+ BA.debugLineNum = 933;BA.debugLine="Dim tmp As String=MyComboField.Value  'here";
 Debug.ShouldStop(16);
-__ref.getField(false,"_ie" /*RemoteObject*/ ).runClassMethod (b4j.example.inlineediting.class, "_exiteditmode" /*RemoteObject*/ );
- if (true) break;
-
-case 93:
+_tmp = BA.ObjectToString(__ref.getField(false,"_mycombofield" /*RemoteObject*/ ).runMethod(false,"getValue"));Debug.locals.put("tmp", _tmp);Debug.locals.put("tmp", _tmp);
+ BA.debugLineNum = 934;BA.debugLine="Sleep(0)";
+Debug.ShouldStop(32);
+parent.__c.runVoidMethod ("Sleep",__ref.getField(false, "ba"),anywheresoftware.b4a.pc.PCResumableSub.createDebugResumeSub(this, "magmagrid", "keypressed_filter"),BA.numberCast(int.class, 0));
+this.state = 104;
+return;
+case 104:
 //C
-this.state = 94;
+this.state = 95;
 ;
- BA.debugLineNum = 935;BA.debugLine="NextEditableColumn";
+ BA.debugLineNum = 935;BA.debugLine="SetValue(SelectedRow,SelectedColumn.Name,tmp";
 Debug.ShouldStop(64);
-__ref.runClassMethod (b4j.example.magmagrid.class, "_nexteditablecolumn" /*void*/ );
- BA.debugLineNum = 937;BA.debugLine="noEdit=False";
-Debug.ShouldStop(256);
-__ref.setField ("_noedit" /*RemoteObject*/ ,parent.__c.getField(true,"False"));
+__ref.runClassMethod (b4j.example.magmagrid.class, "_setvalue" /*RemoteObject*/ ,(Object)(__ref.getField(true,"_selectedrow" /*RemoteObject*/ )),(Object)(__ref.getField(false,"_selectedcolumn" /*RemoteObject*/ ).getField(true,"Name" /*RemoteObject*/ )),(Object)((_tmp)));
  if (true) break;
 
 case 94:
 //C
 this.state = 95;
-;
+ BA.debugLineNum = 937;BA.debugLine="ie.ExitEditMode";
+Debug.ShouldStop(256);
+__ref.getField(false,"_ie" /*RemoteObject*/ ).runClassMethod (b4j.example.inlineediting.class, "_exiteditmode" /*RemoteObject*/ );
  if (true) break;
 
 case 95:
 //C
 this.state = 96;
 ;
+ BA.debugLineNum = 939;BA.debugLine="NextEditableColumn";
+Debug.ShouldStop(1024);
+__ref.runClassMethod (b4j.example.magmagrid.class, "_nexteditablecolumn" /*void*/ );
+ BA.debugLineNum = 941;BA.debugLine="noEdit=False";
+Debug.ShouldStop(4096);
+__ref.setField ("_noedit" /*RemoteObject*/ ,parent.__c.getField(true,"False"));
  if (true) break;
 
 case 96:
 //C
+this.state = 97;
+;
+ if (true) break;
+
+case 97:
+//C
+this.state = 98;
+;
+ if (true) break;
+
+case 98:
+//C
 this.state = -1;
 ;
- BA.debugLineNum = 969;BA.debugLine="End Sub";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 973;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 if (true) break;
 
             }
@@ -2785,7 +2829,7 @@ _update = magmagrid.__c.getField(true,"True");Debug.locals.put("update", _update
        catch (Exception e12) {
 			BA.rdebugUtils.runVoidMethod("setLastException",__ref.getField(false, "ba"), e12.toString()); BA.debugLineNum = 649;BA.debugLine="Log(LastException.Message)";
 Debug.ShouldStop(256);
-magmagrid.__c.runVoidMethod ("LogImpl","72031634",magmagrid.__c.runMethod(false,"LastException",__ref.getField(false, "ba")).runMethod(true,"getMessage"),0);
+magmagrid.__c.runVoidMethod ("LogImpl","21769490",magmagrid.__c.runMethod(false,"LastException",__ref.getField(false, "ba")).runMethod(true,"getMessage"),0);
  };
  BA.debugLineNum = 654;BA.debugLine="If text.Length > SelectedColumn.MaxLength  Then";
 Debug.ShouldStop(8192);
@@ -3167,18 +3211,18 @@ public static void  _complete(RemoteObject __ref,RemoteObject _unused) throws Ex
 }
 public static RemoteObject  _resizetimer_tick(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("ResizeTimer_Tick (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1034);
+		Debug.PushSubsStack("ResizeTimer_Tick (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,1045);
 if (RapidSub.canDelegate("resizetimer_tick")) { return __ref.runUserSub(false, "magmagrid","resizetimer_tick", __ref);}
- BA.debugLineNum = 1034;BA.debugLine="Sub ResizeTimer_Tick";
-Debug.ShouldStop(512);
- BA.debugLineNum = 1035;BA.debugLine="resizeTimer.Enabled = False";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 1045;BA.debugLine="Sub ResizeTimer_Tick";
+Debug.ShouldStop(1048576);
+ BA.debugLineNum = 1046;BA.debugLine="resizeTimer.Enabled = False";
+Debug.ShouldStop(2097152);
 __ref.getField(false,"_resizetimer" /*RemoteObject*/ ).runMethod(true,"setEnabled",magmagrid.__c.getField(true,"False"));
- BA.debugLineNum = 1036;BA.debugLine="EnableResizeGuidelines";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 1047;BA.debugLine="EnableResizeGuidelines";
+Debug.ShouldStop(4194304);
 __ref.runClassMethod (b4j.example.magmagrid.class, "_enableresizeguidelines" /*RemoteObject*/ );
- BA.debugLineNum = 1037;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 1048;BA.debugLine="End Sub";
+Debug.ShouldStop(8388608);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -3757,7 +3801,7 @@ finally {
 		}}
 public static RemoteObject  _sumrows(RemoteObject __ref,RemoteObject _columnid,RemoteObject _sqlstring) throws Exception{
 try {
-		Debug.PushSubsStack("SumRows (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,985);
+		Debug.PushSubsStack("SumRows (magmagrid) ","magmagrid",2,__ref.getField(false, "ba"),__ref,989);
 if (RapidSub.canDelegate("sumrows")) { return __ref.runUserSub(false, "magmagrid","sumrows", __ref, _columnid, _sqlstring);}
 RemoteObject _c = RemoteObject.declareNull("b4j.example.b4xtable._b4xtablecolumn");
 RemoteObject _rs = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
@@ -3765,58 +3809,58 @@ int _k = 0;
 RemoteObject _myc = RemoteObject.declareNull("b4j.example.magmagrid._mycol");
 Debug.locals.put("ColumnID", _columnid);
 Debug.locals.put("sqlstring", _sqlstring);
- BA.debugLineNum = 985;BA.debugLine="public Sub SumRows(ColumnID As String, sqlstring A";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 987;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
-Debug.ShouldStop(67108864);
-__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runVoidMethod ("RequestFocus");
- BA.debugLineNum = 988;BA.debugLine="ie.ExitEditMode";
-Debug.ShouldStop(134217728);
-__ref.getField(false,"_ie" /*RemoteObject*/ ).runClassMethod (b4j.example.inlineediting.class, "_exiteditmode" /*RemoteObject*/ );
- BA.debugLineNum = 990;BA.debugLine="If sqlstring.Trim.Length=0 Then";
-Debug.ShouldStop(536870912);
-if (RemoteObject.solveBoolean("=",_sqlstring.runMethod(true,"trim").runMethod(true,"length"),BA.numberCast(double.class, 0))) { 
- BA.debugLineNum = 991;BA.debugLine="Dim c As B4XTableColumn = useB4XTable.GetColumn(";
+ BA.debugLineNum = 989;BA.debugLine="public Sub SumRows(ColumnID As String, sqlstring A";
+Debug.ShouldStop(268435456);
+ BA.debugLineNum = 991;BA.debugLine="useB4XTable.clvData.sv.RequestFocus";
 Debug.ShouldStop(1073741824);
+__ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_clvdata" /*RemoteObject*/ ).getField(false,"_sv").runVoidMethod ("RequestFocus");
+ BA.debugLineNum = 992;BA.debugLine="ie.ExitEditMode";
+Debug.ShouldStop(-2147483648);
+__ref.getField(false,"_ie" /*RemoteObject*/ ).runClassMethod (b4j.example.inlineediting.class, "_exiteditmode" /*RemoteObject*/ );
+ BA.debugLineNum = 994;BA.debugLine="If sqlstring.Trim.Length=0 Then";
+Debug.ShouldStop(2);
+if (RemoteObject.solveBoolean("=",_sqlstring.runMethod(true,"trim").runMethod(true,"length"),BA.numberCast(double.class, 0))) { 
+ BA.debugLineNum = 995;BA.debugLine="Dim c As B4XTableColumn = useB4XTable.GetColumn(";
+Debug.ShouldStop(4);
 _c = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_getcolumn" /*RemoteObject*/ ,(Object)(_columnid));Debug.locals.put("c", _c);Debug.locals.put("c", _c);
- BA.debugLineNum = 993;BA.debugLine="Dim rs As ResultSet=useB4XTable.sql1.ExecQuery(\"";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 997;BA.debugLine="Dim rs As ResultSet=useB4XTable.sql1.ExecQuery(\"";
+Debug.ShouldStop(16);
 _rs = RemoteObject.createNew ("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 _rs = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_sql1" /*RemoteObject*/ ).runMethod(false,"ExecQuery",(Object)(RemoteObject.concat(RemoteObject.createImmutable("SELECT SUM("),_c.getField(true,"SQLID" /*RemoteObject*/ ).runMethod(true,"trim"),RemoteObject.createImmutable(") AS Total_sum FROM data;"))));Debug.locals.put("rs", _rs);Debug.locals.put("rs", _rs);
- BA.debugLineNum = 994;BA.debugLine="Return rs.GetDouble2(0)";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 998;BA.debugLine="Return rs.GetDouble2(0)";
+Debug.ShouldStop(32);
 if (true) return _rs.runMethod(true,"GetDouble2",(Object)(BA.numberCast(int.class, 0)));
  }else {
- BA.debugLineNum = 996;BA.debugLine="For k=0 To MyColumns.Size-1";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 1000;BA.debugLine="For k=0 To MyColumns.Size-1";
+Debug.ShouldStop(128);
 {
 final int step8 = 1;
 final int limit8 = RemoteObject.solve(new RemoteObject[] {__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(true,"getSize"),RemoteObject.createImmutable(1)}, "-",1, 1).<Integer>get().intValue();
 _k = 0 ;
 for (;(step8 > 0 && _k <= limit8) || (step8 < 0 && _k >= limit8) ;_k = ((int)(0 + _k + step8))  ) {
 Debug.locals.put("k", _k);
- BA.debugLineNum = 997;BA.debugLine="Private myc As mycol=MyColumns.Get(k)";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 1001;BA.debugLine="Private myc As mycol=MyColumns.Get(k)";
+Debug.ShouldStop(256);
 _myc = (__ref.getField(false,"_mycolumns" /*RemoteObject*/ ).runMethod(false,"Get",(Object)(BA.numberCast(int.class, _k))));Debug.locals.put("myc", _myc);Debug.locals.put("myc", _myc);
- BA.debugLineNum = 998;BA.debugLine="Dim c As B4XTableColumn = useB4XTable.GetColumn";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 1002;BA.debugLine="Dim c As B4XTableColumn = useB4XTable.GetColumn";
+Debug.ShouldStop(512);
 _c = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).runClassMethod (b4j.example.b4xtable.class, "_getcolumn" /*RemoteObject*/ ,(Object)(_myc.getField(true,"Name" /*RemoteObject*/ )));Debug.locals.put("c", _c);Debug.locals.put("c", _c);
- BA.debugLineNum = 999;BA.debugLine="sqlstring=sqlstring.Replace(\"[\" & myc.Name & \"]";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 1003;BA.debugLine="sqlstring=sqlstring.Replace(\"[\" & myc.Name & \"]";
+Debug.ShouldStop(1024);
 _sqlstring = _sqlstring.runMethod(true,"replace",(Object)(RemoteObject.concat(RemoteObject.createImmutable("["),_myc.getField(true,"Name" /*RemoteObject*/ ),RemoteObject.createImmutable("]"))),(Object)(_c.getField(true,"SQLID" /*RemoteObject*/ )));Debug.locals.put("sqlstring", _sqlstring);
  }
 }Debug.locals.put("k", _k);
 ;
- BA.debugLineNum = 1001;BA.debugLine="Dim rs As ResultSet=useB4XTable.sql1.ExecQuery(s";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 1005;BA.debugLine="Dim rs As ResultSet=useB4XTable.sql1.ExecQuery(s";
+Debug.ShouldStop(4096);
 _rs = RemoteObject.createNew ("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 _rs = __ref.getField(false,"_useb4xtable" /*RemoteObject*/ ).getField(false,"_sql1" /*RemoteObject*/ ).runMethod(false,"ExecQuery",(Object)(_sqlstring));Debug.locals.put("rs", _rs);Debug.locals.put("rs", _rs);
- BA.debugLineNum = 1002;BA.debugLine="Return rs.GetDouble2(0)";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 1006;BA.debugLine="Return rs.GetDouble2(0)";
+Debug.ShouldStop(8192);
 if (true) return _rs.runMethod(true,"GetDouble2",(Object)(BA.numberCast(int.class, 0)));
  };
- BA.debugLineNum = 1005;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 1009;BA.debugLine="End Sub";
+Debug.ShouldStop(65536);
 return RemoteObject.createImmutable(0);
 }
 catch (Exception e) {

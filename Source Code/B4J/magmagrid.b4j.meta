@@ -22,6 +22,6 @@ ModuleClosedNodes4=
 ModuleClosedNodes5=
 ModuleClosedNodes6=
 ModuleClosedNodes7=
-NavigationStack=B4XMainPage,Button1_Click,120,6,ClassKeyborad,Class_Globals,2,0,B4XMagmaFuncs,Class_Globals,0,0,MagmaGrid,KeyPressed_Filter,855,6,MagmaGrid,GuidelinePanel_MouseReleased,1201,0,B4XMainPage,B4XPage_Created,74,6,B4XMainPage,Button2_Click,141,3,MagmaGrid,RowCalcPraxis,227,0,MagmaGrid,Class_Globals,53,0,MagmaGrid,Initialize,109,3
+NavigationStack=MagmaGrid,ResizeTimer_Tick,1033,0,B4XMainPage,B4XPage_Created,40,6,MagmaGrid,SumRows,994,0,MagmaGrid,GuidelinePanel_MouseReleased,1220,0,MagmaGrid,GetData,1032,0,MagmaGrid,Class_Globals,32,2,MagmaGrid,DeleteRow,1037,6,MagmaGrid,KeyPressed_Filter,889,6,MagmaGrid,RowCalcPraxis,218,0,B4XMainPage,Button2_Click,148,6
 SelectedBuild=0
 VisibleModules=3,7,1,4,2,6,5

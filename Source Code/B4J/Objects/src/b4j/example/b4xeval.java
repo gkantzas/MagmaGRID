@@ -86,19 +86,19 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="b4xeval";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_callback,_eventname}));}
-RDebugUtils.currentLine=3538944;
- //BA.debugLineNum = 3538944;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
-RDebugUtils.currentLine=3538945;
- //BA.debugLineNum = 3538945;BA.debugLine="mCallback = Callback";
+RDebugUtils.currentLine=3276800;
+ //BA.debugLineNum = 3276800;BA.debugLine="Public Sub Initialize (Callback As Object, EventNa";
+RDebugUtils.currentLine=3276801;
+ //BA.debugLineNum = 3276801;BA.debugLine="mCallback = Callback";
 __ref._mcallback /*Object*/  = _callback;
-RDebugUtils.currentLine=3538946;
- //BA.debugLineNum = 3538946;BA.debugLine="mEventName = EventName";
+RDebugUtils.currentLine=3276802;
+ //BA.debugLineNum = 3276802;BA.debugLine="mEventName = EventName";
 __ref._meventname /*String*/  = _eventname;
-RDebugUtils.currentLine=3538947;
- //BA.debugLineNum = 3538947;BA.debugLine="OperatorLevel = CreateMap(\"+\": 1, \"-\": 1, \"*\":2,";
+RDebugUtils.currentLine=3276803;
+ //BA.debugLineNum = 3276803;BA.debugLine="OperatorLevel = CreateMap(\"+\": 1, \"-\": 1, \"*\":2,";
 __ref._operatorlevel /*anywheresoftware.b4a.objects.collections.Map*/  = __c.createMap(new Object[] {(Object)("+"),(Object)(1),(Object)("-"),(Object)(1),(Object)("*"),(Object)(2),(Object)("/"),(Object)(2)});
-RDebugUtils.currentLine=3538948;
- //BA.debugLineNum = 3538948;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3276804;
+ //BA.debugLineNum = 3276804;BA.debugLine="End Sub";
 return "";
 }
 public double  _eval(b4j.example.b4xeval __ref,String _expression) throws Exception{
@@ -106,19 +106,19 @@ __ref = this;
 RDebugUtils.currentModule="b4xeval";
 if (Debug.shouldDelegate(ba, "eval", false))
 	 {return ((Double) Debug.delegate(ba, "eval", new Object[] {_expression}));}
-RDebugUtils.currentLine=3604480;
- //BA.debugLineNum = 3604480;BA.debugLine="Public Sub Eval(Expression As String) As Double";
-RDebugUtils.currentLine=3604481;
- //BA.debugLineNum = 3604481;BA.debugLine="Error = False";
+RDebugUtils.currentLine=3342336;
+ //BA.debugLineNum = 3342336;BA.debugLine="Public Sub Eval(Expression As String) As Double";
+RDebugUtils.currentLine=3342337;
+ //BA.debugLineNum = 3342337;BA.debugLine="Error = False";
 __ref._error /*boolean*/  = __c.False;
-RDebugUtils.currentLine=3604482;
- //BA.debugLineNum = 3604482;BA.debugLine="Expression = Expression.Replace(\" \", \"\").ToLowerC";
+RDebugUtils.currentLine=3342338;
+ //BA.debugLineNum = 3342338;BA.debugLine="Expression = Expression.Replace(\" \", \"\").ToLowerC";
 _expression = _expression.replace(" ","").toLowerCase().replace("-(","-1*(");
-RDebugUtils.currentLine=3604483;
- //BA.debugLineNum = 3604483;BA.debugLine="Return EvalHelper(Expression)";
+RDebugUtils.currentLine=3342339;
+ //BA.debugLineNum = 3342339;BA.debugLine="Return EvalHelper(Expression)";
 if (true) return __ref._evalhelper /*double*/ (null,_expression);
-RDebugUtils.currentLine=3604484;
- //BA.debugLineNum = 3604484;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3342340;
+ //BA.debugLineNum = 3342340;BA.debugLine="End Sub";
 return 0;
 }
 public b4j.example.b4xeval._parsednode  _buildtree(b4j.example.b4xeval __ref) throws Exception{
@@ -129,75 +129,75 @@ if (Debug.shouldDelegate(ba, "buildtree", false))
 b4j.example.b4xeval._parsednode _rt = null;
 b4j.example.b4xeval._parsednode _pn = null;
 boolean _built = false;
-RDebugUtils.currentLine=3866624;
- //BA.debugLineNum = 3866624;BA.debugLine="private Sub BuildTree As ParsedNode";
-RDebugUtils.currentLine=3866625;
- //BA.debugLineNum = 3866625;BA.debugLine="Dim rt As ParsedNode";
+RDebugUtils.currentLine=3604480;
+ //BA.debugLineNum = 3604480;BA.debugLine="private Sub BuildTree As ParsedNode";
+RDebugUtils.currentLine=3604481;
+ //BA.debugLineNum = 3604481;BA.debugLine="Dim rt As ParsedNode";
 _rt = new b4j.example.b4xeval._parsednode();
-RDebugUtils.currentLine=3866626;
- //BA.debugLineNum = 3866626;BA.debugLine="Do While ParseIndex < Nodes.Size";
+RDebugUtils.currentLine=3604482;
+ //BA.debugLineNum = 3604482;BA.debugLine="Do While ParseIndex < Nodes.Size";
 while (__ref._parseindex /*int*/ <__ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .getSize()) {
-RDebugUtils.currentLine=3866627;
- //BA.debugLineNum = 3866627;BA.debugLine="Dim pn As ParsedNode = TakeNextNode";
+RDebugUtils.currentLine=3604483;
+ //BA.debugLineNum = 3604483;BA.debugLine="Dim pn As ParsedNode = TakeNextNode";
 _pn = __ref._takenextnode /*b4j.example.b4xeval._parsednode*/ (null);
-RDebugUtils.currentLine=3866628;
- //BA.debugLineNum = 3866628;BA.debugLine="Dim built As Boolean";
+RDebugUtils.currentLine=3604484;
+ //BA.debugLineNum = 3604484;BA.debugLine="Dim built As Boolean";
 _built = false;
-RDebugUtils.currentLine=3866629;
- //BA.debugLineNum = 3866629;BA.debugLine="If pn.Operator = \")\" Then";
+RDebugUtils.currentLine=3604485;
+ //BA.debugLineNum = 3604485;BA.debugLine="If pn.Operator = \")\" Then";
 if ((_pn.Operator /*String*/ ).equals(")")) { 
-RDebugUtils.currentLine=3866630;
- //BA.debugLineNum = 3866630;BA.debugLine="Exit";
+RDebugUtils.currentLine=3604486;
+ //BA.debugLineNum = 3604486;BA.debugLine="Exit";
 if (true) break;
  }else 
-{RDebugUtils.currentLine=3866631;
- //BA.debugLineNum = 3866631;BA.debugLine="Else If pn.Operator = \"(\" Then";
+{RDebugUtils.currentLine=3604487;
+ //BA.debugLineNum = 3604487;BA.debugLine="Else If pn.Operator = \"(\" Then";
 if ((_pn.Operator /*String*/ ).equals("(")) { 
-RDebugUtils.currentLine=3866632;
- //BA.debugLineNum = 3866632;BA.debugLine="pn = BuildTree";
+RDebugUtils.currentLine=3604488;
+ //BA.debugLineNum = 3604488;BA.debugLine="pn = BuildTree";
 _pn = __ref._buildtree /*b4j.example.b4xeval._parsednode*/ (null);
-RDebugUtils.currentLine=3866633;
- //BA.debugLineNum = 3866633;BA.debugLine="built = True";
+RDebugUtils.currentLine=3604489;
+ //BA.debugLineNum = 3604489;BA.debugLine="built = True";
 _built = __c.True;
  }}
 ;
-RDebugUtils.currentLine=3866635;
- //BA.debugLineNum = 3866635;BA.debugLine="If pn.NodeType = NUMBER_TYPE Or built Then";
+RDebugUtils.currentLine=3604491;
+ //BA.debugLineNum = 3604491;BA.debugLine="If pn.NodeType = NUMBER_TYPE Or built Then";
 if (_pn.NodeType /*int*/ ==__ref._number_type /*int*/  || _built) { 
-RDebugUtils.currentLine=3866636;
- //BA.debugLineNum = 3866636;BA.debugLine="If rt.IsInitialized Then";
+RDebugUtils.currentLine=3604492;
+ //BA.debugLineNum = 3604492;BA.debugLine="If rt.IsInitialized Then";
 if (_rt.IsInitialized /*boolean*/ ) { 
-RDebugUtils.currentLine=3866637;
- //BA.debugLineNum = 3866637;BA.debugLine="rt.Right = pn";
+RDebugUtils.currentLine=3604493;
+ //BA.debugLineNum = 3604493;BA.debugLine="rt.Right = pn";
 _rt.Right /*b4j.example.b4xeval._parsednode*/  = _pn;
  }else {
-RDebugUtils.currentLine=3866639;
- //BA.debugLineNum = 3866639;BA.debugLine="rt = pn";
+RDebugUtils.currentLine=3604495;
+ //BA.debugLineNum = 3604495;BA.debugLine="rt = pn";
 _rt = _pn;
  };
  }else 
-{RDebugUtils.currentLine=3866641;
- //BA.debugLineNum = 3866641;BA.debugLine="Else if pn.NodeType = OPERATOR_TYPE Then";
+{RDebugUtils.currentLine=3604497;
+ //BA.debugLineNum = 3604497;BA.debugLine="Else if pn.NodeType = OPERATOR_TYPE Then";
 if (_pn.NodeType /*int*/ ==__ref._operator_type /*int*/ ) { 
-RDebugUtils.currentLine=3866642;
- //BA.debugLineNum = 3866642;BA.debugLine="pn.Left = rt";
+RDebugUtils.currentLine=3604498;
+ //BA.debugLineNum = 3604498;BA.debugLine="pn.Left = rt";
 _pn.Left /*b4j.example.b4xeval._parsednode*/  = _rt;
-RDebugUtils.currentLine=3866643;
- //BA.debugLineNum = 3866643;BA.debugLine="rt = pn";
+RDebugUtils.currentLine=3604499;
+ //BA.debugLineNum = 3604499;BA.debugLine="rt = pn";
 _rt = _pn;
  }}
 ;
  }
 ;
-RDebugUtils.currentLine=3866646;
- //BA.debugLineNum = 3866646;BA.debugLine="If rt.IsInitialized = False Then rt = pn";
+RDebugUtils.currentLine=3604502;
+ //BA.debugLineNum = 3604502;BA.debugLine="If rt.IsInitialized = False Then rt = pn";
 if (_rt.IsInitialized /*boolean*/ ==__c.False) { 
 _rt = _pn;};
-RDebugUtils.currentLine=3866647;
- //BA.debugLineNum = 3866647;BA.debugLine="Return rt";
+RDebugUtils.currentLine=3604503;
+ //BA.debugLineNum = 3604503;BA.debugLine="Return rt";
 if (true) return _rt;
-RDebugUtils.currentLine=3866648;
- //BA.debugLineNum = 3866648;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3604504;
+ //BA.debugLineNum = 3604504;BA.debugLine="End Sub";
 return null;
 }
 public b4j.example.b4xeval._parsednode  _takenextnode(b4j.example.b4xeval __ref) throws Exception{
@@ -206,19 +206,19 @@ RDebugUtils.currentModule="b4xeval";
 if (Debug.shouldDelegate(ba, "takenextnode", false))
 	 {return ((b4j.example.b4xeval._parsednode) Debug.delegate(ba, "takenextnode", null));}
 b4j.example.b4xeval._parsednode _pn = null;
-RDebugUtils.currentLine=3997696;
- //BA.debugLineNum = 3997696;BA.debugLine="private Sub TakeNextNode As ParsedNode";
-RDebugUtils.currentLine=3997697;
- //BA.debugLineNum = 3997697;BA.debugLine="Dim pn As ParsedNode = Nodes.Get(ParseIndex)";
+RDebugUtils.currentLine=3735552;
+ //BA.debugLineNum = 3735552;BA.debugLine="private Sub TakeNextNode As ParsedNode";
+RDebugUtils.currentLine=3735553;
+ //BA.debugLineNum = 3735553;BA.debugLine="Dim pn As ParsedNode = Nodes.Get(ParseIndex)";
 _pn = (b4j.example.b4xeval._parsednode)(__ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Get(__ref._parseindex /*int*/ ));
-RDebugUtils.currentLine=3997698;
- //BA.debugLineNum = 3997698;BA.debugLine="ParseIndex = ParseIndex + 1";
+RDebugUtils.currentLine=3735554;
+ //BA.debugLineNum = 3735554;BA.debugLine="ParseIndex = ParseIndex + 1";
 __ref._parseindex /*int*/  = (int) (__ref._parseindex /*int*/ +1);
-RDebugUtils.currentLine=3997699;
- //BA.debugLineNum = 3997699;BA.debugLine="Return pn";
+RDebugUtils.currentLine=3735555;
+ //BA.debugLineNum = 3735555;BA.debugLine="Return pn";
 if (true) return _pn;
-RDebugUtils.currentLine=3997700;
- //BA.debugLineNum = 3997700;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3735556;
+ //BA.debugLineNum = 3735556;BA.debugLine="End Sub";
 return null;
 }
 public double  _calcsubexpression(b4j.example.b4xeval __ref,String _expr) throws Exception{
@@ -228,32 +228,32 @@ if (Debug.shouldDelegate(ba, "calcsubexpression", false))
 	 {return ((Double) Debug.delegate(ba, "calcsubexpression", new Object[] {_expr}));}
 b4j.example.b4xeval _be = null;
 double _d = 0;
-RDebugUtils.currentLine=3735552;
- //BA.debugLineNum = 3735552;BA.debugLine="Private Sub CalcSubExpression (expr As String) As";
-RDebugUtils.currentLine=3735553;
- //BA.debugLineNum = 3735553;BA.debugLine="Dim be As B4XEval";
+RDebugUtils.currentLine=3473408;
+ //BA.debugLineNum = 3473408;BA.debugLine="Private Sub CalcSubExpression (expr As String) As";
+RDebugUtils.currentLine=3473409;
+ //BA.debugLineNum = 3473409;BA.debugLine="Dim be As B4XEval";
 _be = new b4j.example.b4xeval();
-RDebugUtils.currentLine=3735554;
- //BA.debugLineNum = 3735554;BA.debugLine="be.Initialize (mCallback, mEventName)";
+RDebugUtils.currentLine=3473410;
+ //BA.debugLineNum = 3473410;BA.debugLine="be.Initialize (mCallback, mEventName)";
 _be._initialize /*String*/ (null,ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ );
-RDebugUtils.currentLine=3735555;
- //BA.debugLineNum = 3735555;BA.debugLine="Dim d As Double = be.EvalHelper(expr)";
+RDebugUtils.currentLine=3473411;
+ //BA.debugLineNum = 3473411;BA.debugLine="Dim d As Double = be.EvalHelper(expr)";
 _d = _be._evalhelper /*double*/ (null,_expr);
-RDebugUtils.currentLine=3735556;
- //BA.debugLineNum = 3735556;BA.debugLine="If be.Error Then";
+RDebugUtils.currentLine=3473412;
+ //BA.debugLineNum = 3473412;BA.debugLine="If be.Error Then";
 if (_be._error /*boolean*/ ) { 
-RDebugUtils.currentLine=3735557;
- //BA.debugLineNum = 3735557;BA.debugLine="Error = True";
+RDebugUtils.currentLine=3473413;
+ //BA.debugLineNum = 3473413;BA.debugLine="Error = True";
 __ref._error /*boolean*/  = __c.True;
-RDebugUtils.currentLine=3735558;
- //BA.debugLineNum = 3735558;BA.debugLine="Return 0";
+RDebugUtils.currentLine=3473414;
+ //BA.debugLineNum = 3473414;BA.debugLine="Return 0";
 if (true) return 0;
  };
-RDebugUtils.currentLine=3735560;
- //BA.debugLineNum = 3735560;BA.debugLine="Return d";
+RDebugUtils.currentLine=3473416;
+ //BA.debugLineNum = 3473416;BA.debugLine="Return d";
 if (true) return _d;
-RDebugUtils.currentLine=3735561;
- //BA.debugLineNum = 3735561;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3473417;
+ //BA.debugLineNum = 3473417;BA.debugLine="End Sub";
 return 0;
 }
 public double  _evalhelper(b4j.example.b4xeval __ref,String _expr) throws Exception{
@@ -270,188 +270,188 @@ b4j.example.b4xeval._parsednode _lastnode = null;
 int _level = 0;
 double _d = 0;
 int _i = 0;
-RDebugUtils.currentLine=3801088;
- //BA.debugLineNum = 3801088;BA.debugLine="Private Sub EvalHelper (expr As String) As Double";
-RDebugUtils.currentLine=3801090;
- //BA.debugLineNum = 3801090;BA.debugLine="ParseIndex = 0";
+RDebugUtils.currentLine=3538944;
+ //BA.debugLineNum = 3538944;BA.debugLine="Private Sub EvalHelper (expr As String) As Double";
+RDebugUtils.currentLine=3538946;
+ //BA.debugLineNum = 3538946;BA.debugLine="ParseIndex = 0";
 __ref._parseindex /*int*/  = (int) (0);
-RDebugUtils.currentLine=3801091;
- //BA.debugLineNum = 3801091;BA.debugLine="Dim root As ParsedNode";
+RDebugUtils.currentLine=3538947;
+ //BA.debugLineNum = 3538947;BA.debugLine="Dim root As ParsedNode";
 _root = new b4j.example.b4xeval._parsednode();
-RDebugUtils.currentLine=3801092;
- //BA.debugLineNum = 3801092;BA.debugLine="root.Initialize";
+RDebugUtils.currentLine=3538948;
+ //BA.debugLineNum = 3538948;BA.debugLine="root.Initialize";
 __ref._root /*b4j.example.b4xeval._parsednode*/ .Initialize();
-RDebugUtils.currentLine=3801093;
- //BA.debugLineNum = 3801093;BA.debugLine="expr = PrepareExpression(expr)";
+RDebugUtils.currentLine=3538949;
+ //BA.debugLineNum = 3538949;BA.debugLine="expr = PrepareExpression(expr)";
 _expr = __ref._prepareexpression /*String*/ (null,_expr);
-RDebugUtils.currentLine=3801094;
- //BA.debugLineNum = 3801094;BA.debugLine="If Error Then Return 0";
+RDebugUtils.currentLine=3538950;
+ //BA.debugLineNum = 3538950;BA.debugLine="If Error Then Return 0";
 if (__ref._error /*boolean*/ ) { 
 if (true) return 0;};
-RDebugUtils.currentLine=3801095;
- //BA.debugLineNum = 3801095;BA.debugLine="Dim m As Matcher = Regex.Matcher(\"[\\.\\d]+\", expr)";
+RDebugUtils.currentLine=3538951;
+ //BA.debugLineNum = 3538951;BA.debugLine="Dim m As Matcher = Regex.Matcher(\"[\\.\\d]+\", expr)";
 _m = new anywheresoftware.b4a.keywords.Regex.MatcherWrapper();
 _m = __c.Regex.Matcher("[\\.\\d]+",_expr);
-RDebugUtils.currentLine=3801096;
- //BA.debugLineNum = 3801096;BA.debugLine="Nodes.Initialize";
+RDebugUtils.currentLine=3538952;
+ //BA.debugLineNum = 3538952;BA.debugLine="Nodes.Initialize";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Initialize();
-RDebugUtils.currentLine=3801097;
- //BA.debugLineNum = 3801097;BA.debugLine="Dim lastIndex As Int = 0";
+RDebugUtils.currentLine=3538953;
+ //BA.debugLineNum = 3538953;BA.debugLine="Dim lastIndex As Int = 0";
 _lastindex = (int) (0);
-RDebugUtils.currentLine=3801098;
- //BA.debugLineNum = 3801098;BA.debugLine="Dim currentOrderData As OrderData";
+RDebugUtils.currentLine=3538954;
+ //BA.debugLineNum = 3538954;BA.debugLine="Dim currentOrderData As OrderData";
 _currentorderdata = new b4j.example.b4xeval._orderdata();
-RDebugUtils.currentLine=3801099;
- //BA.debugLineNum = 3801099;BA.debugLine="currentOrderData.Initialize";
+RDebugUtils.currentLine=3538955;
+ //BA.debugLineNum = 3538955;BA.debugLine="currentOrderData.Initialize";
 _currentorderdata.Initialize();
-RDebugUtils.currentLine=3801100;
- //BA.debugLineNum = 3801100;BA.debugLine="Nodes.Add(CreateOperatorNode(\"(\"))";
+RDebugUtils.currentLine=3538956;
+ //BA.debugLineNum = 3538956;BA.debugLine="Nodes.Add(CreateOperatorNode(\"(\"))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,"(")));
-RDebugUtils.currentLine=3801101;
- //BA.debugLineNum = 3801101;BA.debugLine="Do While m.Find";
+RDebugUtils.currentLine=3538957;
+ //BA.debugLineNum = 3538957;BA.debugLine="Do While m.Find";
 while (_m.Find()) {
-RDebugUtils.currentLine=3801102;
- //BA.debugLineNum = 3801102;BA.debugLine="Dim Operator As String = expr.SubString2(lastInd";
+RDebugUtils.currentLine=3538958;
+ //BA.debugLineNum = 3538958;BA.debugLine="Dim Operator As String = expr.SubString2(lastInd";
 _operator = _expr.substring(_lastindex,_m.GetStart((int) (0)));
-RDebugUtils.currentLine=3801103;
- //BA.debugLineNum = 3801103;BA.debugLine="Dim rawNumber As String = m.Match";
+RDebugUtils.currentLine=3538959;
+ //BA.debugLineNum = 3538959;BA.debugLine="Dim rawNumber As String = m.Match";
 _rawnumber = _m.getMatch();
-RDebugUtils.currentLine=3801104;
- //BA.debugLineNum = 3801104;BA.debugLine="If Operator.EndsWith(\"-\") Then";
+RDebugUtils.currentLine=3538960;
+ //BA.debugLineNum = 3538960;BA.debugLine="If Operator.EndsWith(\"-\") Then";
 if (_operator.endsWith("-")) { 
-RDebugUtils.currentLine=3801105;
- //BA.debugLineNum = 3801105;BA.debugLine="Dim lastNode As ParsedNode = Nodes.Get(Nodes.Si";
+RDebugUtils.currentLine=3538961;
+ //BA.debugLineNum = 3538961;BA.debugLine="Dim lastNode As ParsedNode = Nodes.Get(Nodes.Si";
 _lastnode = (b4j.example.b4xeval._parsednode)(__ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Get((int) (__ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1)));
-RDebugUtils.currentLine=3801106;
- //BA.debugLineNum = 3801106;BA.debugLine="If lastNode.Operator = \"(\" Or Operator.Length >";
+RDebugUtils.currentLine=3538962;
+ //BA.debugLineNum = 3538962;BA.debugLine="If lastNode.Operator = \"(\" Or Operator.Length >";
 if ((_lastnode.Operator /*String*/ ).equals("(") || _operator.length()>1) { 
-RDebugUtils.currentLine=3801108;
- //BA.debugLineNum = 3801108;BA.debugLine="Operator = Operator.SubString2(0, Operator.Len";
+RDebugUtils.currentLine=3538964;
+ //BA.debugLineNum = 3538964;BA.debugLine="Operator = Operator.SubString2(0, Operator.Len";
 _operator = _operator.substring((int) (0),(int) (_operator.length()-1));
-RDebugUtils.currentLine=3801109;
- //BA.debugLineNum = 3801109;BA.debugLine="rawNumber = \"-\" & rawNumber";
+RDebugUtils.currentLine=3538965;
+ //BA.debugLineNum = 3538965;BA.debugLine="rawNumber = \"-\" & rawNumber";
 _rawnumber = "-"+_rawnumber;
  };
  };
-RDebugUtils.currentLine=3801112;
- //BA.debugLineNum = 3801112;BA.debugLine="lastIndex = m.GetEnd(0)";
+RDebugUtils.currentLine=3538968;
+ //BA.debugLineNum = 3538968;BA.debugLine="lastIndex = m.GetEnd(0)";
 _lastindex = _m.GetEnd((int) (0));
-RDebugUtils.currentLine=3801113;
- //BA.debugLineNum = 3801113;BA.debugLine="If Operator.Length > 0 Then";
+RDebugUtils.currentLine=3538969;
+ //BA.debugLineNum = 3538969;BA.debugLine="If Operator.Length > 0 Then";
 if (_operator.length()>0) { 
-RDebugUtils.currentLine=3801114;
- //BA.debugLineNum = 3801114;BA.debugLine="Dim level As Int = OperatorLevel.Get(Operator)";
+RDebugUtils.currentLine=3538970;
+ //BA.debugLineNum = 3538970;BA.debugLine="Dim level As Int = OperatorLevel.Get(Operator)";
 _level = (int)(BA.ObjectToNumber(__ref._operatorlevel /*anywheresoftware.b4a.objects.collections.Map*/ .Get((Object)(_operator))));
-RDebugUtils.currentLine=3801115;
- //BA.debugLineNum = 3801115;BA.debugLine="If currentOrderData.Level > 0 Then";
+RDebugUtils.currentLine=3538971;
+ //BA.debugLineNum = 3538971;BA.debugLine="If currentOrderData.Level > 0 Then";
 if (_currentorderdata.Level /*int*/ >0) { 
-RDebugUtils.currentLine=3801116;
- //BA.debugLineNum = 3801116;BA.debugLine="If currentOrderData.Level < level Then";
+RDebugUtils.currentLine=3538972;
+ //BA.debugLineNum = 3538972;BA.debugLine="If currentOrderData.Level < level Then";
 if (_currentorderdata.Level /*int*/ <_level) { 
-RDebugUtils.currentLine=3801117;
- //BA.debugLineNum = 3801117;BA.debugLine="Nodes.InsertAt(currentOrderData.Index, Create";
+RDebugUtils.currentLine=3538973;
+ //BA.debugLineNum = 3538973;BA.debugLine="Nodes.InsertAt(currentOrderData.Index, Create";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .InsertAt(_currentorderdata.Index /*int*/ ,(Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,"(")));
-RDebugUtils.currentLine=3801118;
- //BA.debugLineNum = 3801118;BA.debugLine="currentOrderData.Added = currentOrderData.Add";
+RDebugUtils.currentLine=3538974;
+ //BA.debugLineNum = 3538974;BA.debugLine="currentOrderData.Added = currentOrderData.Add";
 _currentorderdata.Added /*int*/  = (int) (_currentorderdata.Added /*int*/ +1);
  }else 
-{RDebugUtils.currentLine=3801119;
- //BA.debugLineNum = 3801119;BA.debugLine="Else if currentOrderData.Level > level Then";
+{RDebugUtils.currentLine=3538975;
+ //BA.debugLineNum = 3538975;BA.debugLine="Else if currentOrderData.Level > level Then";
 if (_currentorderdata.Level /*int*/ >_level) { 
-RDebugUtils.currentLine=3801120;
- //BA.debugLineNum = 3801120;BA.debugLine="If currentOrderData.Added > 0 Then";
+RDebugUtils.currentLine=3538976;
+ //BA.debugLineNum = 3538976;BA.debugLine="If currentOrderData.Added > 0 Then";
 if (_currentorderdata.Added /*int*/ >0) { 
-RDebugUtils.currentLine=3801121;
- //BA.debugLineNum = 3801121;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
+RDebugUtils.currentLine=3538977;
+ //BA.debugLineNum = 3538977;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,")")));
-RDebugUtils.currentLine=3801122;
- //BA.debugLineNum = 3801122;BA.debugLine="currentOrderData.Added = currentOrderData.Ad";
+RDebugUtils.currentLine=3538978;
+ //BA.debugLineNum = 3538978;BA.debugLine="currentOrderData.Added = currentOrderData.Ad";
 _currentorderdata.Added /*int*/  = (int) (_currentorderdata.Added /*int*/ -1);
  };
  }}
 ;
  };
-RDebugUtils.currentLine=3801126;
- //BA.debugLineNum = 3801126;BA.debugLine="currentOrderData.Level = level";
+RDebugUtils.currentLine=3538982;
+ //BA.debugLineNum = 3538982;BA.debugLine="currentOrderData.Level = level";
 _currentorderdata.Level /*int*/  = _level;
-RDebugUtils.currentLine=3801127;
- //BA.debugLineNum = 3801127;BA.debugLine="currentOrderData.Index = Nodes.Size + 1";
+RDebugUtils.currentLine=3538983;
+ //BA.debugLineNum = 3538983;BA.debugLine="currentOrderData.Index = Nodes.Size + 1";
 _currentorderdata.Index /*int*/  = (int) (__ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .getSize()+1);
-RDebugUtils.currentLine=3801128;
- //BA.debugLineNum = 3801128;BA.debugLine="Nodes.Add(CreateOperatorNode(Operator))";
+RDebugUtils.currentLine=3538984;
+ //BA.debugLineNum = 3538984;BA.debugLine="Nodes.Add(CreateOperatorNode(Operator))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,_operator)));
  };
-RDebugUtils.currentLine=3801130;
- //BA.debugLineNum = 3801130;BA.debugLine="Dim d As Double = rawNumber";
+RDebugUtils.currentLine=3538986;
+ //BA.debugLineNum = 3538986;BA.debugLine="Dim d As Double = rawNumber";
 _d = (double)(Double.parseDouble(_rawnumber));
-RDebugUtils.currentLine=3801131;
- //BA.debugLineNum = 3801131;BA.debugLine="Nodes.Add(CreateNumberNode(d))";
+RDebugUtils.currentLine=3538987;
+ //BA.debugLineNum = 3538987;BA.debugLine="Nodes.Add(CreateNumberNode(d))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createnumbernode /*b4j.example.b4xeval._parsednode*/ (null,_d)));
  }
 ;
-RDebugUtils.currentLine=3801133;
- //BA.debugLineNum = 3801133;BA.debugLine="For i = 1 To currentOrderData.Added";
+RDebugUtils.currentLine=3538989;
+ //BA.debugLineNum = 3538989;BA.debugLine="For i = 1 To currentOrderData.Added";
 {
 final int step43 = 1;
 final int limit43 = _currentorderdata.Added /*int*/ ;
 _i = (int) (1) ;
 for (;_i <= limit43 ;_i = _i + step43 ) {
-RDebugUtils.currentLine=3801134;
- //BA.debugLineNum = 3801134;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
+RDebugUtils.currentLine=3538990;
+ //BA.debugLineNum = 3538990;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,")")));
  }
 };
-RDebugUtils.currentLine=3801136;
- //BA.debugLineNum = 3801136;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
+RDebugUtils.currentLine=3538992;
+ //BA.debugLineNum = 3538992;BA.debugLine="Nodes.Add(CreateOperatorNode(\")\"))";
 __ref._nodes /*anywheresoftware.b4a.objects.collections.List*/ .Add((Object)(__ref._createoperatornode /*b4j.example.b4xeval._parsednode*/ (null,")")));
-RDebugUtils.currentLine=3801137;
- //BA.debugLineNum = 3801137;BA.debugLine="root = BuildTree";
+RDebugUtils.currentLine=3538993;
+ //BA.debugLineNum = 3538993;BA.debugLine="root = BuildTree";
 __ref._root /*b4j.example.b4xeval._parsednode*/  = __ref._buildtree /*b4j.example.b4xeval._parsednode*/ (null);
-RDebugUtils.currentLine=3801138;
- //BA.debugLineNum = 3801138;BA.debugLine="Return EvalNode(root)";
+RDebugUtils.currentLine=3538994;
+ //BA.debugLineNum = 3538994;BA.debugLine="Return EvalNode(root)";
 if (true) return __ref._evalnode /*double*/ (null,__ref._root /*b4j.example.b4xeval._parsednode*/ );
-RDebugUtils.currentLine=3801139;
- //BA.debugLineNum = 3801139;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3538995;
+ //BA.debugLineNum = 3538995;BA.debugLine="End Sub";
 return 0;
 }
 public String  _class_globals(b4j.example.b4xeval __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xeval";
-RDebugUtils.currentLine=3473408;
- //BA.debugLineNum = 3473408;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=3473409;
- //BA.debugLineNum = 3473409;BA.debugLine="Private Const NUMBER_TYPE = 1, OPERATOR_TYPE = 2";
+RDebugUtils.currentLine=3211264;
+ //BA.debugLineNum = 3211264;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=3211265;
+ //BA.debugLineNum = 3211265;BA.debugLine="Private Const NUMBER_TYPE = 1, OPERATOR_TYPE = 2";
 _number_type = (int) (1);
 _operator_type = (int) (2);
-RDebugUtils.currentLine=3473410;
- //BA.debugLineNum = 3473410;BA.debugLine="Type ParsedNode (Operator As String, Left As Pars";
+RDebugUtils.currentLine=3211266;
+ //BA.debugLineNum = 3211266;BA.debugLine="Type ParsedNode (Operator As String, Left As Pars";
 ;
-RDebugUtils.currentLine=3473412;
- //BA.debugLineNum = 3473412;BA.debugLine="Type OrderData (Index As Int, Level As Int, Added";
+RDebugUtils.currentLine=3211268;
+ //BA.debugLineNum = 3211268;BA.debugLine="Type OrderData (Index As Int, Level As Int, Added";
 ;
-RDebugUtils.currentLine=3473413;
- //BA.debugLineNum = 3473413;BA.debugLine="Private root As ParsedNode";
+RDebugUtils.currentLine=3211269;
+ //BA.debugLineNum = 3211269;BA.debugLine="Private root As ParsedNode";
 _root = new b4j.example.b4xeval._parsednode();
-RDebugUtils.currentLine=3473414;
- //BA.debugLineNum = 3473414;BA.debugLine="Private ParseIndex As Int";
+RDebugUtils.currentLine=3211270;
+ //BA.debugLineNum = 3211270;BA.debugLine="Private ParseIndex As Int";
 _parseindex = 0;
-RDebugUtils.currentLine=3473415;
- //BA.debugLineNum = 3473415;BA.debugLine="Private Nodes As List";
+RDebugUtils.currentLine=3211271;
+ //BA.debugLineNum = 3211271;BA.debugLine="Private Nodes As List";
 _nodes = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=3473416;
- //BA.debugLineNum = 3473416;BA.debugLine="Private OperatorLevel As Map";
+RDebugUtils.currentLine=3211272;
+ //BA.debugLineNum = 3211272;BA.debugLine="Private OperatorLevel As Map";
 _operatorlevel = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=3473417;
- //BA.debugLineNum = 3473417;BA.debugLine="Public Error As Boolean";
+RDebugUtils.currentLine=3211273;
+ //BA.debugLineNum = 3211273;BA.debugLine="Public Error As Boolean";
 _error = false;
-RDebugUtils.currentLine=3473418;
- //BA.debugLineNum = 3473418;BA.debugLine="Private mCallback As Object";
+RDebugUtils.currentLine=3211274;
+ //BA.debugLineNum = 3211274;BA.debugLine="Private mCallback As Object";
 _mcallback = new Object();
-RDebugUtils.currentLine=3473419;
- //BA.debugLineNum = 3473419;BA.debugLine="Private mEventName As String";
+RDebugUtils.currentLine=3211275;
+ //BA.debugLineNum = 3211275;BA.debugLine="Private mEventName As String";
 _meventname = "";
-RDebugUtils.currentLine=3473420;
- //BA.debugLineNum = 3473420;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3211276;
+ //BA.debugLineNum = 3211276;BA.debugLine="End Sub";
 return "";
 }
 public b4j.example.b4xeval._parsednode  _createnumbernode(b4j.example.b4xeval __ref,double _d) throws Exception{
@@ -460,25 +460,25 @@ RDebugUtils.currentModule="b4xeval";
 if (Debug.shouldDelegate(ba, "createnumbernode", false))
 	 {return ((b4j.example.b4xeval._parsednode) Debug.delegate(ba, "createnumbernode", new Object[] {_d}));}
 b4j.example.b4xeval._parsednode _pn = null;
-RDebugUtils.currentLine=4128768;
- //BA.debugLineNum = 4128768;BA.debugLine="Private Sub CreateNumberNode (d As Double) As Pars";
-RDebugUtils.currentLine=4128769;
- //BA.debugLineNum = 4128769;BA.debugLine="Dim pn As ParsedNode";
+RDebugUtils.currentLine=3866624;
+ //BA.debugLineNum = 3866624;BA.debugLine="Private Sub CreateNumberNode (d As Double) As Pars";
+RDebugUtils.currentLine=3866625;
+ //BA.debugLineNum = 3866625;BA.debugLine="Dim pn As ParsedNode";
 _pn = new b4j.example.b4xeval._parsednode();
-RDebugUtils.currentLine=4128770;
- //BA.debugLineNum = 4128770;BA.debugLine="pn.Initialize";
+RDebugUtils.currentLine=3866626;
+ //BA.debugLineNum = 3866626;BA.debugLine="pn.Initialize";
 _pn.Initialize();
-RDebugUtils.currentLine=4128771;
- //BA.debugLineNum = 4128771;BA.debugLine="pn.NodeType = NUMBER_TYPE";
+RDebugUtils.currentLine=3866627;
+ //BA.debugLineNum = 3866627;BA.debugLine="pn.NodeType = NUMBER_TYPE";
 _pn.NodeType /*int*/  = __ref._number_type /*int*/ ;
-RDebugUtils.currentLine=4128772;
- //BA.debugLineNum = 4128772;BA.debugLine="pn.Value = d";
+RDebugUtils.currentLine=3866628;
+ //BA.debugLineNum = 3866628;BA.debugLine="pn.Value = d";
 _pn.Value /*double*/  = _d;
-RDebugUtils.currentLine=4128773;
- //BA.debugLineNum = 4128773;BA.debugLine="Return pn";
+RDebugUtils.currentLine=3866629;
+ //BA.debugLineNum = 3866629;BA.debugLine="Return pn";
 if (true) return _pn;
-RDebugUtils.currentLine=4128774;
- //BA.debugLineNum = 4128774;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3866630;
+ //BA.debugLineNum = 3866630;BA.debugLine="End Sub";
 return null;
 }
 public b4j.example.b4xeval._parsednode  _createoperatornode(b4j.example.b4xeval __ref,String _operator) throws Exception{
@@ -487,25 +487,25 @@ RDebugUtils.currentModule="b4xeval";
 if (Debug.shouldDelegate(ba, "createoperatornode", false))
 	 {return ((b4j.example.b4xeval._parsednode) Debug.delegate(ba, "createoperatornode", new Object[] {_operator}));}
 b4j.example.b4xeval._parsednode _pn = null;
-RDebugUtils.currentLine=4063232;
- //BA.debugLineNum = 4063232;BA.debugLine="Private Sub CreateOperatorNode(operator As String)";
-RDebugUtils.currentLine=4063233;
- //BA.debugLineNum = 4063233;BA.debugLine="Dim pn As ParsedNode";
+RDebugUtils.currentLine=3801088;
+ //BA.debugLineNum = 3801088;BA.debugLine="Private Sub CreateOperatorNode(operator As String)";
+RDebugUtils.currentLine=3801089;
+ //BA.debugLineNum = 3801089;BA.debugLine="Dim pn As ParsedNode";
 _pn = new b4j.example.b4xeval._parsednode();
-RDebugUtils.currentLine=4063234;
- //BA.debugLineNum = 4063234;BA.debugLine="pn.Initialize";
+RDebugUtils.currentLine=3801090;
+ //BA.debugLineNum = 3801090;BA.debugLine="pn.Initialize";
 _pn.Initialize();
-RDebugUtils.currentLine=4063235;
- //BA.debugLineNum = 4063235;BA.debugLine="pn.NodeType = OPERATOR_TYPE";
+RDebugUtils.currentLine=3801091;
+ //BA.debugLineNum = 3801091;BA.debugLine="pn.NodeType = OPERATOR_TYPE";
 _pn.NodeType /*int*/  = __ref._operator_type /*int*/ ;
-RDebugUtils.currentLine=4063236;
- //BA.debugLineNum = 4063236;BA.debugLine="pn.Operator = operator";
+RDebugUtils.currentLine=3801092;
+ //BA.debugLineNum = 3801092;BA.debugLine="pn.Operator = operator";
 _pn.Operator /*String*/  = _operator;
-RDebugUtils.currentLine=4063237;
- //BA.debugLineNum = 4063237;BA.debugLine="Return pn";
+RDebugUtils.currentLine=3801093;
+ //BA.debugLineNum = 3801093;BA.debugLine="Return pn";
 if (true) return _pn;
-RDebugUtils.currentLine=4063238;
- //BA.debugLineNum = 4063238;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3801094;
+ //BA.debugLineNum = 3801094;BA.debugLine="End Sub";
 return null;
 }
 public String  _prepareexpression(b4j.example.b4xeval __ref,String _expr) throws Exception{
@@ -523,110 +523,110 @@ int _level = 0;
 int _start = 0;
 int _i = 0;
 double _d = 0;
-RDebugUtils.currentLine=3670016;
- //BA.debugLineNum = 3670016;BA.debugLine="Private Sub PrepareExpression(expr As String) As S";
-RDebugUtils.currentLine=3670017;
- //BA.debugLineNum = 3670017;BA.debugLine="Dim m As Matcher = Regex.Matcher(\"(\\w*)\\(\", expr)";
+RDebugUtils.currentLine=3407872;
+ //BA.debugLineNum = 3407872;BA.debugLine="Private Sub PrepareExpression(expr As String) As S";
+RDebugUtils.currentLine=3407873;
+ //BA.debugLineNum = 3407873;BA.debugLine="Dim m As Matcher = Regex.Matcher(\"(\\w*)\\(\", expr)";
 _m = new anywheresoftware.b4a.keywords.Regex.MatcherWrapper();
 _m = __c.Regex.Matcher("(\\w*)\\(",_expr);
-RDebugUtils.currentLine=3670018;
- //BA.debugLineNum = 3670018;BA.debugLine="Dim sb As StringBuilder";
+RDebugUtils.currentLine=3407874;
+ //BA.debugLineNum = 3407874;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
-RDebugUtils.currentLine=3670019;
- //BA.debugLineNum = 3670019;BA.debugLine="sb.Initialize";
+RDebugUtils.currentLine=3407875;
+ //BA.debugLineNum = 3407875;BA.debugLine="sb.Initialize";
 _sb.Initialize();
-RDebugUtils.currentLine=3670020;
- //BA.debugLineNum = 3670020;BA.debugLine="Dim lastMatchEnd As Int = 0";
+RDebugUtils.currentLine=3407876;
+ //BA.debugLineNum = 3407876;BA.debugLine="Dim lastMatchEnd As Int = 0";
 _lastmatchend = (int) (0);
-RDebugUtils.currentLine=3670021;
- //BA.debugLineNum = 3670021;BA.debugLine="Do While m.Find";
+RDebugUtils.currentLine=3407877;
+ //BA.debugLineNum = 3407877;BA.debugLine="Do While m.Find";
 while (_m.Find()) {
-RDebugUtils.currentLine=3670022;
- //BA.debugLineNum = 3670022;BA.debugLine="Dim currentStart As Int = m.GetStart(0)";
+RDebugUtils.currentLine=3407878;
+ //BA.debugLineNum = 3407878;BA.debugLine="Dim currentStart As Int = m.GetStart(0)";
 _currentstart = _m.GetStart((int) (0));
-RDebugUtils.currentLine=3670023;
- //BA.debugLineNum = 3670023;BA.debugLine="If currentStart < lastMatchEnd Then Continue";
+RDebugUtils.currentLine=3407879;
+ //BA.debugLineNum = 3407879;BA.debugLine="If currentStart < lastMatchEnd Then Continue";
 if (_currentstart<_lastmatchend) { 
 if (true) continue;};
-RDebugUtils.currentLine=3670024;
- //BA.debugLineNum = 3670024;BA.debugLine="sb.Append(expr.SubString2(lastMatchEnd, currentS";
+RDebugUtils.currentLine=3407880;
+ //BA.debugLineNum = 3407880;BA.debugLine="sb.Append(expr.SubString2(lastMatchEnd, currentS";
 _sb.Append(_expr.substring(_lastmatchend,_currentstart));
-RDebugUtils.currentLine=3670025;
- //BA.debugLineNum = 3670025;BA.debugLine="Dim functionCall As Boolean";
+RDebugUtils.currentLine=3407881;
+ //BA.debugLineNum = 3407881;BA.debugLine="Dim functionCall As Boolean";
 _functioncall = false;
-RDebugUtils.currentLine=3670026;
- //BA.debugLineNum = 3670026;BA.debugLine="Dim args As List";
+RDebugUtils.currentLine=3407882;
+ //BA.debugLineNum = 3407882;BA.debugLine="Dim args As List";
 _args = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=3670027;
- //BA.debugLineNum = 3670027;BA.debugLine="If m.Match.Length > 1 Then";
+RDebugUtils.currentLine=3407883;
+ //BA.debugLineNum = 3407883;BA.debugLine="If m.Match.Length > 1 Then";
 if (_m.getMatch().length()>1) { 
-RDebugUtils.currentLine=3670028;
- //BA.debugLineNum = 3670028;BA.debugLine="args.Initialize";
+RDebugUtils.currentLine=3407884;
+ //BA.debugLineNum = 3407884;BA.debugLine="args.Initialize";
 _args.Initialize();
-RDebugUtils.currentLine=3670029;
- //BA.debugLineNum = 3670029;BA.debugLine="functionCall = True";
+RDebugUtils.currentLine=3407885;
+ //BA.debugLineNum = 3407885;BA.debugLine="functionCall = True";
 _functioncall = __c.True;
  };
-RDebugUtils.currentLine=3670031;
- //BA.debugLineNum = 3670031;BA.debugLine="Dim level As Int";
+RDebugUtils.currentLine=3407887;
+ //BA.debugLineNum = 3407887;BA.debugLine="Dim level As Int";
 _level = 0;
-RDebugUtils.currentLine=3670032;
- //BA.debugLineNum = 3670032;BA.debugLine="Dim start As Int = m.GetEnd(0)";
+RDebugUtils.currentLine=3407888;
+ //BA.debugLineNum = 3407888;BA.debugLine="Dim start As Int = m.GetEnd(0)";
 _start = _m.GetEnd((int) (0));
-RDebugUtils.currentLine=3670033;
- //BA.debugLineNum = 3670033;BA.debugLine="For i = start To expr.Length - 1";
+RDebugUtils.currentLine=3407889;
+ //BA.debugLineNum = 3407889;BA.debugLine="For i = start To expr.Length - 1";
 {
 final int step17 = 1;
 final int limit17 = (int) (_expr.length()-1);
 _i = _start ;
 for (;_i <= limit17 ;_i = _i + step17 ) {
-RDebugUtils.currentLine=3670034;
- //BA.debugLineNum = 3670034;BA.debugLine="If expr.CharAt(i) = \"(\" Then";
+RDebugUtils.currentLine=3407890;
+ //BA.debugLineNum = 3407890;BA.debugLine="If expr.CharAt(i) = \"(\" Then";
 if (_expr.charAt(_i)==BA.ObjectToChar("(")) { 
-RDebugUtils.currentLine=3670035;
- //BA.debugLineNum = 3670035;BA.debugLine="level = level + 1";
+RDebugUtils.currentLine=3407891;
+ //BA.debugLineNum = 3407891;BA.debugLine="level = level + 1";
 _level = (int) (_level+1);
  }else 
-{RDebugUtils.currentLine=3670036;
- //BA.debugLineNum = 3670036;BA.debugLine="Else if expr.CharAt(i) = \",\" And level = 0 Then";
+{RDebugUtils.currentLine=3407892;
+ //BA.debugLineNum = 3407892;BA.debugLine="Else if expr.CharAt(i) = \",\" And level = 0 Then";
 if (_expr.charAt(_i)==BA.ObjectToChar(",") && _level==0) { 
-RDebugUtils.currentLine=3670037;
- //BA.debugLineNum = 3670037;BA.debugLine="args.Add(CalcSubExpression(expr.SubString2(sta";
+RDebugUtils.currentLine=3407893;
+ //BA.debugLineNum = 3407893;BA.debugLine="args.Add(CalcSubExpression(expr.SubString2(sta";
 _args.Add((Object)(__ref._calcsubexpression /*double*/ (null,_expr.substring(_start,_i))));
-RDebugUtils.currentLine=3670038;
- //BA.debugLineNum = 3670038;BA.debugLine="start = i + 1";
+RDebugUtils.currentLine=3407894;
+ //BA.debugLineNum = 3407894;BA.debugLine="start = i + 1";
 _start = (int) (_i+1);
  }else 
-{RDebugUtils.currentLine=3670039;
- //BA.debugLineNum = 3670039;BA.debugLine="Else if expr.CharAt(i) = \")\" Then";
+{RDebugUtils.currentLine=3407895;
+ //BA.debugLineNum = 3407895;BA.debugLine="Else if expr.CharAt(i) = \")\" Then";
 if (_expr.charAt(_i)==BA.ObjectToChar(")")) { 
-RDebugUtils.currentLine=3670040;
- //BA.debugLineNum = 3670040;BA.debugLine="level = level - 1";
+RDebugUtils.currentLine=3407896;
+ //BA.debugLineNum = 3407896;BA.debugLine="level = level - 1";
 _level = (int) (_level-1);
-RDebugUtils.currentLine=3670041;
- //BA.debugLineNum = 3670041;BA.debugLine="If level = -1 Then";
+RDebugUtils.currentLine=3407897;
+ //BA.debugLineNum = 3407897;BA.debugLine="If level = -1 Then";
 if (_level==-1) { 
-RDebugUtils.currentLine=3670042;
- //BA.debugLineNum = 3670042;BA.debugLine="Dim d As Double = CalcSubExpression(expr.SubS";
+RDebugUtils.currentLine=3407898;
+ //BA.debugLineNum = 3407898;BA.debugLine="Dim d As Double = CalcSubExpression(expr.SubS";
 _d = __ref._calcsubexpression /*double*/ (null,_expr.substring(_start,_i));
-RDebugUtils.currentLine=3670043;
- //BA.debugLineNum = 3670043;BA.debugLine="If functionCall Then";
+RDebugUtils.currentLine=3407899;
+ //BA.debugLineNum = 3407899;BA.debugLine="If functionCall Then";
 if (_functioncall) { 
-RDebugUtils.currentLine=3670044;
- //BA.debugLineNum = 3670044;BA.debugLine="args.Add(d)";
+RDebugUtils.currentLine=3407900;
+ //BA.debugLineNum = 3407900;BA.debugLine="args.Add(d)";
 _args.Add((Object)(_d));
-RDebugUtils.currentLine=3670045;
- //BA.debugLineNum = 3670045;BA.debugLine="d = CallSub3(mCallback, mEventName & \"_Funct";
+RDebugUtils.currentLine=3407901;
+ //BA.debugLineNum = 3407901;BA.debugLine="d = CallSub3(mCallback, mEventName & \"_Funct";
 _d = (double)(BA.ObjectToNumber(__c.CallSubNew3(ba,__ref._mcallback /*Object*/ ,__ref._meventname /*String*/ +"_Function",(Object)(_m.getMatch().substring((int) (0),(int) (_m.getMatch().length()-1))),(Object)(_args))));
  };
-RDebugUtils.currentLine=3670047;
- //BA.debugLineNum = 3670047;BA.debugLine="sb.Append(NumberFormat2(d, 1, 15, 0, False))";
+RDebugUtils.currentLine=3407903;
+ //BA.debugLineNum = 3407903;BA.debugLine="sb.Append(NumberFormat2(d, 1, 15, 0, False))";
 _sb.Append(__c.NumberFormat2(_d,(int) (1),(int) (15),(int) (0),__c.False));
-RDebugUtils.currentLine=3670048;
- //BA.debugLineNum = 3670048;BA.debugLine="lastMatchEnd = i + 1";
+RDebugUtils.currentLine=3407904;
+ //BA.debugLineNum = 3407904;BA.debugLine="lastMatchEnd = i + 1";
 _lastmatchend = (int) (_i+1);
-RDebugUtils.currentLine=3670049;
- //BA.debugLineNum = 3670049;BA.debugLine="Exit";
+RDebugUtils.currentLine=3407905;
+ //BA.debugLineNum = 3407905;BA.debugLine="Exit";
 if (true) break;
  };
  }}}
@@ -635,15 +635,15 @@ if (true) break;
 };
  }
 ;
-RDebugUtils.currentLine=3670054;
- //BA.debugLineNum = 3670054;BA.debugLine="If lastMatchEnd < expr.Length Then sb.Append(expr";
+RDebugUtils.currentLine=3407910;
+ //BA.debugLineNum = 3407910;BA.debugLine="If lastMatchEnd < expr.Length Then sb.Append(expr";
 if (_lastmatchend<_expr.length()) { 
 _sb.Append(_expr.substring(_lastmatchend));};
-RDebugUtils.currentLine=3670055;
- //BA.debugLineNum = 3670055;BA.debugLine="Return sb.ToString";
+RDebugUtils.currentLine=3407911;
+ //BA.debugLineNum = 3407911;BA.debugLine="Return sb.ToString";
 if (true) return _sb.ToString();
-RDebugUtils.currentLine=3670056;
- //BA.debugLineNum = 3670056;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3407912;
+ //BA.debugLineNum = 3407912;BA.debugLine="End Sub";
 return "";
 }
 public double  _evalnode(b4j.example.b4xeval __ref,b4j.example.b4xeval._parsednode _pn) throws Exception{
@@ -653,53 +653,53 @@ if (Debug.shouldDelegate(ba, "evalnode", false))
 	 {return ((Double) Debug.delegate(ba, "evalnode", new Object[] {_pn}));}
 double _left = 0;
 double _right = 0;
-RDebugUtils.currentLine=3932160;
- //BA.debugLineNum = 3932160;BA.debugLine="Private Sub EvalNode (pn As ParsedNode) As Double";
-RDebugUtils.currentLine=3932162;
- //BA.debugLineNum = 3932162;BA.debugLine="If pn.NodeType = NUMBER_TYPE Then Return pn.Value";
+RDebugUtils.currentLine=3670016;
+ //BA.debugLineNum = 3670016;BA.debugLine="Private Sub EvalNode (pn As ParsedNode) As Double";
+RDebugUtils.currentLine=3670018;
+ //BA.debugLineNum = 3670018;BA.debugLine="If pn.NodeType = NUMBER_TYPE Then Return pn.Value";
 if (_pn.NodeType /*int*/ ==__ref._number_type /*int*/ ) { 
 if (true) return _pn.Value /*double*/ ;};
-RDebugUtils.currentLine=3932163;
- //BA.debugLineNum = 3932163;BA.debugLine="Dim left As Double = EvalNode(pn.Left)";
+RDebugUtils.currentLine=3670019;
+ //BA.debugLineNum = 3670019;BA.debugLine="Dim left As Double = EvalNode(pn.Left)";
 _left = __ref._evalnode /*double*/ (null,_pn.Left /*b4j.example.b4xeval._parsednode*/ );
-RDebugUtils.currentLine=3932164;
- //BA.debugLineNum = 3932164;BA.debugLine="Dim right As Double = EvalNode(pn.Right)";
+RDebugUtils.currentLine=3670020;
+ //BA.debugLineNum = 3670020;BA.debugLine="Dim right As Double = EvalNode(pn.Right)";
 _right = __ref._evalnode /*double*/ (null,_pn.Right /*b4j.example.b4xeval._parsednode*/ );
-RDebugUtils.currentLine=3932165;
- //BA.debugLineNum = 3932165;BA.debugLine="Select pn.Operator";
+RDebugUtils.currentLine=3670021;
+ //BA.debugLineNum = 3670021;BA.debugLine="Select pn.Operator";
 switch (BA.switchObjectToInt(_pn.Operator /*String*/ ,"+","-","*","/")) {
 case 0: {
-RDebugUtils.currentLine=3932167;
- //BA.debugLineNum = 3932167;BA.debugLine="Return left + right";
+RDebugUtils.currentLine=3670023;
+ //BA.debugLineNum = 3670023;BA.debugLine="Return left + right";
 if (true) return _left+_right;
  break; }
 case 1: {
-RDebugUtils.currentLine=3932169;
- //BA.debugLineNum = 3932169;BA.debugLine="Return left - right";
+RDebugUtils.currentLine=3670025;
+ //BA.debugLineNum = 3670025;BA.debugLine="Return left - right";
 if (true) return _left-_right;
  break; }
 case 2: {
-RDebugUtils.currentLine=3932171;
- //BA.debugLineNum = 3932171;BA.debugLine="Return left * right";
+RDebugUtils.currentLine=3670027;
+ //BA.debugLineNum = 3670027;BA.debugLine="Return left * right";
 if (true) return _left*_right;
  break; }
 case 3: {
-RDebugUtils.currentLine=3932173;
- //BA.debugLineNum = 3932173;BA.debugLine="Return left / right";
+RDebugUtils.currentLine=3670029;
+ //BA.debugLineNum = 3670029;BA.debugLine="Return left / right";
 if (true) return _left/(double)_right;
  break; }
 default: {
-RDebugUtils.currentLine=3932175;
- //BA.debugLineNum = 3932175;BA.debugLine="Log(\"Syntax error: \" & pn.Operator)";
-__c.LogImpl("73932175","Syntax error: "+_pn.Operator /*String*/ ,0);
-RDebugUtils.currentLine=3932176;
- //BA.debugLineNum = 3932176;BA.debugLine="Return \"error\"";
+RDebugUtils.currentLine=3670031;
+ //BA.debugLineNum = 3670031;BA.debugLine="Log(\"Syntax error: \" & pn.Operator)";
+__c.LogImpl("23670031","Syntax error: "+_pn.Operator /*String*/ ,0);
+RDebugUtils.currentLine=3670032;
+ //BA.debugLineNum = 3670032;BA.debugLine="Return \"error\"";
 if (true) return (double)(Double.parseDouble("error"));
  break; }
 }
 ;
-RDebugUtils.currentLine=3932178;
- //BA.debugLineNum = 3932178;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3670034;
+ //BA.debugLineNum = 3670034;BA.debugLine="End Sub";
 return 0;
 }
 }

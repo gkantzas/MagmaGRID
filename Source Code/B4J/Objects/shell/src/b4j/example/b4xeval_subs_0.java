@@ -460,7 +460,7 @@ if (true) return RemoteObject.solve(new RemoteObject[] {_left,_right}, "/",0, 0)
 default: {
  BA.debugLineNum = 177;BA.debugLine="Log(\"Syntax error: \" & pn.Operator)";
 Debug.ShouldStop(65536);
-b4xeval.__c.runVoidMethod ("LogImpl","73932175",RemoteObject.concat(RemoteObject.createImmutable("Syntax error: "),_pn.getField(true,"Operator" /*RemoteObject*/ )),0);
+b4xeval.__c.runVoidMethod ("LogImpl","23670031",RemoteObject.concat(RemoteObject.createImmutable("Syntax error: "),_pn.getField(true,"Operator" /*RemoteObject*/ )),0);
  BA.debugLineNum = 178;BA.debugLine="Return \"error\"";
 Debug.ShouldStop(131072);
 if (true) return BA.numberCast(double.class, "error");

@@ -42,13 +42,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "mainform_closed", true))
 	 {return ((String) Debug.delegate(ba, "mainform_closed", null));}
-RDebugUtils.currentLine=14417920;
- //BA.debugLineNum = 14417920;BA.debugLine="Public Sub MainForm_Closed";
-RDebugUtils.currentLine=14417921;
- //BA.debugLineNum = 14417921;BA.debugLine="B4XPages.GetManager.MainForm_Closed";
+RDebugUtils.currentLine=12713984;
+ //BA.debugLineNum = 12713984;BA.debugLine="Public Sub MainForm_Closed";
+RDebugUtils.currentLine=12713985;
+ //BA.debugLineNum = 12713985;BA.debugLine="B4XPages.GetManager.MainForm_Closed";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._mainform_closed /*String*/ (null);
-RDebugUtils.currentLine=14417922;
- //BA.debugLineNum = 14417922;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12713986;
+ //BA.debugLineNum = 12713986;BA.debugLine="End Sub";
 return "";
 }
 public String  _mainform_closerequest(b4j.example.b4xpagesdelegator __ref,anywheresoftware.b4j.objects.NodeWrapper.ConcreteEventWrapper _eventdata) throws Exception{
@@ -56,13 +56,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "mainform_closerequest", true))
 	 {return ((String) Debug.delegate(ba, "mainform_closerequest", new Object[] {_eventdata}));}
-RDebugUtils.currentLine=14483456;
- //BA.debugLineNum = 14483456;BA.debugLine="Public Sub MainForm_CloseRequest (EventData As Eve";
-RDebugUtils.currentLine=14483457;
- //BA.debugLineNum = 14483457;BA.debugLine="B4XPages.GetManager.MainForm_CloseRequest (EventD";
+RDebugUtils.currentLine=12779520;
+ //BA.debugLineNum = 12779520;BA.debugLine="Public Sub MainForm_CloseRequest (EventData As Eve";
+RDebugUtils.currentLine=12779521;
+ //BA.debugLineNum = 12779521;BA.debugLine="B4XPages.GetManager.MainForm_CloseRequest (EventD";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._mainform_closerequest /*String*/ (null,_eventdata);
-RDebugUtils.currentLine=14483458;
- //BA.debugLineNum = 14483458;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12779522;
+ //BA.debugLineNum = 12779522;BA.debugLine="End Sub";
 return "";
 }
 public String  _mainform_focuschanged(b4j.example.b4xpagesdelegator __ref,boolean _hasfocus) throws Exception{
@@ -70,13 +70,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "mainform_focuschanged", true))
 	 {return ((String) Debug.delegate(ba, "mainform_focuschanged", new Object[] {_hasfocus}));}
-RDebugUtils.currentLine=14352384;
- //BA.debugLineNum = 14352384;BA.debugLine="Public Sub MainForm_FocusChanged (HasFocus As Bool";
-RDebugUtils.currentLine=14352385;
- //BA.debugLineNum = 14352385;BA.debugLine="B4XPages.GetManager.MainForm_FocusChanged (HasFoc";
+RDebugUtils.currentLine=12648448;
+ //BA.debugLineNum = 12648448;BA.debugLine="Public Sub MainForm_FocusChanged (HasFocus As Bool";
+RDebugUtils.currentLine=12648449;
+ //BA.debugLineNum = 12648449;BA.debugLine="B4XPages.GetManager.MainForm_FocusChanged (HasFoc";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._mainform_focuschanged /*String*/ (null,_hasfocus);
-RDebugUtils.currentLine=14352386;
- //BA.debugLineNum = 14352386;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12648450;
+ //BA.debugLineNum = 12648450;BA.debugLine="End Sub";
 return "";
 }
 public String  _mainform_iconifiedchanged(b4j.example.b4xpagesdelegator __ref,boolean _iconified) throws Exception{
@@ -84,13 +84,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "mainform_iconifiedchanged", true))
 	 {return ((String) Debug.delegate(ba, "mainform_iconifiedchanged", new Object[] {_iconified}));}
-RDebugUtils.currentLine=14548992;
- //BA.debugLineNum = 14548992;BA.debugLine="Public Sub MainForm_IconifiedChanged (Iconified As";
-RDebugUtils.currentLine=14548993;
- //BA.debugLineNum = 14548993;BA.debugLine="B4XPages.GetManager.MainForm_IconifiedChanged(Ico";
+RDebugUtils.currentLine=12845056;
+ //BA.debugLineNum = 12845056;BA.debugLine="Public Sub MainForm_IconifiedChanged (Iconified As";
+RDebugUtils.currentLine=12845057;
+ //BA.debugLineNum = 12845057;BA.debugLine="B4XPages.GetManager.MainForm_IconifiedChanged(Ico";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._mainform_iconifiedchanged /*String*/ (null,_iconified);
-RDebugUtils.currentLine=14548994;
- //BA.debugLineNum = 14548994;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12845058;
+ //BA.debugLineNum = 12845058;BA.debugLine="End Sub";
 return "";
 }
 public String  _mainform_resize(b4j.example.b4xpagesdelegator __ref,double _width,double _height) throws Exception{
@@ -98,13 +98,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "mainform_resize", true))
 	 {return ((String) Debug.delegate(ba, "mainform_resize", new Object[] {_width,_height}));}
-RDebugUtils.currentLine=14614528;
- //BA.debugLineNum = 14614528;BA.debugLine="Public Sub MainForm_Resize(Width As Double, Height";
-RDebugUtils.currentLine=14614529;
- //BA.debugLineNum = 14614529;BA.debugLine="B4XPages.GetManager.MainForm_Resize(Width, Height";
+RDebugUtils.currentLine=12910592;
+ //BA.debugLineNum = 12910592;BA.debugLine="Public Sub MainForm_Resize(Width As Double, Height";
+RDebugUtils.currentLine=12910593;
+ //BA.debugLineNum = 12910593;BA.debugLine="B4XPages.GetManager.MainForm_Resize(Width, Height";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._mainform_resize /*String*/ (null,_width,_height);
-RDebugUtils.currentLine=14614530;
- //BA.debugLineNum = 14614530;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12910594;
+ //BA.debugLineNum = 12910594;BA.debugLine="End Sub";
 return "";
 }
 public String  _initialize(b4j.example.b4xpagesdelegator __ref,anywheresoftware.b4a.BA _ba) throws Exception{
@@ -113,22 +113,22 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "initialize", true))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=14286848;
- //BA.debugLineNum = 14286848;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=14286850;
- //BA.debugLineNum = 14286850;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12582912;
+ //BA.debugLineNum = 12582912;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=12582914;
+ //BA.debugLineNum = 12582914;BA.debugLine="End Sub";
 return "";
 }
 public String  _activity_pause(b4j.example.b4xpagesdelegator __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
-RDebugUtils.currentLine=14745600;
- //BA.debugLineNum = 14745600;BA.debugLine="Public Sub Activity_Pause";
-RDebugUtils.currentLine=14745601;
- //BA.debugLineNum = 14745601;BA.debugLine="B4XPages.GetManager.Activity_Pause";
+RDebugUtils.currentLine=13041664;
+ //BA.debugLineNum = 13041664;BA.debugLine="Public Sub Activity_Pause";
+RDebugUtils.currentLine=13041665;
+ //BA.debugLineNum = 13041665;BA.debugLine="B4XPages.GetManager.Activity_Pause";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._activity_pause /*String*/ (null);
-RDebugUtils.currentLine=14745602;
- //BA.debugLineNum = 14745602;BA.debugLine="End Sub";
+RDebugUtils.currentLine=13041666;
+ //BA.debugLineNum = 13041666;BA.debugLine="End Sub";
 return "";
 }
 public String  _activity_resume(b4j.example.b4xpagesdelegator __ref) throws Exception{
@@ -136,22 +136,22 @@ __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
 if (Debug.shouldDelegate(ba, "activity_resume", true))
 	 {return ((String) Debug.delegate(ba, "activity_resume", null));}
-RDebugUtils.currentLine=14680064;
- //BA.debugLineNum = 14680064;BA.debugLine="Public Sub Activity_Resume";
-RDebugUtils.currentLine=14680065;
- //BA.debugLineNum = 14680065;BA.debugLine="B4XPages.GetManager.Activity_Resume";
+RDebugUtils.currentLine=12976128;
+ //BA.debugLineNum = 12976128;BA.debugLine="Public Sub Activity_Resume";
+RDebugUtils.currentLine=12976129;
+ //BA.debugLineNum = 12976129;BA.debugLine="B4XPages.GetManager.Activity_Resume";
 _b4xpages._getmanager /*b4j.example.b4xpagesmanager*/ ()._activity_resume /*String*/ (null);
-RDebugUtils.currentLine=14680066;
- //BA.debugLineNum = 14680066;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12976130;
+ //BA.debugLineNum = 12976130;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4j.example.b4xpagesdelegator __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xpagesdelegator";
-RDebugUtils.currentLine=14221312;
- //BA.debugLineNum = 14221312;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=14221313;
- //BA.debugLineNum = 14221313;BA.debugLine="End Sub";
+RDebugUtils.currentLine=12517376;
+ //BA.debugLineNum = 12517376;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=12517377;
+ //BA.debugLineNum = 12517377;BA.debugLine="End Sub";
 return "";
 }
 }

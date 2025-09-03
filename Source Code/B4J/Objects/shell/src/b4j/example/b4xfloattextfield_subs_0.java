@@ -476,7 +476,7 @@ Debug.JustUpdateDeviceLine();
 __ref.setField ("_multiline" /*RemoteObject*/ ,b4xfloattextfield.__c.getField(true,"False"));
  BA.debugLineNum = 94;BA.debugLine="Log(\"Multiline not supported with password mode.";
 Debug.JustUpdateDeviceLine();
-b4xfloattextfield.__c.runVoidMethod ("LogImpl","927787288",RemoteObject.createImmutable("Multiline not supported with password mode."),0);
+b4xfloattextfield.__c.runVoidMethod ("LogImpl","926083352",RemoteObject.createImmutable("Multiline not supported with password mode."),0);
  };
  BA.debugLineNum = 96;BA.debugLine="CreateTextFieldAll(PasswordMode, PassedLabel.Font";
 Debug.JustUpdateDeviceLine();

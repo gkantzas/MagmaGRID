@@ -186,7 +186,7 @@ __ref.getField(false,"_translated" /*RemoteObject*/ ).runVoidMethod ("Put",(Obje
        catch (Exception e11) {
 			BA.rdebugUtils.runVoidMethod("setLastException",__ref.getField(false, "ba"), e11.toString()); BA.debugLineNum = 23;BA.debugLine="Log(LastException.Message)";
 Debug.ShouldStop(4194304);
-b4xmagmafuncs.__c.runVoidMethod ("LogImpl","74980747",b4xmagmafuncs.__c.runMethod(false,"LastException",__ref.getField(false, "ba")).runMethod(true,"getMessage"),0);
+b4xmagmafuncs.__c.runVoidMethod ("LogImpl","246465035",b4xmagmafuncs.__c.runMethod(false,"LastException",__ref.getField(false, "ba")).runMethod(true,"getMessage"),0);
  };
  };
  BA.debugLineNum = 27;BA.debugLine="End Sub";

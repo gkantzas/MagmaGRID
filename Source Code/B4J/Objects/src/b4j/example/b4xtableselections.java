@@ -57,22 +57,22 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba,_table}));}
-RDebugUtils.currentLine=4259840;
- //BA.debugLineNum = 4259840;BA.debugLine="Public Sub Initialize (Table As B4XTable)";
-RDebugUtils.currentLine=4259841;
- //BA.debugLineNum = 4259841;BA.debugLine="mTable = Table";
+RDebugUtils.currentLine=3997696;
+ //BA.debugLineNum = 3997696;BA.debugLine="Public Sub Initialize (Table As B4XTable)";
+RDebugUtils.currentLine=3997697;
+ //BA.debugLineNum = 3997697;BA.debugLine="mTable = Table";
 __ref._mtable /*b4j.example.b4xtable*/  = _table;
-RDebugUtils.currentLine=4259842;
- //BA.debugLineNum = 4259842;BA.debugLine="SelectionColor = mTable.SelectionColor";
+RDebugUtils.currentLine=3997698;
+ //BA.debugLineNum = 3997698;BA.debugLine="SelectionColor = mTable.SelectionColor";
 __ref._selectioncolor /*int*/  = __ref._mtable /*b4j.example.b4xtable*/ ._selectioncolor /*int*/ ;
-RDebugUtils.currentLine=4259843;
- //BA.debugLineNum = 4259843;BA.debugLine="SelectedLines.Initialize";
+RDebugUtils.currentLine=3997699;
+ //BA.debugLineNum = 3997699;BA.debugLine="SelectedLines.Initialize";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._initialize /*String*/ (null,ba);
-RDebugUtils.currentLine=4259844;
- //BA.debugLineNum = 4259844;BA.debugLine="mCurrentMode = MODE_SINGLE_CELL_TEMP";
+RDebugUtils.currentLine=3997700;
+ //BA.debugLineNum = 3997700;BA.debugLine="mCurrentMode = MODE_SINGLE_CELL_TEMP";
 __ref._mcurrentmode /*int*/  = __ref._mode_single_cell_temp /*int*/ ;
-RDebugUtils.currentLine=4259845;
- //BA.debugLineNum = 4259845;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3997701;
+ //BA.debugLineNum = 3997701;BA.debugLine="End Sub";
 return "";
 }
 public String  _setmode(b4j.example.b4xtableselections __ref,int _m) throws Exception{
@@ -80,73 +80,73 @@ __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "setmode", false))
 	 {return ((String) Debug.delegate(ba, "setmode", new Object[] {_m}));}
-RDebugUtils.currentLine=4521984;
- //BA.debugLineNum = 4521984;BA.debugLine="Public Sub setMode (m As Int)";
-RDebugUtils.currentLine=4521985;
- //BA.debugLineNum = 4521985;BA.debugLine="mCurrentMode = m";
+RDebugUtils.currentLine=4259840;
+ //BA.debugLineNum = 4259840;BA.debugLine="Public Sub setMode (m As Int)";
+RDebugUtils.currentLine=4259841;
+ //BA.debugLineNum = 4259841;BA.debugLine="mCurrentMode = m";
 __ref._mcurrentmode /*int*/  = _m;
-RDebugUtils.currentLine=4521986;
- //BA.debugLineNum = 4521986;BA.debugLine="SelectedLines.Clear";
+RDebugUtils.currentLine=4259842;
+ //BA.debugLineNum = 4259842;BA.debugLine="SelectedLines.Clear";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._clear /*String*/ (null);
-RDebugUtils.currentLine=4521987;
- //BA.debugLineNum = 4521987;BA.debugLine="If mCurrentMode = MODE_SINGLE_CELL_TEMP Then";
+RDebugUtils.currentLine=4259843;
+ //BA.debugLineNum = 4259843;BA.debugLine="If mCurrentMode = MODE_SINGLE_CELL_TEMP Then";
 if (__ref._mcurrentmode /*int*/ ==__ref._mode_single_cell_temp /*int*/ ) { 
-RDebugUtils.currentLine=4521988;
- //BA.debugLineNum = 4521988;BA.debugLine="mTable.SelectionColor = SelectionColor";
+RDebugUtils.currentLine=4259844;
+ //BA.debugLineNum = 4259844;BA.debugLine="mTable.SelectionColor = SelectionColor";
 __ref._mtable /*b4j.example.b4xtable*/ ._selectioncolor /*int*/  = __ref._selectioncolor /*int*/ ;
-RDebugUtils.currentLine=4521989;
- //BA.debugLineNum = 4521989;BA.debugLine="mTable.HighlightSearchResults = True";
+RDebugUtils.currentLine=4259845;
+ //BA.debugLineNum = 4259845;BA.debugLine="mTable.HighlightSearchResults = True";
 __ref._mtable /*b4j.example.b4xtable*/ ._highlightsearchresults /*boolean*/  = __c.True;
  }else {
-RDebugUtils.currentLine=4521991;
- //BA.debugLineNum = 4521991;BA.debugLine="mTable.SelectionColor = xui.Color_Transparent";
+RDebugUtils.currentLine=4259847;
+ //BA.debugLineNum = 4259847;BA.debugLine="mTable.SelectionColor = xui.Color_Transparent";
 __ref._mtable /*b4j.example.b4xtable*/ ._selectioncolor /*int*/  = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .Color_Transparent;
-RDebugUtils.currentLine=4521992;
- //BA.debugLineNum = 4521992;BA.debugLine="mTable.HighlightSearchResults = False";
+RDebugUtils.currentLine=4259848;
+ //BA.debugLineNum = 4259848;BA.debugLine="mTable.HighlightSearchResults = False";
 __ref._mtable /*b4j.example.b4xtable*/ ._highlightsearchresults /*boolean*/  = __c.False;
  };
-RDebugUtils.currentLine=4521994;
- //BA.debugLineNum = 4521994;BA.debugLine="Select mCurrentMode";
+RDebugUtils.currentLine=4259850;
+ //BA.debugLineNum = 4259850;BA.debugLine="Select mCurrentMode";
 switch (BA.switchObjectToInt(__ref._mcurrentmode /*int*/ ,__ref._mode_single_cell_permanent /*int*/ ,__ref._mode_single_line_permanent /*int*/ ,__ref._mode_multiple_cells /*int*/ ,__ref._mode_multiple_lines /*int*/ )) {
 case 0: {
-RDebugUtils.currentLine=4521996;
- //BA.debugLineNum = 4521996;BA.debugLine="SingleMode = True";
+RDebugUtils.currentLine=4259852;
+ //BA.debugLineNum = 4259852;BA.debugLine="SingleMode = True";
 __ref._singlemode /*boolean*/  = __c.True;
-RDebugUtils.currentLine=4521997;
- //BA.debugLineNum = 4521997;BA.debugLine="LineMode = False";
+RDebugUtils.currentLine=4259853;
+ //BA.debugLineNum = 4259853;BA.debugLine="LineMode = False";
 __ref._linemode /*boolean*/  = __c.False;
  break; }
 case 1: {
-RDebugUtils.currentLine=4521999;
- //BA.debugLineNum = 4521999;BA.debugLine="SingleMode = True";
+RDebugUtils.currentLine=4259855;
+ //BA.debugLineNum = 4259855;BA.debugLine="SingleMode = True";
 __ref._singlemode /*boolean*/  = __c.True;
-RDebugUtils.currentLine=4522000;
- //BA.debugLineNum = 4522000;BA.debugLine="LineMode = True";
+RDebugUtils.currentLine=4259856;
+ //BA.debugLineNum = 4259856;BA.debugLine="LineMode = True";
 __ref._linemode /*boolean*/  = __c.True;
  break; }
 case 2: {
-RDebugUtils.currentLine=4522002;
- //BA.debugLineNum = 4522002;BA.debugLine="SingleMode = False";
+RDebugUtils.currentLine=4259858;
+ //BA.debugLineNum = 4259858;BA.debugLine="SingleMode = False";
 __ref._singlemode /*boolean*/  = __c.False;
-RDebugUtils.currentLine=4522003;
- //BA.debugLineNum = 4522003;BA.debugLine="LineMode = False";
+RDebugUtils.currentLine=4259859;
+ //BA.debugLineNum = 4259859;BA.debugLine="LineMode = False";
 __ref._linemode /*boolean*/  = __c.False;
  break; }
 case 3: {
-RDebugUtils.currentLine=4522005;
- //BA.debugLineNum = 4522005;BA.debugLine="SingleMode = False";
+RDebugUtils.currentLine=4259861;
+ //BA.debugLineNum = 4259861;BA.debugLine="SingleMode = False";
 __ref._singlemode /*boolean*/  = __c.False;
-RDebugUtils.currentLine=4522006;
- //BA.debugLineNum = 4522006;BA.debugLine="LineMode = True";
+RDebugUtils.currentLine=4259862;
+ //BA.debugLineNum = 4259862;BA.debugLine="LineMode = True";
 __ref._linemode /*boolean*/  = __c.True;
  break; }
 }
 ;
-RDebugUtils.currentLine=4522008;
- //BA.debugLineNum = 4522008;BA.debugLine="Refresh";
+RDebugUtils.currentLine=4259864;
+ //BA.debugLineNum = 4259864;BA.debugLine="Refresh";
 __ref._refresh /*String*/ (null);
-RDebugUtils.currentLine=4522009;
- //BA.debugLineNum = 4522009;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4259865;
+ //BA.debugLineNum = 4259865;BA.debugLine="End Sub";
 return "";
 }
 public long  _firstselectedrowid(b4j.example.b4xtableselections __ref) throws Exception{
@@ -154,21 +154,21 @@ __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "firstselectedrowid", false))
 	 {return ((Long) Debug.delegate(ba, "firstselectedrowid", null));}
-RDebugUtils.currentLine=4718592;
- //BA.debugLineNum = 4718592;BA.debugLine="Public Sub FirstSelectedRowId As Long";
-RDebugUtils.currentLine=4718593;
- //BA.debugLineNum = 4718593;BA.debugLine="If SelectedLines.Size > 0 Then";
+RDebugUtils.currentLine=4456448;
+ //BA.debugLineNum = 4456448;BA.debugLine="Public Sub FirstSelectedRowId As Long";
+RDebugUtils.currentLine=4456449;
+ //BA.debugLineNum = 4456449;BA.debugLine="If SelectedLines.Size > 0 Then";
 if (__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getsize /*int*/ (null)>0) { 
-RDebugUtils.currentLine=4718594;
- //BA.debugLineNum = 4718594;BA.debugLine="Return SelectedLines.Keys.Get(0)";
+RDebugUtils.currentLine=4456450;
+ //BA.debugLineNum = 4456450;BA.debugLine="Return SelectedLines.Keys.Get(0)";
 if (true) return BA.ObjectToLongNumber(__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getkeys /*anywheresoftware.b4a.objects.collections.List*/ (null).Get((int) (0)));
  }else {
-RDebugUtils.currentLine=4718596;
- //BA.debugLineNum = 4718596;BA.debugLine="Return 0";
+RDebugUtils.currentLine=4456452;
+ //BA.debugLineNum = 4456452;BA.debugLine="Return 0";
 if (true) return (long) (0);
  };
-RDebugUtils.currentLine=4718598;
- //BA.debugLineNum = 4718598;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4456454;
+ //BA.debugLineNum = 4456454;BA.debugLine="End Sub";
 return 0L;
 }
 public String  _cellclicked(b4j.example.b4xtableselections __ref,String _columnid,long _rowid) throws Exception{
@@ -177,52 +177,52 @@ RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "cellclicked", false))
 	 {return ((String) Debug.delegate(ba, "cellclicked", new Object[] {_columnid,_rowid}));}
 anywheresoftware.b4a.objects.collections.List _selectedcells = null;
-RDebugUtils.currentLine=4325376;
- //BA.debugLineNum = 4325376;BA.debugLine="Public Sub CellClicked (ColumnId As String, RowId";
-RDebugUtils.currentLine=4325377;
- //BA.debugLineNum = 4325377;BA.debugLine="If mCurrentMode = MODE_SINGLE_CELL_TEMP Then Retu";
+RDebugUtils.currentLine=4063232;
+ //BA.debugLineNum = 4063232;BA.debugLine="Public Sub CellClicked (ColumnId As String, RowId";
+RDebugUtils.currentLine=4063233;
+ //BA.debugLineNum = 4063233;BA.debugLine="If mCurrentMode = MODE_SINGLE_CELL_TEMP Then Retu";
 if (__ref._mcurrentmode /*int*/ ==__ref._mode_single_cell_temp /*int*/ ) { 
 if (true) return "";};
-RDebugUtils.currentLine=4325396;
- //BA.debugLineNum = 4325396;BA.debugLine="If SingleMode Then SelectedLines.Clear";
+RDebugUtils.currentLine=4063252;
+ //BA.debugLineNum = 4063252;BA.debugLine="If SingleMode Then SelectedLines.Clear";
 if (__ref._singlemode /*boolean*/ ) { 
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._clear /*String*/ (null);};
-RDebugUtils.currentLine=4325397;
- //BA.debugLineNum = 4325397;BA.debugLine="If LineMode Then";
+RDebugUtils.currentLine=4063253;
+ //BA.debugLineNum = 4063253;BA.debugLine="If LineMode Then";
 if (__ref._linemode /*boolean*/ ) { 
-RDebugUtils.currentLine=4325398;
- //BA.debugLineNum = 4325398;BA.debugLine="SelectedLines.Put(RowId, \"\")";
+RDebugUtils.currentLine=4063254;
+ //BA.debugLineNum = 4063254;BA.debugLine="SelectedLines.Put(RowId, \"\")";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._put /*String*/ (null,(Object)(_rowid),(Object)(""));
  }else {
-RDebugUtils.currentLine=4325400;
- //BA.debugLineNum = 4325400;BA.debugLine="Dim SelectedCells As List";
+RDebugUtils.currentLine=4063256;
+ //BA.debugLineNum = 4063256;BA.debugLine="Dim SelectedCells As List";
 _selectedcells = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=4325401;
- //BA.debugLineNum = 4325401;BA.debugLine="If SelectedLines.ContainsKey(RowId) Then";
+RDebugUtils.currentLine=4063257;
+ //BA.debugLineNum = 4063257;BA.debugLine="If SelectedLines.ContainsKey(RowId) Then";
 if (__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._containskey /*boolean*/ (null,(Object)(_rowid))) { 
-RDebugUtils.currentLine=4325402;
- //BA.debugLineNum = 4325402;BA.debugLine="SelectedCells = SelectedLines.Get(RowId)";
+RDebugUtils.currentLine=4063258;
+ //BA.debugLineNum = 4063258;BA.debugLine="SelectedCells = SelectedLines.Get(RowId)";
 _selectedcells = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._get /*Object*/ (null,(Object)(_rowid))));
  }else {
-RDebugUtils.currentLine=4325404;
- //BA.debugLineNum = 4325404;BA.debugLine="Dim SelectedCells As List";
+RDebugUtils.currentLine=4063260;
+ //BA.debugLineNum = 4063260;BA.debugLine="Dim SelectedCells As List";
 _selectedcells = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=4325405;
- //BA.debugLineNum = 4325405;BA.debugLine="SelectedCells.Initialize";
+RDebugUtils.currentLine=4063261;
+ //BA.debugLineNum = 4063261;BA.debugLine="SelectedCells.Initialize";
 _selectedcells.Initialize();
-RDebugUtils.currentLine=4325406;
- //BA.debugLineNum = 4325406;BA.debugLine="SelectedLines.Put(RowId, SelectedCells)";
+RDebugUtils.currentLine=4063262;
+ //BA.debugLineNum = 4063262;BA.debugLine="SelectedLines.Put(RowId, SelectedCells)";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._put /*String*/ (null,(Object)(_rowid),(Object)(_selectedcells.getObject()));
  };
-RDebugUtils.currentLine=4325408;
- //BA.debugLineNum = 4325408;BA.debugLine="SelectedCells.Add(ColumnId)";
+RDebugUtils.currentLine=4063264;
+ //BA.debugLineNum = 4063264;BA.debugLine="SelectedCells.Add(ColumnId)";
 _selectedcells.Add((Object)(_columnid));
  };
-RDebugUtils.currentLine=4325411;
- //BA.debugLineNum = 4325411;BA.debugLine="Refresh";
+RDebugUtils.currentLine=4063267;
+ //BA.debugLineNum = 4063267;BA.debugLine="Refresh";
 __ref._refresh /*String*/ (null);
-RDebugUtils.currentLine=4325412;
- //BA.debugLineNum = 4325412;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4063268;
+ //BA.debugLineNum = 4063268;BA.debugLine="End Sub";
 return "";
 }
 public String  _refresh(b4j.example.b4xtableselections __ref) throws Exception{
@@ -239,40 +239,40 @@ b4j.example.b4xtable._b4xtablecolumn _col = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _p = null;
 anywheresoftware.b4a.objects.B4XViewWrapper _lbl = null;
 anywheresoftware.b4a.objects.collections.List _rowstoremove = null;
-RDebugUtils.currentLine=4390912;
- //BA.debugLineNum = 4390912;BA.debugLine="Public Sub Refresh";
-RDebugUtils.currentLine=4390913;
- //BA.debugLineNum = 4390913;BA.debugLine="For i = 0 To mTable.VisibleRowIds.Size - 1";
+RDebugUtils.currentLine=4128768;
+ //BA.debugLineNum = 4128768;BA.debugLine="Public Sub Refresh";
+RDebugUtils.currentLine=4128769;
+ //BA.debugLineNum = 4128769;BA.debugLine="For i = 0 To mTable.VisibleRowIds.Size - 1";
 {
 final int step1 = 1;
 final int limit1 = (int) (__ref._mtable /*b4j.example.b4xtable*/ ._visiblerowids /*anywheresoftware.b4a.objects.collections.List*/ .getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit1 ;_i = _i + step1 ) {
-RDebugUtils.currentLine=4390914;
- //BA.debugLineNum = 4390914;BA.debugLine="Dim clr As Int";
+RDebugUtils.currentLine=4128770;
+ //BA.debugLineNum = 4128770;BA.debugLine="Dim clr As Int";
 _clr = 0;
-RDebugUtils.currentLine=4390915;
- //BA.debugLineNum = 4390915;BA.debugLine="If i Mod 2 = 0 Then clr = mTable.EvenRowColor El";
+RDebugUtils.currentLine=4128771;
+ //BA.debugLineNum = 4128771;BA.debugLine="If i Mod 2 = 0 Then clr = mTable.EvenRowColor El";
 if (_i%2==0) { 
 _clr = __ref._mtable /*b4j.example.b4xtable*/ ._evenrowcolor /*int*/ ;}
 else {
 _clr = __ref._mtable /*b4j.example.b4xtable*/ ._oddrowcolor /*int*/ ;};
-RDebugUtils.currentLine=4390916;
- //BA.debugLineNum = 4390916;BA.debugLine="Dim RowId As Long = mTable.VisibleRowIds.Get(i)";
+RDebugUtils.currentLine=4128772;
+ //BA.debugLineNum = 4128772;BA.debugLine="Dim RowId As Long = mTable.VisibleRowIds.Get(i)";
 _rowid = BA.ObjectToLongNumber(__ref._mtable /*b4j.example.b4xtable*/ ._visiblerowids /*anywheresoftware.b4a.objects.collections.List*/ .Get(_i));
-RDebugUtils.currentLine=4390917;
- //BA.debugLineNum = 4390917;BA.debugLine="Dim RowSelected As Boolean = SelectedLines.Conta";
+RDebugUtils.currentLine=4128773;
+ //BA.debugLineNum = 4128773;BA.debugLine="Dim RowSelected As Boolean = SelectedLines.Conta";
 _rowselected = __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._containskey /*boolean*/ (null,(Object)(_rowid));
-RDebugUtils.currentLine=4390918;
- //BA.debugLineNum = 4390918;BA.debugLine="If RowSelected And LineMode = False Then";
+RDebugUtils.currentLine=4128774;
+ //BA.debugLineNum = 4128774;BA.debugLine="If RowSelected And LineMode = False Then";
 if (_rowselected && __ref._linemode /*boolean*/ ==__c.False) { 
-RDebugUtils.currentLine=4390919;
- //BA.debugLineNum = 4390919;BA.debugLine="Dim SelectedCells As List = SelectedLines.Get(R";
+RDebugUtils.currentLine=4128775;
+ //BA.debugLineNum = 4128775;BA.debugLine="Dim SelectedCells As List = SelectedLines.Get(R";
 _selectedcells = new anywheresoftware.b4a.objects.collections.List();
 _selectedcells = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._get /*Object*/ (null,(Object)(_rowid))));
  };
-RDebugUtils.currentLine=4390921;
- //BA.debugLineNum = 4390921;BA.debugLine="For Each col As B4XTableColumn In mTable.Visible";
+RDebugUtils.currentLine=4128777;
+ //BA.debugLineNum = 4128777;BA.debugLine="For Each col As B4XTableColumn In mTable.Visible";
 {
 final anywheresoftware.b4a.BA.IterableList group9 = __ref._mtable /*b4j.example.b4xtable*/ ._visiblecolumns /*anywheresoftware.b4a.objects.collections.List*/ ;
 final int groupLen9 = group9.getSize()
@@ -280,46 +280,46 @@ final int groupLen9 = group9.getSize()
 ;
 for (; index9 < groupLen9;index9++){
 _col = (b4j.example.b4xtable._b4xtablecolumn)(group9.Get(index9));
-RDebugUtils.currentLine=4390922;
- //BA.debugLineNum = 4390922;BA.debugLine="Dim p As B4XView = col.CellsLayouts.Get(i + 1)";
+RDebugUtils.currentLine=4128778;
+ //BA.debugLineNum = 4128778;BA.debugLine="Dim p As B4XView = col.CellsLayouts.Get(i + 1)";
 _p = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _p = (anywheresoftware.b4a.objects.B4XViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.B4XViewWrapper(), (java.lang.Object)(_col.CellsLayouts /*anywheresoftware.b4a.objects.collections.List*/ .Get((int) (_i+1))));
-RDebugUtils.currentLine=4390923;
- //BA.debugLineNum = 4390923;BA.debugLine="Dim lbl As B4XView = p.GetView(col.LabelIndex)";
+RDebugUtils.currentLine=4128779;
+ //BA.debugLineNum = 4128779;BA.debugLine="Dim lbl As B4XView = p.GetView(col.LabelIndex)";
 _lbl = new anywheresoftware.b4a.objects.B4XViewWrapper();
 _lbl = _p.GetView(_col.LabelIndex /*int*/ );
-RDebugUtils.currentLine=4390924;
- //BA.debugLineNum = 4390924;BA.debugLine="If RowSelected And (LineMode Or SelectedCells.I";
+RDebugUtils.currentLine=4128780;
+ //BA.debugLineNum = 4128780;BA.debugLine="If RowSelected And (LineMode Or SelectedCells.I";
 if (_rowselected && (__ref._linemode /*boolean*/  || _selectedcells.IndexOf((Object)(_col.Id /*String*/ ))>-1)) { 
-RDebugUtils.currentLine=4390925;
- //BA.debugLineNum = 4390925;BA.debugLine="p.Color = SelectionColor";
+RDebugUtils.currentLine=4128781;
+ //BA.debugLineNum = 4128781;BA.debugLine="p.Color = SelectionColor";
 _p.setColor(__ref._selectioncolor /*int*/ );
-RDebugUtils.currentLine=4390926;
- //BA.debugLineNum = 4390926;BA.debugLine="lbl.TextColor = SelectedTextColor";
+RDebugUtils.currentLine=4128782;
+ //BA.debugLineNum = 4128782;BA.debugLine="lbl.TextColor = SelectedTextColor";
 _lbl.setTextColor(__ref._selectedtextcolor /*int*/ );
  }else {
-RDebugUtils.currentLine=4390928;
- //BA.debugLineNum = 4390928;BA.debugLine="p.Color = clr";
+RDebugUtils.currentLine=4128784;
+ //BA.debugLineNum = 4128784;BA.debugLine="p.Color = clr";
 _p.setColor(_clr);
-RDebugUtils.currentLine=4390929;
- //BA.debugLineNum = 4390929;BA.debugLine="lbl.TextColor = mTable.TextColor";
+RDebugUtils.currentLine=4128785;
+ //BA.debugLineNum = 4128785;BA.debugLine="lbl.TextColor = mTable.TextColor";
 _lbl.setTextColor(__ref._mtable /*b4j.example.b4xtable*/ ._textcolor /*int*/ );
  };
  }
 };
  }
 };
-RDebugUtils.currentLine=4390933;
- //BA.debugLineNum = 4390933;BA.debugLine="If AutoRemoveInvisibleSelections Then";
+RDebugUtils.currentLine=4128789;
+ //BA.debugLineNum = 4128789;BA.debugLine="If AutoRemoveInvisibleSelections Then";
 if (__ref._autoremoveinvisibleselections /*boolean*/ ) { 
-RDebugUtils.currentLine=4390934;
- //BA.debugLineNum = 4390934;BA.debugLine="Dim RowsToRemove As List";
+RDebugUtils.currentLine=4128790;
+ //BA.debugLineNum = 4128790;BA.debugLine="Dim RowsToRemove As List";
 _rowstoremove = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=4390935;
- //BA.debugLineNum = 4390935;BA.debugLine="RowsToRemove.Initialize";
+RDebugUtils.currentLine=4128791;
+ //BA.debugLineNum = 4128791;BA.debugLine="RowsToRemove.Initialize";
 _rowstoremove.Initialize();
-RDebugUtils.currentLine=4390936;
- //BA.debugLineNum = 4390936;BA.debugLine="For Each RowId As Long In SelectedLines.Keys";
+RDebugUtils.currentLine=4128792;
+ //BA.debugLineNum = 4128792;BA.debugLine="For Each RowId As Long In SelectedLines.Keys";
 {
 final anywheresoftware.b4a.BA.IterableList group24 = __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getkeys /*anywheresoftware.b4a.objects.collections.List*/ (null);
 final int groupLen24 = group24.getSize()
@@ -327,17 +327,17 @@ final int groupLen24 = group24.getSize()
 ;
 for (; index24 < groupLen24;index24++){
 _rowid = BA.ObjectToLongNumber(group24.Get(index24));
-RDebugUtils.currentLine=4390937;
- //BA.debugLineNum = 4390937;BA.debugLine="If mTable.VisibleRowIds.IndexOf(RowId) = -1 The";
+RDebugUtils.currentLine=4128793;
+ //BA.debugLineNum = 4128793;BA.debugLine="If mTable.VisibleRowIds.IndexOf(RowId) = -1 The";
 if (__ref._mtable /*b4j.example.b4xtable*/ ._visiblerowids /*anywheresoftware.b4a.objects.collections.List*/ .IndexOf((Object)(_rowid))==-1) { 
-RDebugUtils.currentLine=4390938;
- //BA.debugLineNum = 4390938;BA.debugLine="RowsToRemove.Add(RowId)";
+RDebugUtils.currentLine=4128794;
+ //BA.debugLineNum = 4128794;BA.debugLine="RowsToRemove.Add(RowId)";
 _rowstoremove.Add((Object)(_rowid));
  };
  }
 };
-RDebugUtils.currentLine=4390941;
- //BA.debugLineNum = 4390941;BA.debugLine="For Each RowId As Long In RowsToRemove";
+RDebugUtils.currentLine=4128797;
+ //BA.debugLineNum = 4128797;BA.debugLine="For Each RowId As Long In RowsToRemove";
 {
 final anywheresoftware.b4a.BA.IterableList group29 = _rowstoremove;
 final int groupLen29 = group29.getSize()
@@ -345,57 +345,57 @@ final int groupLen29 = group29.getSize()
 ;
 for (; index29 < groupLen29;index29++){
 _rowid = BA.ObjectToLongNumber(group29.Get(index29));
-RDebugUtils.currentLine=4390942;
- //BA.debugLineNum = 4390942;BA.debugLine="SelectedLines.Remove(RowId)";
+RDebugUtils.currentLine=4128798;
+ //BA.debugLineNum = 4128798;BA.debugLine="SelectedLines.Remove(RowId)";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._remove /*String*/ (null,(Object)(_rowid));
  }
 };
  };
-RDebugUtils.currentLine=4390945;
- //BA.debugLineNum = 4390945;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4128801;
+ //BA.debugLineNum = 4128801;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4j.example.b4xtableselections __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
-RDebugUtils.currentLine=4194304;
- //BA.debugLineNum = 4194304;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=4194305;
- //BA.debugLineNum = 4194305;BA.debugLine="Public MODE_SINGLE_CELL_TEMP = 1, MODE_SINGLE_CEL";
+RDebugUtils.currentLine=3932160;
+ //BA.debugLineNum = 3932160;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=3932161;
+ //BA.debugLineNum = 3932161;BA.debugLine="Public MODE_SINGLE_CELL_TEMP = 1, MODE_SINGLE_CEL";
 _mode_single_cell_temp = (int) (1);
 _mode_single_cell_permanent = (int) (2);
 _mode_single_line_permanent = (int) (3);
-RDebugUtils.currentLine=4194306;
- //BA.debugLineNum = 4194306;BA.debugLine="Public MODE_MULTIPLE_CELLS = 4, MODE_MULTIPLE_LIN";
+RDebugUtils.currentLine=3932162;
+ //BA.debugLineNum = 3932162;BA.debugLine="Public MODE_MULTIPLE_CELLS = 4, MODE_MULTIPLE_LIN";
 _mode_multiple_cells = (int) (4);
 _mode_multiple_lines = (int) (5);
-RDebugUtils.currentLine=4194307;
- //BA.debugLineNum = 4194307;BA.debugLine="Private LineMode, SingleMode As Boolean";
+RDebugUtils.currentLine=3932163;
+ //BA.debugLineNum = 3932163;BA.debugLine="Private LineMode, SingleMode As Boolean";
 _linemode = false;
 _singlemode = false;
-RDebugUtils.currentLine=4194308;
- //BA.debugLineNum = 4194308;BA.debugLine="Private mCurrentMode As Int";
+RDebugUtils.currentLine=3932164;
+ //BA.debugLineNum = 3932164;BA.debugLine="Private mCurrentMode As Int";
 _mcurrentmode = 0;
-RDebugUtils.currentLine=4194309;
- //BA.debugLineNum = 4194309;BA.debugLine="Public SelectedLines As B4XOrderedMap";
+RDebugUtils.currentLine=3932165;
+ //BA.debugLineNum = 3932165;BA.debugLine="Public SelectedLines As B4XOrderedMap";
 _selectedlines = new b4j.example.b4xorderedmap();
-RDebugUtils.currentLine=4194310;
- //BA.debugLineNum = 4194310;BA.debugLine="Public SelectionColor As Int";
+RDebugUtils.currentLine=3932166;
+ //BA.debugLineNum = 3932166;BA.debugLine="Public SelectionColor As Int";
 _selectioncolor = 0;
-RDebugUtils.currentLine=4194311;
- //BA.debugLineNum = 4194311;BA.debugLine="Private mTable As B4XTable";
+RDebugUtils.currentLine=3932167;
+ //BA.debugLineNum = 3932167;BA.debugLine="Private mTable As B4XTable";
 _mtable = new b4j.example.b4xtable();
-RDebugUtils.currentLine=4194312;
- //BA.debugLineNum = 4194312;BA.debugLine="Private xui As XUI";
+RDebugUtils.currentLine=3932168;
+ //BA.debugLineNum = 3932168;BA.debugLine="Private xui As XUI";
 _xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
-RDebugUtils.currentLine=4194313;
- //BA.debugLineNum = 4194313;BA.debugLine="Public AutoRemoveInvisibleSelections As Boolean";
+RDebugUtils.currentLine=3932169;
+ //BA.debugLineNum = 3932169;BA.debugLine="Public AutoRemoveInvisibleSelections As Boolean";
 _autoremoveinvisibleselections = false;
-RDebugUtils.currentLine=4194314;
- //BA.debugLineNum = 4194314;BA.debugLine="Public SelectedTextColor As Int = xui.Color_White";
+RDebugUtils.currentLine=3932170;
+ //BA.debugLineNum = 3932170;BA.debugLine="Public SelectedTextColor As Int = xui.Color_White";
 _selectedtextcolor = __ref._xui /*anywheresoftware.b4a.objects.B4XViewWrapper.XUI*/ .Color_White;
-RDebugUtils.currentLine=4194315;
- //BA.debugLineNum = 4194315;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3932171;
+ //BA.debugLineNum = 3932171;BA.debugLine="End Sub";
 return "";
 }
 public String  _clear(b4j.example.b4xtableselections __ref) throws Exception{
@@ -403,16 +403,16 @@ __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "clear", false))
 	 {return ((String) Debug.delegate(ba, "clear", null));}
-RDebugUtils.currentLine=4587520;
- //BA.debugLineNum = 4587520;BA.debugLine="Public Sub Clear";
-RDebugUtils.currentLine=4587521;
- //BA.debugLineNum = 4587521;BA.debugLine="SelectedLines.Clear";
+RDebugUtils.currentLine=4325376;
+ //BA.debugLineNum = 4325376;BA.debugLine="Public Sub Clear";
+RDebugUtils.currentLine=4325377;
+ //BA.debugLineNum = 4325377;BA.debugLine="SelectedLines.Clear";
 __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._clear /*String*/ (null);
-RDebugUtils.currentLine=4587522;
- //BA.debugLineNum = 4587522;BA.debugLine="Refresh";
+RDebugUtils.currentLine=4325378;
+ //BA.debugLineNum = 4325378;BA.debugLine="Refresh";
 __ref._refresh /*String*/ (null);
-RDebugUtils.currentLine=4587523;
- //BA.debugLineNum = 4587523;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4325379;
+ //BA.debugLineNum = 4325379;BA.debugLine="End Sub";
 return "";
 }
 public String  _firstselectedcolumnid(b4j.example.b4xtableselections __ref) throws Exception{
@@ -421,25 +421,25 @@ RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "firstselectedcolumnid", false))
 	 {return ((String) Debug.delegate(ba, "firstselectedcolumnid", null));}
 anywheresoftware.b4a.objects.collections.List _l = null;
-RDebugUtils.currentLine=4784128;
- //BA.debugLineNum = 4784128;BA.debugLine="Public Sub FirstSelectedColumnId As String";
-RDebugUtils.currentLine=4784129;
- //BA.debugLineNum = 4784129;BA.debugLine="If SelectedLines.Size > 0 Then";
+RDebugUtils.currentLine=4521984;
+ //BA.debugLineNum = 4521984;BA.debugLine="Public Sub FirstSelectedColumnId As String";
+RDebugUtils.currentLine=4521985;
+ //BA.debugLineNum = 4521985;BA.debugLine="If SelectedLines.Size > 0 Then";
 if (__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getsize /*int*/ (null)>0) { 
-RDebugUtils.currentLine=4784130;
- //BA.debugLineNum = 4784130;BA.debugLine="Dim l As List = SelectedLines.Values.Get(0)";
+RDebugUtils.currentLine=4521986;
+ //BA.debugLineNum = 4521986;BA.debugLine="Dim l As List = SelectedLines.Values.Get(0)";
 _l = new anywheresoftware.b4a.objects.collections.List();
 _l = (anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(__ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getvalues /*anywheresoftware.b4a.objects.collections.List*/ (null).Get((int) (0))));
-RDebugUtils.currentLine=4784131;
- //BA.debugLineNum = 4784131;BA.debugLine="Return l.Get(0)";
+RDebugUtils.currentLine=4521987;
+ //BA.debugLineNum = 4521987;BA.debugLine="Return l.Get(0)";
 if (true) return BA.ObjectToString(_l.Get((int) (0)));
  }else {
-RDebugUtils.currentLine=4784133;
- //BA.debugLineNum = 4784133;BA.debugLine="Return \"\"";
+RDebugUtils.currentLine=4521989;
+ //BA.debugLineNum = 4521989;BA.debugLine="Return \"\"";
 if (true) return "";
  };
-RDebugUtils.currentLine=4784135;
- //BA.debugLineNum = 4784135;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4521991;
+ //BA.debugLineNum = 4521991;BA.debugLine="End Sub";
 return "";
 }
 public boolean  _getisselected(b4j.example.b4xtableselections __ref) throws Exception{
@@ -447,13 +447,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "getisselected", false))
 	 {return ((Boolean) Debug.delegate(ba, "getisselected", null));}
-RDebugUtils.currentLine=4653056;
- //BA.debugLineNum = 4653056;BA.debugLine="Public Sub getIsSelected As Boolean";
-RDebugUtils.currentLine=4653057;
- //BA.debugLineNum = 4653057;BA.debugLine="Return SelectedLines.Size > 0";
+RDebugUtils.currentLine=4390912;
+ //BA.debugLineNum = 4390912;BA.debugLine="Public Sub getIsSelected As Boolean";
+RDebugUtils.currentLine=4390913;
+ //BA.debugLineNum = 4390913;BA.debugLine="Return SelectedLines.Size > 0";
 if (true) return __ref._selectedlines /*b4j.example.b4xorderedmap*/ ._getsize /*int*/ (null)>0;
-RDebugUtils.currentLine=4653058;
- //BA.debugLineNum = 4653058;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4390914;
+ //BA.debugLineNum = 4390914;BA.debugLine="End Sub";
 return false;
 }
 public int  _getmode(b4j.example.b4xtableselections __ref) throws Exception{
@@ -461,13 +461,13 @@ __ref = this;
 RDebugUtils.currentModule="b4xtableselections";
 if (Debug.shouldDelegate(ba, "getmode", false))
 	 {return ((Integer) Debug.delegate(ba, "getmode", null));}
-RDebugUtils.currentLine=4456448;
- //BA.debugLineNum = 4456448;BA.debugLine="Public Sub getMode As Int";
-RDebugUtils.currentLine=4456449;
- //BA.debugLineNum = 4456449;BA.debugLine="Return mCurrentMode";
+RDebugUtils.currentLine=4194304;
+ //BA.debugLineNum = 4194304;BA.debugLine="Public Sub getMode As Int";
+RDebugUtils.currentLine=4194305;
+ //BA.debugLineNum = 4194305;BA.debugLine="Return mCurrentMode";
 if (true) return __ref._mcurrentmode /*int*/ ;
-RDebugUtils.currentLine=4456450;
- //BA.debugLineNum = 4456450;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4194306;
+ //BA.debugLineNum = 4194306;BA.debugLine="End Sub";
 return 0;
 }
 }

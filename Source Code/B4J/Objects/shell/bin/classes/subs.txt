@@ -306,7 +306,7 @@ b4xmainpage,button1_click,1,0,117,136
 
 
 magmagrid,sumrows,magmagrid,getdata,magmagrid,setdata,inlineediting,exiteditmode,b4xtable,getcolumn,inlineediting,getisineditingstate,b4xtable,refreshnow,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,b4xtable,setdata,magmagrid,calcall,magmagrid,enableresizeguidelines,b4xtable,createtable,b4xtable,columntosqltype,magmagrid,rowcalcpraxis,b4xtable,getrow,b4xeval,initialize,b4xeval,eval,magmagrid,setvalue,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xtable,refresh
-b4xmainpage,button2_click,1,0,138,147
+b4xmainpage,button2_click,1,0,138,151
 
 
 magmagrid,getdata,magmagrid,setdata,magmagrid,calcall,b4xtable,setdata,magmagrid,enableresizeguidelines,b4xtable,createtable,b4xtable,refreshnow,b4xtable,columntosqltype,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,magmagrid,rowcalcpraxis,b4xtable,getrow,b4xeval,initialize,b4xeval,eval,magmagrid,setvalue,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xtable,getcolumn,b4xtable,refresh
@@ -394,11 +394,11 @@ magmagrid,setdata,1,0,165,189
 
 
 b4xtable,setdata,,calcall,,enableresizeguidelines,b4xtable,createtable,b4xtable,refreshnow,b4xtable,columntosqltype,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,,rowcalcpraxis,b4xtable,getrow,b4xeval,initialize,b4xeval,eval,,setvalue,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xtable,getcolumn,b4xtable,refresh
-magmagrid,sumrows,1,0,985,1005
+magmagrid,sumrows,1,0,989,1009
 
 
 inlineediting,exiteditmode,b4xtable,getcolumn,inlineediting,getisineditingstate,b4xtable,refreshnow,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata
-magmagrid,getdata,0,0,1007,1029
+magmagrid,getdata,0,0,1011,1033
 
 
 
@@ -426,11 +426,15 @@ magmagrid,class_globals,0,0,14,65
 
 
 
-magmagrid,enableresizeguidelines,0,0,1039,1072
+magmagrid,deleterow,1,0,1035,1040
+
+
+b4xtable,refresh,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata
+magmagrid,enableresizeguidelines,0,0,1050,1083
 
 
 
-magmagrid,firstcolforedit,0,0,972,982
+magmagrid,firstcolforedit,0,0,976,986
 
 
 
@@ -446,23 +450,23 @@ magmagrid,useb4xtable_cellclicked,1,0,575,609
 
 
 inlineediting,exiteditmode,,rowcalcpraxis,b4xtableselections,cellclicked,,selcolumn,,getvalue,,setvalue,inlineediting,cellclicked,inlineediting,getisineditingstate,b4xtable,getcolumn,b4xtable,refreshnow,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,b4xtable,getrow,b4xeval,initialize,b4xeval,eval,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xtable,refresh,b4xorderedmap,clear,b4xorderedmap,put,b4xorderedmap,containskey,b4xorderedmap,get,b4xtableselections,refresh,b4xorderedmap,getkeys,b4xorderedmap,remove,inlineediting,makecelleditable,inlineediting,createfocusedcell,inlineediting,seteditablecontrollayout
-magmagrid,guidelinepanel_mousedragged,0,0,1157,1200
+magmagrid,guidelinepanel_mousedragged,0,0,1168,1211
 
 
 
-magmagrid,guidelinepanel_mouseentered,0,0,1074,1097
+magmagrid,guidelinepanel_mouseentered,0,0,1085,1108
 
 
 
-magmagrid,guidelinepanel_mouseexited,0,0,1099,1111
+magmagrid,guidelinepanel_mouseexited,0,0,1110,1122
 
 
 
-magmagrid,guidelinepanel_mousepressed,1,0,1113,1155
+magmagrid,guidelinepanel_mousepressed,1,0,1124,1166
 
 
 b4xtable,refresh,,enableresizeguidelines,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata
-magmagrid,guidelinepanel_mousereleased,1,0,1202,1217
+magmagrid,guidelinepanel_mousereleased,1,0,1213,1228
 
 
 b4xtable,refresh,,enableresizeguidelines,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,updatedata,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata
@@ -482,10 +486,10 @@ magmagrid,istablefocused,0,0,811,820
 main,scene
 
 
-magmagrid,keypressed_filter,1,0,831,969
+magmagrid,keypressed_filter,1,0,831,973
 main,scene
 
-,istablefocused,b4xtableselections,firstselectedrowid,b4xtable,setcurrentpage,b4xtable,getcurrentpage,,getvalue,,setvalue,,selcolumn,,nexteditablecolumn,b4xtableselections,cellclicked,inlineediting,exiteditmode,b4xmagmafuncs,iscomboboxfocused,,mynumfield_action,,mytextfield_action,b4xorderedmap,getsize,b4xorderedmap,getkeys,b4xtable,setfirstrowindex,b4xtable,updatedata,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,b4xtable,getrow,b4xtable,getcolumn,b4xtable,refresh,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,updatetablecounters,,useb4xtable_cellclicked,,goatrowandclick,,rowcalcpraxis,inlineediting,cellclicked,inlineediting,getisineditingstate,b4xtable,refreshnow,b4xeval,initialize,b4xeval,eval,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xorderedmap,clear,b4xorderedmap,put,b4xorderedmap,containskey,b4xorderedmap,get,b4xtableselections,refresh,b4xorderedmap,remove,inlineediting,makecelleditable,inlineediting,createfocusedcell,inlineediting,seteditablecontrollayout,,firstcolforedit
+,istablefocused,b4xtableselections,firstselectedrowid,b4xtable,setcurrentpage,b4xtable,getcurrentpage,,getvalue,,setvalue,,deleterow,,selcolumn,,nexteditablecolumn,b4xtableselections,cellclicked,inlineediting,exiteditmode,b4xmagmafuncs,iscomboboxfocused,,mynumfield_action,,mytextfield_action,b4xorderedmap,getsize,b4xorderedmap,getkeys,b4xtable,setfirstrowindex,b4xtable,updatedata,b4xtable,buildquery,b4xtable,implupdatedatafromquery,b4xtable,getlabelfromcolumn,b4xtable,settexttocell,b4xformatter,formatlabel,b4xtable,setpagelabelstate,b4xformatter,format,b4jtextflow,reset,b4jtextflow,append,b4jtextflow,setcolor,b4jtextflow,setfont,b4jtextflow,createtextflow,b4xformatter,getformatdata,b4xtable,getrow,b4xtable,getcolumn,b4xtable,refresh,b4xtable,refresh2,b4xtable,calculatewidths,b4xtable,checkandremovecolumnthatwasaddedtoincorrectparent,b4xtable,addcolumntoclv,b4xtable,createcolumnlayouts,b4xtable,resizecolumnimpl,b4xtable,resizeandreorderclvitems,b4xtable,updatesearchfieldvisibility,b4xtable,updatesorticon,b4xtable,removecolumnfromclv,b4xtable,createcellviews,b4xtable,setmousetransparent,b4xtable,updatetablecounters,,useb4xtable_cellclicked,,goatrowandclick,,rowcalcpraxis,inlineediting,cellclicked,inlineediting,getisineditingstate,b4xtable,refreshnow,b4xeval,initialize,b4xeval,eval,b4xeval,evalhelper,b4xeval,prepareexpression,b4xeval,createoperatornode,b4xeval,createnumbernode,b4xeval,buildtree,b4xeval,evalnode,b4xeval,calcsubexpression,b4xeval,takenextnode,b4xorderedmap,clear,b4xorderedmap,put,b4xorderedmap,containskey,b4xorderedmap,get,b4xtableselections,refresh,b4xorderedmap,remove,inlineediting,makecelleditable,inlineediting,createfocusedcell,inlineediting,seteditablecontrollayout,,firstcolforedit
 magmagrid,selcolumn,0,0,612,624
 
 
@@ -530,7 +534,7 @@ magmagrid,mytextfield_textchanged,0,0,718,745
 
 
 
-magmagrid,resizetimer_tick,0,0,1034,1037
+magmagrid,resizetimer_tick,0,0,1045,1048
 
 
 ,enableresizeguidelines

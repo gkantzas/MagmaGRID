@@ -25,7 +25,7 @@ Debug.locals.put("ctl", _ctl);
 Debug.ShouldStop(2048);
  BA.debugLineNum = 14;BA.debugLine="Log(ctl)";
 Debug.ShouldStop(8192);
-classkeyborad.__c.runVoidMethod ("LogImpl","76094850",BA.ObjectToString(_ctl),0);
+classkeyborad.__c.runVoidMethod ("LogImpl","247579138",BA.ObjectToString(_ctl),0);
  BA.debugLineNum = 15;BA.debugLine="Dim r As Reflector";
 Debug.ShouldStop(16384);
 _r = RemoteObject.createNew ("anywheresoftware.b4j.agraham.reflection.Reflection");Debug.locals.put("r", _r);

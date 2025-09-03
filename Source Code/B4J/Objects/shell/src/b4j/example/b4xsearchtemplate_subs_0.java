@@ -570,7 +570,7 @@ _count = RemoteObject.solve(new RemoteObject[] {_count,RemoteObject.createImmuta
 ;
  BA.debugLineNum = 227;BA.debugLine="Log(\"Index time: \" & (DateTime.Now - startTime) &";
 Debug.JustUpdateDeviceLine();
-b4xsearchtemplate.__c.runVoidMethod ("LogImpl","937093407",RemoteObject.concat(RemoteObject.createImmutable("Index time: "),(RemoteObject.solve(new RemoteObject[] {b4xsearchtemplate.__c.getField(false,"DateTime").runMethod(true,"getNow"),_starttime}, "-",1, 2)),RemoteObject.createImmutable(" ms ("),_items.runMethod(true,"getSize"),RemoteObject.createImmutable(" Items)")),0);
+b4xsearchtemplate.__c.runVoidMethod ("LogImpl","935389471",RemoteObject.concat(RemoteObject.createImmutable("Index time: "),(RemoteObject.solve(new RemoteObject[] {b4xsearchtemplate.__c.getField(false,"DateTime").runMethod(true,"getNow"),_starttime}, "-",1, 2)),RemoteObject.createImmutable(" ms ("),_items.runMethod(true,"getSize"),RemoteObject.createImmutable(" Items)")),0);
  BA.debugLineNum = 228;BA.debugLine="AllItems = Items";
 Debug.JustUpdateDeviceLine();
 __ref.setField ("_allitems" /*RemoteObject*/ ,_items);

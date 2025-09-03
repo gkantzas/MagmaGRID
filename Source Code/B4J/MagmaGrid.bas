@@ -39,8 +39,8 @@ Sub Class_Globals
 	Private DecimalSeparator As String = "."
 
 	Private PrevColumn As mycol
-	Private SelectedColumn As mycol
-	Private SelectedRow As Long
+	Public SelectedColumn As mycol
+	Public SelectedRow As Long
 
 	Private myroot As B4XView
 
@@ -889,7 +889,11 @@ Sub KeyPressed_Filter (e As Event)
 						End If
 						End If
 					Next
-					
+				Case "DELETE"
+					SelectedRow=row
+					DeleteRow(SelectedRow)	
+					row = table.VisibleRowIds.Get(0)
+					SelectedRow=row
 				Case "ENTER"
 					If noEdit=False Then
 						SelectedRow=row
@@ -1031,6 +1035,13 @@ public Sub GetData As List
 	rs.Close
 	
 	Return list1
+	
+End Sub
+
+Public Sub DeleteRow(rowid As Long)
+	
+	useB4XTable.sql1.ExecnonQuery("DELETE FROM data WHERE rowid=" & rowid & ";")
+	useB4XTable.Refresh
 	
 End Sub
 
