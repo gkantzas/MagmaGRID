@@ -135,9 +135,9 @@ You can use all mathematical symbols and any calculation. You can add as many ca
 
 You can SUM vertical (columns) or you can make any Calculation as an SQLITE query string without limit!
 
-**You can always Donate me / Send me money using PayPal at cyberd@mmpc.gr**
-
 
 **GetData** As List
 This returns your Data at a List... You can easily add them to any Database you want afterwards... This means that you can work without affecting the db the same time of changes but when you really want it...
  
+
+**You can always Donate me / Send me money using PayPal at cyberd@mmpc.gr**
