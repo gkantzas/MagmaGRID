@@ -119,6 +119,14 @@ Public Sub Initialize(parent As B4XView)
 
 End Sub
 
+Public Sub GetValues As Map
+	If SelectedRow>0 Then
+		Private MapValues As Map = useB4XTable.GetRow(SelectedRow)
+		Return MapValues
+	End If
+	Return Null
+End Sub
+
 public Sub GetValue(rowid As Long, columnid As String) As String
 	Private MapValues As Map = useB4XTable.GetRow(rowid)
 	For k=0 To MyColumns.Size-1
@@ -613,6 +621,8 @@ Sub useB4XTable_CellClicked (ColumnId As String, RowId As Long)
 	
 
 End Sub
+
+
 
 
 private Sub SelColumn(ID1 As String) As ResumableSub

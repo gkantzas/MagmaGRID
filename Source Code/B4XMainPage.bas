@@ -122,6 +122,10 @@ End Sub
 
 Private Sub Button1_Click
 	
+	'getvalues - get row values
+'	Dim m As Map=mg.GetValues
+'	If m.IsInitialized Then Log(m.GetValueAt(0))
+	
 	'You can auto calc perhaps using a timer (every some ms)
 	
 	
@@ -139,6 +143,8 @@ Private Sub Button1_Click
 	
 	'Check here if will be the same Data...
 	mg.SetData(newlist)
+	
+
 End Sub
 
 Private Sub Button2_Click
@@ -154,4 +160,6 @@ Private Sub Button2_Click
 	mg.SetData(newlist)
 	Sleep(1000)
 	mg.CalcAll
+	
+
 End Sub
