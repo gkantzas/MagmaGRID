@@ -45,17 +45,17 @@ I am thinking adding also keyfilter of DEL - for deleting rows of list.
 
 There are the following types of Column Types / Inline Editing:
 
-**TEXTFIELD
+**TEXTFIELD**
 
-TEXTFIELD_NUMERIC
+**TEXTFIELD_NUMERIC**
 
-COMBOEDIT
+**COMBOEDIT**
 
-COMBO
+**COMBO**
 
-CHECKBOX
+**CHECKBOX**
 
-DATE**
+**DATE**
 
 so using the following:
 
@@ -64,29 +64,29 @@ Width1 As Int, Controltype As String, Defaultvalue As String, UseList As List, M
 MinValue As Double, MaxValue As Double, Alignment As String, _
 MinIntegers As Int, MinFractions As Int, MaxFractions As Int, Grouping As Boolean)
 
-Name - Gives a Title at Column
+**Name** - Gives a Title at Column
 
-Hidden - Gives width of 1 pixel - so if you go at guideline of the column and press double click will show...
+**Hidden** - Gives width of 1 pixel - so if you go at guideline of the column and press double click will show...
 
-Locked - Cant use inline editing for specific field
+**Locked** - Cant use inline editing for specific field
 
-Sortable - You can sort By Column
+**Sortable** - You can sort By Column
 
-Width1 - You can set the default width of Column
+**Width1** - You can set the default width of Column
 
-DefaultValue - You can set the default value of column if you give a null "" text at the inline editing
+**DefaultValue** - You can set the default value of column if you give a null "" text at the inline editing
 
-UseList - You can use any list with items as map (useful for COMBO, COMBOEDIT)
+**UseList** - You can use any list with items as map (useful for COMBO, COMBOEDIT)
 
-MaxLength - You can set the Maximum Length for TextFields (even if is a numeric)
+**MaxLength** - You can set the Maximum Length for TextFields (even if is a numeric)
 
-MinValue - You can set the minimum value for numeric values (in date you can the long ticks number)
+**MinValue** - You can set the minimum value for numeric values (in date you can the long ticks number)
 
-MaxValue - You can set the maximum value for numeric values (in date you can the long ticks number)
+**MaxValue** - You can set the maximum value for numeric values (in date you can the long ticks number)
 
-Alignment - You can set it "RIGHT", "LEFT", "CENTER"
+**Alignment** - You can set it "RIGHT", "LEFT", "CENTER"
 
-MinIntegers, MinFractions, MaxFractions, Grouping - Are only for numeric values for formatting them right
+**MinIntegers**, **MinFractions**, **MaxFractions**, **Grouping** - Are only for numeric values for formatting them right
 
 
 Explaining UseList example:
