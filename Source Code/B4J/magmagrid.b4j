@@ -14,13 +14,14 @@ Library6=jreflection
 Module1=B4XEval
 Module2=B4XMagmaFuncs
 Module3=|relative|..\B4XMainPage
-Module4=B4XTableSelections
-Module5=ClassKeyborad
-Module6=InlineEditing
-Module7=MagmaGrid
+Module4=B4XTableDoubleClickEvents
+Module5=B4XTableSelections
+Module6=ClassKeyborad
+Module7=InlineEditing
+Module8=MagmaGrid
 NumberOfFiles=2
 NumberOfLibraries=6
-NumberOfModules=7
+NumberOfModules=8
 Version=10.3
 @EndOfDesignText@
 #Region Project Attributes 

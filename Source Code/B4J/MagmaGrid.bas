@@ -66,7 +66,11 @@ Sub Class_Globals
 	Private currentColumn As B4XTableColumn
 	Private currentPanel As B4XView
 	'-----------------------
-	
+
+	Public OnlySelectRow As Boolean=False
+
+
+	Private  doubleClickEvents As B4XTableDoubleClickEvents
 
 End Sub
 
@@ -109,6 +113,8 @@ Public Sub Initialize(parent As B4XView)
 	useB4XTable.RowHeight=50dip
 	
 	ie.TableResized
+
+	doubleClickEvents.Initialize(Me, "Table", useB4XTable)  'double click at b4xtable: useb4xtable
 	
 	AddKeyPressedListener
 
@@ -127,12 +133,20 @@ Public Sub GetValues As Map
 	Return Null
 End Sub
 
+Public Sub GetValuesAsync As ResumableSub
+	If SelectedRow>0 Then
+		Private MapValues As Map = useB4XTable.GetRow(SelectedRow)
+		Return MapValues
+	End If
+	Return Null
+End Sub
+
 public Sub GetValue(rowid As Long, columnid As String) As String
 	Private MapValues As Map = useB4XTable.GetRow(rowid)
 	For k=0 To MyColumns.Size-1
 		Dim myc As mycol=MyColumns.Get(k)
 		If myc.Name=columnid Then
-			Dim value As String = MapValues.Getvalueat(k)
+ 			Dim value As String = MapValues.Getvalueat(k)
 			Exit
 		End If
 	Next
@@ -160,10 +174,16 @@ public Sub SetValue(rowid As Long, columnid As String, newvalue As Object)
 					params.Add(newvalue)
 				End If
 				Else
-				params.Add(MapValues.GetValueAt(k))
+				If MapValues.ContainsKey(myc.Name) Then params.Add(MapValues.GetValueAt(k))
 			End If
 			Dim c As B4XTableColumn = useB4XTable.GetColumn(myc.Name)
-			Query.Append (c.SQLID.Trim & " = ?")
+			If MapValues.ContainsKey(myc.Name) Then 
+				Query.Append (c.SQLID.Trim & " = ?")
+				Else
+				If k>1 Then
+					Query.Remove(Query.Length-1,Query.Length)
+				End If
+			End If
 			If k<MyColumns.Size-1 Then
 				Query.Append (",")
 			End If
@@ -171,6 +191,7 @@ public Sub SetValue(rowid As Long, columnid As String, newvalue As Object)
 	Next
 	Query.Append ("WHERE rowid = ?")
 	params.Add(rowid)
+	'Log(Query)
 	useB4XTable.sql1.ExecNonQuery2(Query, params)
 	useB4XTable.Refresh
 	
@@ -230,6 +251,9 @@ public Sub RowCalcPraxis
 		Dim tocolumn As String=parts(0).Replace("[","").Replace("]","")
 		Dim apraxis As String=parts(1)
 		For c=0 To HeaderValues.Length-1
+			If MapValues.ContainsKey(HeaderValues(c))=False  Then
+				MapValues.Put(HeaderValues(c),0)
+			End If
 			apraxis = apraxis.Replace("[" & HeaderValues(c) & "]",MapValues.GetValueAt(c))
 		Next
 		Dim eeval As B4XEval
@@ -307,7 +331,7 @@ Public Sub AddColumn(Name As String, Hidden As Boolean, Locked As Boolean, Sorta
 		Case "DATE"
 			useB4XTable.AddColumn(Name,useB4XTable.COLUMN_TYPE_DATE)
 
-		Case "EDITCONTROLS"
+		Case "EDITCONTROLS","BUTTON"
 			useB4XTable.AddColumn(Name,useB4XTable.COLUMN_TYPE_VOID)
 
 		End Select
@@ -335,7 +359,7 @@ Public Sub AddColumn(Name As String, Hidden As Boolean, Locked As Boolean, Sorta
 					SetColumnAlignment(useB4XTable,Name,"RIGHT")
 				End If
 				
-			Case "EDITCONTROLS"
+			Case "EDITCONTROLS", "BUTTON"
 				SetColumnAlignment(useB4XTable,Name,"CENTER")
 
 			Case "DATE"
@@ -351,8 +375,11 @@ Public Sub AddColumn(Name As String, Hidden As Boolean, Locked As Boolean, Sorta
 		tmp.Initialize
 		UseList = tmp
 	End If
-	Lists.add(UseList)
 
+	Dim anewlist As List
+	anewlist.Initialize
+	anewlist.AddAll(Array(Name,UseList))
+	Lists.Add(anewlist)
 		
 End Sub
 
@@ -425,7 +452,7 @@ Public Sub AlignAllCols
 						SetColumnAlignment(useB4XTable,myc.Name,"RIGHT")
 					End If
 				
-				Case "EDITCONTROLS"
+				Case "EDITCONTROLS", "BUTTON"
 					SetColumnAlignment(useB4XTable,myc.Name,"CENTER")
 
 				Case "DATE"
@@ -443,9 +470,7 @@ Public Sub AlignAllCols
 End Sub
 
 
-Private Sub B4XTable1_DataUpdated
-	
-End Sub
+
 
 
 'align column
@@ -512,6 +537,8 @@ Private Sub IE_EnterEditMode (FC As FocusedCell)
 							MyTextField.Text=DateTime.Date(FC.PrevValue)
 							FC.View=MyTextField
 					End Select
+					
+						
 
 			End If
 
@@ -586,9 +613,22 @@ Private Sub IE_GetUpdatedValue (FC As FocusedCell) As Object
 End Sub
 
 
-Sub useB4XTable_CellClicked (ColumnId As String, RowId As Long)
+public Sub useB4XTable_CellClicked (ColumnId As String, RowId As Long) '
 	'avoid calling ie.CellClicked if the column is not editable.
 	'Sleep(0)
+
+	If OnlySelectRow=True Then
+		
+		thistable.CellClicked(ColumnId, RowId)
+		SelectedRow=RowId
+		
+		If SelectedRow>0 Then
+			Private MapValues As Map = useB4XTable.GetRow(SelectedRow)
+			'Return MapValues
+		End If
+		'Return Null
+		
+	Else
 
 	If noEdit=True Then
 		noEdit=False
@@ -604,7 +644,7 @@ Sub useB4XTable_CellClicked (ColumnId As String, RowId As Long)
 	
 	
 	wait for (SelColumn(ColumnId)) complete (unused As Boolean)
-	If SelectedColumn.Locked=True Then Return
+	If SelectedColumn.Locked=True Then Return 'Null
 	
 	If SelectedColumn.Controltype.Contains("CHECK") Then
 		
@@ -619,7 +659,9 @@ Sub useB4XTable_CellClicked (ColumnId As String, RowId As Long)
 	End If
 
 	
-
+	'Return Null
+	
+	End If
 End Sub
 
 
@@ -640,7 +682,55 @@ private Sub SelColumn(ID1 As String) As ResumableSub
 End Sub
 
 Sub useB4XTable_DataUpdated
+
+
+	For i = 0 To useB4XTable.VisibleRowIds.Size - 1
+		
+		'Log(i)
+
+		If useB4XTable.VisibleRowIds.Get(i) > 0 Then
+			For k=0 To useB4XTable.Columns.Size-1
+				Dim myc As mycol = MyColumns.Get(k)
+				If myc.Controltype="BUTTON"  Then
+					Dim p As B4XView = useB4XTable.GetColumn("col"&k.As(String).Trim).CellsLayouts.Get(i + 1)
+					'Dim p2 As B4XView= xui.CreatePanel("")
+					'p2.loadlayout()
+					' Πάντα καθαρίζουμε πρώτα όλες τις υπάρχουσες views
+					If i<MyList.size Then
+						Dim p2 As Button
+						p2.Initialize("MyButton")
+						p.AddView(p2, 5, 5, p.Width - 10 , p.Height - 10)
+						p2.Text=myc.Defaultvalue
+						Dim s As String = useB4XTable.VisibleRowIds.Get(i).As(String).trim
+						p2.Tag=myc.Name & "," & s
+					End If
+				End If
+
+			Next
+		Else
+		'Dim p2 As B4XView = p
+		For k=0 To useB4XTable.Columns.Size-1
+			Dim myc As mycol = MyColumns.Get(k)
+			If myc.Controltype="BUTTON"  Then
+				Dim p As B4XView = useB4XTable.GetColumn("col"&k.As(String).Trim).CellsLayouts.Get(i + 1)
+
+			For Each isb As B4XView In p.GetAllViewsRecursive
+				isb.Visible=False
+			Next
+
+		
+			End If
+		Next
+		End If
+		
+		
+	Next
+
 	ie.DataUpdated
+	' Επανεπισύναψη των double click handlers μετά από refresh
+	If doubleClickEvents.IsInitialized Then
+		CallSubDelayed(Me, "AttachDoubleClickAfterRefresh")
+	End If
 End Sub
 
 
@@ -888,6 +978,7 @@ Sub KeyPressed_Filter (e As Event)
 					row=1
 					table.CurrentPage=table.CurrentPage+1
 				Case "SPACE"
+					If OnlySelectRow=False Then
 					For k=0 To MyColumns.Size-1
 						Dim myc As mycol=MyColumns.Get(k)
 						If myc.Controltype.Contains("CHECK") Then
@@ -899,13 +990,16 @@ Sub KeyPressed_Filter (e As Event)
 						End If
 						End If
 					Next
+					End If
 				Case "DELETE"
+					If OnlySelectRow=False Then
 					SelectedRow=row
 					DeleteRow(SelectedRow)	
 					row = table.VisibleRowIds.Get(0)
 					SelectedRow=row
+					End If
 				Case "ENTER"
-					If noEdit=False Then
+					If noEdit=False And OnlySelectRow=False Then
 						SelectedRow=row
 						Dim myc As mycol=MyColumns.Get(0)
 						SelColumn(myc.Name)
@@ -1245,6 +1339,35 @@ End Sub
 
 
 
+public Sub Table_CellDoubleClicked(params As Map)
+	Dim columnId As String = params.Get("ColumnId")
+	Dim rowId As Long = params.Get("RowId")
+	
+	GetValuesAsync
+	' Εδώ μπορείς να προσθέσεις τη δική σου λογική για το double click
+'	Log($"Cell double clicked: Column=${columnId}, Row=${rowId}"$)
+    
+	' Παράδειγμα: Αν θέλεις να εμφανίσεις τα δεδομένα του row
+'	If rowId > 0 Then
+'		Dim rowData As Map = useB4XTable.GetRow(rowId)
+'		For Each key As String In rowData.Keys
+'			Log($"${key}: ${rowData.Get(key)}"$)
+'		Next
+'	End If
+    
+	' Μπορείς να καλέσεις και άλλες μεθόδους ή να εμφανίσεις dialogs
+	' π.χ. EditRowDialog(rowId) ή ShowRowDetails(rowId)
+End Sub
+
+
+
+Private Sub AttachDoubleClickAfterRefresh
+	Sleep(200) ' Περισσότερος χρόνος για να ολοκληρωθεί το table setup
+	If doubleClickEvents.IsInitialized Then
+		doubleClickEvents.AttachDoubleClickHandlers
+	End If
+End Sub
+
 
 #if DEBUG
 #if JAVA
@@ -1261,3 +1384,37 @@ public void RemoveWarning() throws Exception{
 }
 #End If
 #End If
+
+Private Sub MyButton_Click
+	Dim b As Button=Sender
+	
+
+	Dim whatis() As String=Regex.Split(",",b.tag.As(String))
+		
+	For k=0 To Lists.Size-1
+		
+	Dim alist As List
+	alist.Initialize
+	alist.AddAll(Lists.Get(k))
+	
+	Dim args As List
+	args.Initialize
+	args.AddAll(alist.get(1))
+
+	If alist.get(0).As(String)=whatis(0) Then
+		If args.size>2 Then 
+		
+			CallSub2(args.get(0),args.get(1).As(String),whatis(1))  'rowid = whatis(1)
+		
+		Else
+			Log("No list with 3 args!")
+			Log(b.Tag)
+		End If
+	End If
+	
+	args.clear
+	alist.Clear
+	
+	Next 
+
+End Sub
