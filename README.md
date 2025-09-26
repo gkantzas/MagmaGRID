@@ -57,6 +57,8 @@ There are the following types of Column Types / Inline Editing:
 
 **DATE**
 
+**BUTTON** (26/9/2025 - added)
+
 so using the following:
 
 **AddColumn**(Name As String, Hidden As Boolean, Locked As Boolean, Sortable As Boolean, _
@@ -76,7 +78,7 @@ MinIntegers As Int, MinFractions As Int, MaxFractions As Int, Grouping As Boolea
 
 **DefaultValue** - You can set the default value of column if you give a null "" text at the inline editing
 
-**UseList** - You can use any list with items as map (useful for COMBO, COMBOEDIT)
+**UseList** - You can use any list with items as map (useful for COMBO, COMBOEDIT - also useful for BUTTON it uses callsub ex. array(me,"showmoves","rowid") - that calls showmoves public sub with arg of rowid)
 
 **MaxLength** - You can set the Maximum Length for TextFields (even if is a numeric)
 
