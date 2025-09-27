@@ -77,11 +77,11 @@ Private Sub Button2_Click
 	Dim newlist As List = mg.GetData
 	If newlist.Size>0 Then
 		Dim maxRow() As Object = newlist.Get(newlist.Size-1) 'aeric's fix
-		Dim newID As Int = maxRow(0) + 1 'aeric's fix
+		Dim newID As Int = maxRow(1) + 1 'aeric's fix ------------------------> search for ID (now with button is the 2nd, so 1st)
 	Else
 		Dim newID As Int = 1
 	End If
-	newlist.Add(Array As String(newID,"","",DateTime.now, "0.00","0.00","1.00","24.00"))
+	newlist.Add(Array As String("",newID,"","","",DateTime.now, "0.00","0.00","1.00","24.00","","","",Chr(9744)))
 	mg.SetData(newlist)
 	Sleep(1000)
 	mg.CalcAll
@@ -138,8 +138,10 @@ Private Sub ShowMyGRID As ResumableSub
 	
 	mg.Initialize(Pane1)
 	
+	mg.AddColumn("ShowMoves",  False, True , False,80,"BUTTON","Show Moves...", Array As Object(Me,"showmoves","rowid"),0,0,0,"CENTER",  0, 0, 0, False) 'Asked by Guenter Becker (Anything is different from changing values - must be added in DataUpdated) / same for images too
 	mg.AddColumn("ID",False,True,True,70,"TEXTFIELD_NUMERIC","",Null, 0,0,0,"CENTER", 5, 0, 0, False)
 	mg.AddColumn("Item Desc", False,False,True,215,"TEXTFIELD","",Null,  40, 0,0,"LEFT",  0, 0, 0, False)
+	mg.AddColumn("Show2",  False, True , False,120,"BUTTON","Show-2", Array As Object(Me,"showmoves","rowid"),0,0,0,"CENTER",  0, 0, 0, False) 'Asked by Guenter Becker (Anything is different from changing values - must be added as VOID and in DataUpdated) / same for images too
 	mg.AddColumn("Enviromental Fee", False,False,True,180,"COMBOEDIT","",envfees,  0, 0,0,"LEFT",  0, 0, 0, False)
 	mg.AddColumn("Prod.Date", False,False,True,115,"DATE", DateTime.now, Null, 0, 0,0,"CENTER", 0, 0, 0, False)
 	mg.AddColumn("Price", False,False,True,80,"TEXTFIELD_NUMERIC","0",Null,0,0,0,"RIGHT", 1, 2, 2,  False)
@@ -150,7 +152,6 @@ Private Sub ShowMyGRID As ResumableSub
 	mg.AddColumn("VAT", False,True,False,90,"TEXTFIELD_NUMERIC","",Null,0,0,0,"RIGHT", 1, 2, 2, False)
 	mg.AddColumn("Tot.Price w VAT", False,True,False,90,"TEXTFIELD_NUMERIC","",Null,0,0,0,"RIGHT", 1, 2, 2, False)
 	mg.AddColumn("Check", False,False,False,50,"CHECKBOX",Chr(9744),Null,0,0,0,"CENTER", 0, 0, 0, False)  '9744 unchecked / 9746 checked  -can be used True/False but must change in dataupdated
-	mg.AddColumn("ShowMoves",  False, True , False,80,"BUTTON","Show Moves...", Array As Object(Me,"showmoves","rowid"),0,0,0,"CENTER",  0, 0, 0, False) 'Asked by Guenter Becker (Anything is different from changing values - must be added as VOID and in DataUpdated) / same for images too
 
 	#Region Add Some Formulas / Calculations
 	mg.AddHorizontalPraxis("[Tot.Price wo VAT]=(([Price]+[Env.Fee])*[Qty])")  'caution here, have them in right position !
@@ -162,9 +163,9 @@ Private Sub ShowMyGRID As ResumableSub
 	'the data
 	#Region Add Some Data, Items
 	list1.Initialize
-	list1.Add(Array As String("1","Tzatziki 200gr","Plastic", DateTime.now,"3.30","0.08","3.00","13.00","","","",Chr(9744)))
-	list1.Add(Array As String("2","Taramosalata 100gr","Plastic",DateTime.now,"3.90","0.08","1.00","13.00","","","",Chr(9746)))
-	list1.Add(Array As String("3","Red Wine 750ml","Glass",DateTime.now, "9.90","0.11","1.00","24.00","","","",Chr(9744)))
+	list1.Add(Array As String("","1","Tzatziki 200gr","","Plastic", DateTime.now,"3.30","0.08","3.00","13.00","","","",Chr(9744)))
+	list1.Add(Array As String("","2","Taramosalata 100gr","","Plastic",DateTime.now,"3.90","0.08","1.00","13.00","","","",Chr(9746)))
+	list1.Add(Array As String("","3","Red Wine 750ml","","Glass",DateTime.now, "9.90","0.11","1.00","24.00","","","",Chr(9744)))
 	#End Region
 	
 	mg.AlignAllCols
@@ -179,6 +180,7 @@ Private Sub ShowMyGRID As ResumableSub
 	'Return mg.GetValues 'This will return only selected row
 	
 	'Async and return with just selecting row
+	'next versions if used as a dialog... - tests...
 	wait for (mg.GetValuesAsync) complete (selectedmap As Map)
 	Return selectedmap
 	
@@ -188,6 +190,14 @@ End Sub
 Private Sub Button3_Click
 	
 	' OK to return...
+	Dim list1 As List
+	list1.Initialize
+	For k=0 To mg.GetData.Size-1
+		Dim a() As Object=mg.GetData.Get(k)
+		For i=0 To a.Length-1
+			Log ("row:" & k & " col" & i.As(String).trim & " = " & a(i))
+		Next
+	Next
 		
 End Sub
 

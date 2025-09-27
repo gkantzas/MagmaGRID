@@ -164,8 +164,7 @@ public Sub SetValue(rowid As Long, columnid As String, newvalue As Object)
 	Query.Append ("UPDATE data SET ")
 	For k=0 To MyColumns.Size-1
 		Private myc As mycol = MyColumns.Get(k)
-		If myc.Controltype.Contains("EDITCONTROLS") Then
-			Else
+		Dim c As B4XTableColumn = useB4XTable.GetColumn(myc.Name)
 			If columnid=myc.Name Then
 				If myc.Controltype.Contains("NUMERIC") Then
 					Dim newvalue1 As Double=newvalue
@@ -174,22 +173,25 @@ public Sub SetValue(rowid As Long, columnid As String, newvalue As Object)
 					params.Add(newvalue)
 				End If
 				Else
-				If MapValues.ContainsKey(myc.Name) Then params.Add(MapValues.GetValueAt(k))
+				'If MapValues.ContainsKey(myc.Name) Then 
+					params.Add(MapValues.GetValueAt(k))
+				'Else
+				'	params.Add(Null)
+				'End If
 			End If
-			Dim c As B4XTableColumn = useB4XTable.GetColumn(myc.Name)
-			If MapValues.ContainsKey(myc.Name) Then 
+			'If MapValues.ContainsKey(myc.Name) Then 
 				Query.Append (c.SQLID.Trim & " = ?")
-				Else
-				If k>1 Then
-					Query.Remove(Query.Length-1,Query.Length)
-				End If
-			End If
+			'	Else
+			'	If k>1 Then
+			'		Query.Remove(Query.Length-1,1)
+			'	End If
+			'End If
 			If k<MyColumns.Size-1 Then
 				Query.Append (",")
 			End If
-		End If
+
 	Next
-	Query.Append ("WHERE rowid = ?")
+	Query.Append (" WHERE rowid = ?")
 	params.Add(rowid)
 	'Log(Query)
 	useB4XTable.sql1.ExecNonQuery2(Query, params)
@@ -201,6 +203,7 @@ public Sub SetData(mylist1 As List)
 	
 	wait for (useB4XTable.SetData(mylist1)) complete (unused As Boolean)
 	MyList=mylist1
+
 	CalcAll
 	
 	
@@ -239,6 +242,7 @@ End Sub
 public Sub RowCalcPraxis
 	
 	Private HeaderValues(MyColumns.Size) As String
+
 	For k=0 To MyColumns.Size-1
 		Private myc As mycol=MyColumns.Get(k)
 		HeaderValues(k)= myc.Name
@@ -322,7 +326,7 @@ Public Sub AddColumn(Name As String, Hidden As Boolean, Locked As Boolean, Sorta
 	MyColumns.Add(MyColumn)
 	
 	Select Case Controltype
-		Case "TEXTFIELD","TEXTAREA", "COMBO", "COMBO", "COMBOEDIT", "COMBOFIELD","COMBOEDITFIELD", "PICTURE", "CHECKBOX", "CHECK"  ', "BLOB"
+		Case "TEXTFIELD","TEXTAREA", "COMBO", "COMBO", "COMBOEDIT", "COMBOFIELD","COMBOEDITFIELD", "PICTURE", "CHECKBOX", "CHECK", "BUTTON", "EDITCONTROLS"  ', "BLOB"
 			useB4XTable.AddColumn(Name,useB4XTable.COLUMN_TYPE_TEXT)
 		
 		Case "TEXTFIELD_NUMERIC"
@@ -330,9 +334,6 @@ Public Sub AddColumn(Name As String, Hidden As Boolean, Locked As Boolean, Sorta
 			
 		Case "DATE"
 			useB4XTable.AddColumn(Name,useB4XTable.COLUMN_TYPE_DATE)
-
-		Case "EDITCONTROLS","BUTTON"
-			useB4XTable.AddColumn(Name,useB4XTable.COLUMN_TYPE_VOID)
 
 		End Select
 	
@@ -692,7 +693,7 @@ Sub useB4XTable_DataUpdated
 			For k=0 To useB4XTable.Columns.Size-1
 				Dim myc As mycol = MyColumns.Get(k)
 				If myc.Controltype="BUTTON"  Then
-					Dim p As B4XView = useB4XTable.GetColumn("col"&k.As(String).Trim).CellsLayouts.Get(i + 1)
+					Dim p As B4XView = useB4XTable.GetColumn(myc.Name).CellsLayouts.Get(i + 1)
 					'Dim p2 As B4XView= xui.CreatePanel("")
 					'p2.loadlayout()
 					' Πάντα καθαρίζουμε πρώτα όλες τις υπάρχουσες views
@@ -712,7 +713,7 @@ Sub useB4XTable_DataUpdated
 		For k=0 To useB4XTable.Columns.Size-1
 			Dim myc As mycol = MyColumns.Get(k)
 			If myc.Controltype="BUTTON"  Then
-				Dim p As B4XView = useB4XTable.GetColumn("col"&k.As(String).Trim).CellsLayouts.Get(i + 1)
+				Dim p As B4XView = useB4XTable.GetColumn(myc.name).CellsLayouts.Get(i + 1)
 
 			For Each isb As B4XView In p.GetAllViewsRecursive
 				isb.Visible=False
